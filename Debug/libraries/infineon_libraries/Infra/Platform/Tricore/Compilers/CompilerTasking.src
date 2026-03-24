@@ -1,0 +1,216 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc8240a --dep-file=libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.src ../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.CompilerTasking.Ifx_C_Init',code,cluster('Ifx_C_Init')
+	.sect	'.text.CompilerTasking.Ifx_C_Init'
+	.align	2
+	
+	.global	Ifx_C_Init
+; Function Ifx_C_Init
+.L3:
+Ifx_C_Init:	.type	func
+	call	_c_init
+.L22:
+	ret
+.L13:
+	
+__Ifx_C_Init_function_end:
+	.size	Ifx_C_Init,__Ifx_C_Init_function_end-Ifx_C_Init
+.L12:
+	; End of function
+	
+	.calls	'Ifx_C_Init','_c_init'
+	.extern	_c_init
+	.calls	'Ifx_C_Init','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L5:
+	.word	755
+	.half	3
+	.word	.L6
+	.byte	4
+.L4:
+	.byte	1
+	.byte	'../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L7
+	.byte	2
+	.byte	'_c_init',0,1,59,17,1,1,1,1,3
+	.byte	'short int',0,2,5,4
+	.byte	'__wchar_t',0,1,1,1
+	.word	227
+	.byte	3
+	.byte	'unsigned int',0,4,7,4
+	.byte	'__size_t',0,1,1,1
+	.word	258
+	.byte	3
+	.byte	'int',0,4,5,4
+	.byte	'__ptrdiff_t',0,1,1,1
+	.word	291
+	.byte	5,1,6
+	.word	318
+	.byte	4
+	.byte	'__codeptr',0,1,1,1
+	.word	320
+	.byte	4
+	.byte	'__intptr_t',0,1,1,1
+	.word	291
+	.byte	4
+	.byte	'__uintptr_t',0,1,1,1
+	.word	258
+	.byte	3
+	.byte	'unsigned short int',0,2,7,4
+	.byte	'_iob_flag_t',0,2,82,25
+	.word	382
+	.byte	3
+	.byte	'unsigned char',0,1,8,4
+	.byte	'uint8',0,3,105,29
+	.word	424
+	.byte	4
+	.byte	'uint16',0,3,109,29
+	.word	382
+	.byte	3
+	.byte	'unsigned long int',0,4,7,4
+	.byte	'uint32',0,3,113,29
+	.word	470
+	.byte	3
+	.byte	'unsigned long long int',0,8,7,4
+	.byte	'uint64',0,3,118,29
+	.word	506
+	.byte	4
+	.byte	'sint16',0,3,126,29
+	.word	227
+	.byte	3
+	.byte	'long int',0,4,5,4
+	.byte	'sint32',0,3,131,1,29
+	.word	562
+	.byte	3
+	.byte	'long long int',0,8,5,4
+	.byte	'sint64',0,3,138,1,29
+	.word	590
+	.byte	3
+	.byte	'float',0,4,4,4
+	.byte	'float32',0,3,167,1,29
+	.word	623
+	.byte	3
+	.byte	'char',0,1,6,4
+	.byte	'int8',0,4,54,29
+	.word	649
+	.byte	4
+	.byte	'int16',0,4,55,29
+	.word	227
+	.byte	4
+	.byte	'int32',0,4,56,29
+	.word	291
+	.byte	4
+	.byte	'int64',0,4,57,29
+	.word	590
+	.byte	7
+	.byte	'void',0,6
+	.word	712
+	.byte	4
+	.byte	'pvoid',0,5,57,28
+	.word	718
+	.byte	4
+	.byte	'Ifx_TickTime',0,5,79,28
+	.word	590
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L6:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,0,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0
+	.byte	3,36,0,3,8,11,15,62,15,0,0,4,22,0,3,8,58,15,59,15,57,15,73,19,0,0,5,21,0,54,15,0,0,6,15,0,73,19,0,0,7
+	.byte	59,0,3,8,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L7:
+	.word	.L15-.L14
+.L14:
+	.half	3
+	.word	.L17-.L16
+.L16:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\AURIX-Studio-1.10.6\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common',0,0
+	.byte	'../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c',0,0,0,0
+	.byte	'stdio.h',0,1,0,0
+	.byte	'PLATFORM_TYPES.H',0,2,0,0
+	.byte	'zf_common_typedef.h',0,3,0,0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
+	.byte	0,0,0,0
+.L17:
+.L15:
+	.sdecl	'.debug_info',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_info'
+.L8:
+	.word	257
+	.half	3
+	.word	.L9
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L11,.L10
+	.byte	2
+	.word	.L4
+	.byte	3
+	.byte	'Ifx_C_Init',0,1,57,6,1,1,1
+	.word	.L3,.L13,.L2
+	.byte	4
+	.word	.L3,.L13
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_abbrev'
+.L9:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_line'
+.L10:
+	.word	.L19-.L18
+.L18:
+	.half	3
+	.word	.L21-.L20
+.L20:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Infra/Platform/Tricore/Compilers/CompilerTasking.c',0,0,0,0,0
+.L21:
+	.byte	5,12,7,0,5,2
+	.word	.L3
+	.byte	3,60,1,5,1,9
+	.half	.L22-.L3
+	.byte	3,1,1,7,9
+	.half	.L12-.L22
+	.byte	0,1,1
+.L19:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_ranges'
+.L11:
+	.word	-1,.L3,0,.L12-.L3,0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_loc'
+.L2:
+	.word	-1,.L3,0,.L13-.L3
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L23:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('Ifx_C_Init')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L23,.L3,.L13-.L3
+	; Module end

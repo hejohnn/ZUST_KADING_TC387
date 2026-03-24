@@ -1,0 +1,543 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc27048a --dep-file=code/SysTimer/SysTimer.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/SysTimer/SysTimer.src ../code/SysTimer/SysTimer.c"
+	.compiler_name		"ctc"
+	;source	'../code/SysTimer/SysTimer.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.SysTimer.SysTimer_Start',code,cluster('SysTimer_Start')
+	.sect	'.text.SysTimer.SysTimer_Start'
+	.align	2
+	
+	.global	SysTimer_Start
+; Function SysTimer_Start
+.L4:
+SysTimer_Start:	.type	func
+	movh.a	a15,#@his(timer_start_time)
+	lea	a15,[a15]@los(timer_start_time)
+.L46:
+	call	system_getval
+	mov	d15,#100
+	div.u	e0,d2,d15
+.L47:
+	st.w	[a15],d0
+.L48:
+	ret
+.L34:
+	
+__SysTimer_Start_function_end:
+	.size	SysTimer_Start,__SysTimer_Start_function_end-SysTimer_Start
+.L17:
+	; End of function
+	
+	.sdecl	'.text.SysTimer.SysTimer_Stop',code,cluster('SysTimer_Stop')
+	.sect	'.text.SysTimer.SysTimer_Stop'
+	.align	2
+	
+	.global	SysTimer_Stop
+; Function SysTimer_Stop
+.L6:
+SysTimer_Stop:	.type	func
+	movh.a	a15,#@his(timer_stop_time)
+	lea	a15,[a15]@los(timer_stop_time)
+.L53:
+	call	system_getval
+	mov	d15,#100
+	div.u	e0,d2,d15
+.L54:
+	st.w	[a15],d0
+.L55:
+	movh.a	a15,#@his(g_past_time)
+	lea	a15,[a15]@los(g_past_time)
+.L56:
+	movh.a	a2,#@his(timer_stop_time)
+	lea	a2,[a2]@los(timer_stop_time)
+	ld.w	d15,[a2]
+.L57:
+	movh.a	a2,#@his(timer_start_time)
+	lea	a2,[a2]@los(timer_start_time)
+	ld.w	d0,[a2]
+.L58:
+	sub	d15,d0
+.L59:
+	st.w	[a15],d15
+.L60:
+	ret
+.L35:
+	
+__SysTimer_Stop_function_end:
+	.size	SysTimer_Stop,__SysTimer_Stop_function_end-SysTimer_Stop
+.L22:
+	; End of function
+	
+	.sdecl	'.text.SysTimer.GetPastTime',code,cluster('GetPastTime')
+	.sect	'.text.SysTimer.GetPastTime'
+	.align	2
+	
+	.global	GetPastTime
+; Function GetPastTime
+.L8:
+GetPastTime:	.type	func
+	movh.a	a15,#@his(g_past_time)
+	lea	a15,[a15]@los(g_past_time)
+.L65:
+	movh.a	a2,#@his(timer_stop_time)
+	lea	a2,[a2]@los(timer_stop_time)
+	ld.w	d15,[a2]
+.L66:
+	movh.a	a2,#@his(timer_start_time)
+	lea	a2,[a2]@los(timer_start_time)
+	ld.w	d0,[a2]
+.L67:
+	sub	d15,d0
+.L68:
+	st.w	[a15],d15
+.L69:
+	movh.a	a15,#@his(g_past_time)
+	lea	a15,[a15]@los(g_past_time)
+	ld.w	d2,[a15]
+.L70:
+	j	.L2
+.L2:
+	ret
+.L37:
+	
+__GetPastTime_function_end:
+	.size	GetPastTime,__GetPastTime_function_end-GetPastTime
+.L27:
+	; End of function
+	
+	.sdecl	'.bss.SysTimer.timer_start_time',data,cluster('timer_start_time')
+	.sect	'.bss.SysTimer.timer_start_time'
+	.global	timer_start_time
+	.align	2
+timer_start_time:	.type	object
+	.size	timer_start_time,4
+	.space	4
+	.sdecl	'.bss.SysTimer.timer_stop_time',data,cluster('timer_stop_time')
+	.sect	'.bss.SysTimer.timer_stop_time'
+	.global	timer_stop_time
+	.align	2
+timer_stop_time:	.type	object
+	.size	timer_stop_time,4
+	.space	4
+	.sdecl	'.bss.SysTimer.g_past_time',data,cluster('g_past_time')
+	.sect	'.bss.SysTimer.g_past_time'
+	.global	g_past_time
+	.align	2
+g_past_time:	.type	object
+	.size	g_past_time,4
+	.space	4
+	.calls	'SysTimer_Start','system_getval'
+	.calls	'SysTimer_Stop','system_getval'
+	.calls	'SysTimer_Start','',0
+	.calls	'SysTimer_Stop','',0
+	.extern	system_getval
+	.calls	'GetPastTime','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L10:
+	.word	710
+	.half	3
+	.word	.L11
+	.byte	4
+.L9:
+	.byte	1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L12
+.L36:
+	.byte	2
+	.byte	'unsigned long int',0,4,7,3
+	.byte	'system_getval',0,1,43,9
+	.word	156
+	.byte	1,1,1,1,2
+	.byte	'short int',0,2,5,4
+	.byte	'__wchar_t',0,2,1,1
+	.word	203
+	.byte	2
+	.byte	'unsigned int',0,4,7,4
+	.byte	'__size_t',0,2,1,1
+	.word	234
+	.byte	2
+	.byte	'int',0,4,5,4
+	.byte	'__ptrdiff_t',0,2,1,1
+	.word	267
+	.byte	5,1,6
+	.word	294
+	.byte	4
+	.byte	'__codeptr',0,2,1,1
+	.word	296
+	.byte	4
+	.byte	'__intptr_t',0,2,1,1
+	.word	267
+	.byte	4
+	.byte	'__uintptr_t',0,2,1,1
+	.word	234
+	.byte	2
+	.byte	'unsigned short int',0,2,7,4
+	.byte	'_iob_flag_t',0,3,82,25
+	.word	358
+	.byte	2
+	.byte	'unsigned char',0,1,8,4
+	.byte	'uint8',0,4,105,29
+	.word	400
+	.byte	4
+	.byte	'uint16',0,4,109,29
+	.word	358
+	.byte	4
+	.byte	'uint32',0,4,113,29
+	.word	156
+	.byte	2
+	.byte	'unsigned long long int',0,8,7,4
+	.byte	'uint64',0,4,118,29
+	.word	461
+	.byte	4
+	.byte	'sint16',0,4,126,29
+	.word	203
+	.byte	2
+	.byte	'long int',0,4,5,4
+	.byte	'sint32',0,4,131,1,29
+	.word	517
+	.byte	2
+	.byte	'long long int',0,8,5,4
+	.byte	'sint64',0,4,138,1,29
+	.word	545
+	.byte	2
+	.byte	'float',0,4,4,4
+	.byte	'float32',0,4,167,1,29
+	.word	578
+	.byte	7
+	.byte	'void',0,6
+	.word	604
+	.byte	4
+	.byte	'pvoid',0,5,57,28
+	.word	610
+	.byte	4
+	.byte	'Ifx_TickTime',0,5,79,28
+	.word	545
+	.byte	2
+	.byte	'char',0,1,6,4
+	.byte	'int8',0,6,54,29
+	.word	650
+	.byte	4
+	.byte	'int16',0,6,55,29
+	.word	203
+	.byte	4
+	.byte	'int32',0,6,56,29
+	.word	267
+	.byte	4
+	.byte	'int64',0,6,57,29
+	.word	545
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L11:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,0,3,8,58,15,59,15,57,15
+	.byte	73,19,54,15,39,12,63,12,60,12,0,0,4,22,0,3,8,58,15,59,15,57,15,73,19,0,0,5,21,0,54,15,0,0,6,15,0,73,19
+	.byte	0,0,7,59,0,3,8,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L12:
+	.word	.L39-.L38
+.L38:
+	.half	3
+	.word	.L41-.L40
+.L40:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver',0
+	.byte	'D:\\AURIX-Studio-1.10.6\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common',0,0
+	.byte	'zf_driver_timer.h',0,1,0,0
+	.byte	'../code/SysTimer/SysTimer.c',0,0,0,0
+	.byte	'stdio.h',0,2,0,0
+	.byte	'Platform_Types.h',0,3,0,0
+	.byte	'ifx_types.h',0,3,0,0
+	.byte	'zf_common_typedef.h',0,4,0,0,0
+.L41:
+.L39:
+	.sdecl	'.debug_info',debug,cluster('SysTimer_Start')
+	.sect	'.debug_info'
+.L13:
+	.word	206
+	.half	3
+	.word	.L14
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L16,.L15
+	.byte	2
+	.word	.L9
+	.byte	3
+	.byte	'SysTimer_Start',0,1,7,6,1,1,1
+	.word	.L4,.L34,.L3
+	.byte	4
+	.word	.L4,.L34
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('SysTimer_Start')
+	.sect	'.debug_abbrev'
+.L14:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('SysTimer_Start')
+	.sect	'.debug_line'
+.L15:
+	.word	.L43-.L42
+.L42:
+	.half	3
+	.word	.L45-.L44
+.L44:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/SysTimer/SysTimer.c',0,0,0,0,0
+.L45:
+	.byte	5,5,7,0,5,2
+	.word	.L4
+	.byte	3,8,1,5,24,9
+	.half	.L46-.L4
+	.byte	1,5,22,9
+	.half	.L47-.L46
+	.byte	1,5,1,9
+	.half	.L48-.L47
+	.byte	3,2,1,7,9
+	.half	.L17-.L48
+	.byte	0,1,1
+.L43:
+	.sdecl	'.debug_ranges',debug,cluster('SysTimer_Start')
+	.sect	'.debug_ranges'
+.L16:
+	.word	-1,.L4,0,.L17-.L4,0,0
+	.sdecl	'.debug_info',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_info'
+.L18:
+	.word	205
+	.half	3
+	.word	.L19
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L21,.L20
+	.byte	2
+	.word	.L9
+	.byte	3
+	.byte	'SysTimer_Stop',0,1,13,6,1,1,1
+	.word	.L6,.L35,.L5
+	.byte	4
+	.word	.L6,.L35
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_abbrev'
+.L19:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_line'
+.L20:
+	.word	.L50-.L49
+.L49:
+	.half	3
+	.word	.L52-.L51
+.L51:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/SysTimer/SysTimer.c',0,0,0,0,0
+.L52:
+	.byte	5,5,7,0,5,2
+	.word	.L6
+	.byte	3,14,1,5,23,9
+	.half	.L53-.L6
+	.byte	1,5,21,9
+	.half	.L54-.L53
+	.byte	1,5,5,9
+	.half	.L55-.L54
+	.byte	3,2,1,5,19,9
+	.half	.L56-.L55
+	.byte	1,5,37,9
+	.half	.L57-.L56
+	.byte	1,5,35,9
+	.half	.L58-.L57
+	.byte	1,5,17,9
+	.half	.L59-.L58
+	.byte	1,5,1,9
+	.half	.L60-.L59
+	.byte	3,1,1,7,9
+	.half	.L22-.L60
+	.byte	0,1,1
+.L50:
+	.sdecl	'.debug_ranges',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_ranges'
+.L21:
+	.word	-1,.L6,0,.L22-.L6,0,0
+	.sdecl	'.debug_info',debug,cluster('GetPastTime')
+	.sect	'.debug_info'
+.L23:
+	.word	207
+	.half	3
+	.word	.L24
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L26,.L25
+	.byte	2
+	.word	.L9
+	.byte	3
+	.byte	'GetPastTime',0,1,20,8
+	.word	.L36
+	.byte	1,1,1
+	.word	.L8,.L37,.L7
+	.byte	4
+	.word	.L8,.L37
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('GetPastTime')
+	.sect	'.debug_abbrev'
+.L24:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('GetPastTime')
+	.sect	'.debug_line'
+.L25:
+	.word	.L62-.L61
+.L61:
+	.half	3
+	.word	.L64-.L63
+.L63:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/SysTimer/SysTimer.c',0,0,0,0,0
+.L64:
+	.byte	5,5,7,0,5,2
+	.word	.L8
+	.byte	3,21,1,5,19,9
+	.half	.L65-.L8
+	.byte	1,5,37,9
+	.half	.L66-.L65
+	.byte	1,5,35,9
+	.half	.L67-.L66
+	.byte	1,5,17,9
+	.half	.L68-.L67
+	.byte	1,5,12,9
+	.half	.L69-.L68
+	.byte	3,1,1,5,5,9
+	.half	.L70-.L69
+	.byte	1,5,1,9
+	.half	.L2-.L70
+	.byte	3,1,1,7,9
+	.half	.L27-.L2
+	.byte	0,1,1
+.L62:
+	.sdecl	'.debug_ranges',debug,cluster('GetPastTime')
+	.sect	'.debug_ranges'
+.L26:
+	.word	-1,.L8,0,.L27-.L8,0,0
+	.sdecl	'.debug_info',debug,cluster('g_past_time')
+	.sect	'.debug_info'
+.L28:
+	.word	181
+	.half	3
+	.word	.L29
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L9
+	.byte	3
+	.byte	'g_past_time',0,2,3,43
+	.word	.L36
+	.byte	1,5,3
+	.word	g_past_time
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_past_time')
+	.sect	'.debug_abbrev'
+.L29:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('timer_start_time')
+	.sect	'.debug_info'
+.L30:
+	.word	186
+	.half	3
+	.word	.L31
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L9
+	.byte	3
+	.byte	'timer_start_time',0,2,3,8
+	.word	.L36
+	.byte	1,5,3
+	.word	timer_start_time
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('timer_start_time')
+	.sect	'.debug_abbrev'
+.L31:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('timer_stop_time')
+	.sect	'.debug_info'
+.L32:
+	.word	185
+	.half	3
+	.word	.L33
+	.byte	4,1
+	.byte	'../code/SysTimer/SysTimer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L9
+	.byte	3
+	.byte	'timer_stop_time',0,2,3,26
+	.word	.L36
+	.byte	1,5,3
+	.word	timer_stop_time
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('timer_stop_time')
+	.sect	'.debug_abbrev'
+.L33:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_loc',debug,cluster('GetPastTime')
+	.sect	'.debug_loc'
+.L7:
+	.word	-1,.L8,0,.L37-.L8
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('SysTimer_Start')
+	.sect	'.debug_loc'
+.L3:
+	.word	-1,.L4,0,.L34-.L4
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_loc'
+.L5:
+	.word	-1,.L6,0,.L35-.L6
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L71:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('SysTimer_Start')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L71,.L4,.L34-.L4
+	.sdecl	'.debug_frame',debug,cluster('SysTimer_Stop')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L71,.L6,.L35-.L6
+	.sdecl	'.debug_frame',debug,cluster('GetPastTime')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L71,.L8,.L37-.L8
+	.byte	8,19,8,20,8,21,8,22,8,23,0,0
+	; Module end

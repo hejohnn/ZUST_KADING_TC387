@@ -1,0 +1,505 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc20996a --dep-file=code/xf_asr/base64.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/xf_asr/base64.src ../code/xf_asr/base64.c"
+	.compiler_name		"ctc"
+	;source	'../code/xf_asr/base64.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.base64.base64_encode',code,cluster('base64_encode')
+	.sect	'.text.base64.base64_encode'
+	.align	2
+	
+	.global	base64_encode
+; Function base64_encode
+.L15:
+base64_encode:	.type	func
+	mov	d3,#0
+.L40:
+	mov	d0,#0
+.L41:
+	j	.L2
+.L3:
+	jge.u	d3,d4,.L4
+.L53:
+	addsc.a	a15,a4,d3,#0
+	ld.bu	d1,[a15]
+.L54:
+	j	.L5
+.L4:
+	mov	d1,#0
+.L5:
+	add	d15,d3,#1
+.L55:
+	jge.u	d15,d4,.L6
+.L56:
+	addsc.a	a15,a4,d3,#0
+	ld.bu	d2,[a15]1
+.L57:
+	j	.L7
+.L6:
+	mov	d2,#0
+.L7:
+	add	d15,d3,#2
+.L58:
+	jge.u	d15,d4,.L8
+.L59:
+	addsc.a	a15,a4,d3,#0
+	ld.bu	d15,[a15]2
+.L60:
+	j	.L9
+.L8:
+	mov	d15,#0
+.L9:
+	sh	d1,d1,#16
+.L61:
+	sh	d2,d2,#8
+.L62:
+	or	d1,d2
+.L43:
+	or	d1,d15
+.L63:
+	addsc.a	a15,a5,d0,#0
+.L64:
+	extr.u	d15,d1,#18,#6
+.L65:
+	movh.a	a2,#@his(_999001_base64_table)
+	lea	a2,[a2]@los(_999001_base64_table)
+.L66:
+	addsc.a	a2,a2,d15,#0
+	ld.b	d2,[a2]0
+.L67:
+	st.b	[a15],d2
+.L68:
+	add	d15,d0,#1
+.L42:
+	addsc.a	a15,a5,d15,#0
+.L69:
+	extr.u	d0,d1,#12,#6
+.L70:
+	movh.a	a2,#@his(_999001_base64_table)
+	lea	a2,[a2]@los(_999001_base64_table)
+.L71:
+	addsc.a	a2,a2,d0,#0
+	ld.b	d0,[a2]0
+.L72:
+	st.b	[a15],d0
+.L73:
+	add	d15,#1
+.L74:
+	add	d0,d3,#1
+.L75:
+	jge.u	d0,d4,.L10
+.L76:
+	extr.u	d0,d1,#6,#6
+.L77:
+	movh.a	a15,#@his(_999001_base64_table)
+	lea	a15,[a15]@los(_999001_base64_table)
+.L78:
+	addsc.a	a15,a15,d0,#0
+	ld.b	d0,[a15]0
+.L79:
+	j	.L11
+.L10:
+	mov	d0,#61
+.L11:
+	addsc.a	a15,a5,d15,#0
+.L80:
+	st.b	[a15],d0
+.L81:
+	add	d0,d15,#1
+.L44:
+	add	d15,d3,#2
+.L82:
+	jge.u	d15,d4,.L12
+.L83:
+	and	d15,d1,#63
+.L84:
+	movh.a	a15,#@his(_999001_base64_table)
+	lea	a15,[a15]@los(_999001_base64_table)
+.L85:
+	addsc.a	a15,a15,d15,#0
+	ld.b	d15,[a15]0
+.L86:
+	j	.L13
+.L12:
+	mov	d15,#61
+.L13:
+	addsc.a	a15,a5,d0,#0
+.L87:
+	st.b	[a15],d15
+.L88:
+	add	d0,#1
+.L35:
+	add	d3,#3
+.L2:
+	jlt.u	d3,d4,.L3
+.L89:
+	addsc.a	a15,a5,d0,#0
+.L90:
+	mov	d15,#0
+.L91:
+	st.b	[a15],d15
+.L92:
+	ret
+.L25:
+	
+__base64_encode_function_end:
+	.size	base64_encode,__base64_encode_function_end-base64_encode
+.L24:
+	; End of function
+	
+	.sdecl	'.rodata.base64._999001_base64_table',data,rom,cluster('_999001_base64_table')
+	.sect	'.rodata.base64._999001_base64_table'
+_999001_base64_table:	.type	object
+	.size	_999001_base64_table,65
+	.byte	65,66,67,68,69,70,71,72
+	.byte	73,74,75,76,77,78,79,80
+	.byte	81,82,83,84,85,86,87,88
+	.byte	89,90,97,98,99,100,101,102
+	.byte	103,104,105,106,107,108,109,110
+	.byte	111,112,113,114,115,116,117,118
+	.byte	119,120,121,122,48,49,50,51
+	.byte	52,53,54,55,56,57,43,47
+	.space	1
+	.calls	'base64_encode','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L17:
+	.word	410
+	.half	3
+	.word	.L18
+	.byte	4
+.L16:
+	.byte	1
+	.byte	'../code/xf_asr/base64.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L19
+	.byte	2
+	.byte	'unsigned char',0,1,8
+.L26:
+	.byte	3
+	.word	152
+	.byte	2
+	.byte	'char',0,1,6
+.L28:
+	.byte	3
+	.word	174
+.L30:
+	.byte	2
+	.byte	'unsigned int',0,4,7,4,65
+	.word	174
+	.byte	5,64,0
+.L32:
+	.byte	6
+	.word	203
+	.byte	2
+	.byte	'short int',0,2,5,7
+	.byte	'__wchar_t',0,1,1,1
+	.word	217
+	.byte	7
+	.byte	'__size_t',0,1,1,1
+	.word	187
+	.byte	8,1,3
+	.word	265
+	.byte	7
+	.byte	'__codeptr',0,1,1,1
+	.word	267
+	.byte	2
+	.byte	'int',0,4,5,7
+	.byte	'__intptr_t',0,1,1,1
+	.word	290
+	.byte	7
+	.byte	'__uintptr_t',0,1,1,1
+	.word	187
+	.byte	2
+	.byte	'unsigned short int',0,2,7,7
+	.byte	'_iob_flag_t',0,2,82,25
+	.word	336
+	.byte	7
+	.byte	'uint8_t',0,3,242,1,41
+	.word	152
+	.byte	7
+	.byte	'uint32_t',0,3,254,1,41
+	.word	187
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L18:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,15,0,73,19,0,0,4,1,1,11,15
+	.byte	73,19,0,0,5,33,0,47,15,0,0,6,38,0,73,19,0,0,7,22,0,3,8,58,15,59,15,57,15,73,19,0,0,8,21,0,54,15,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L19:
+	.word	.L46-.L45
+.L45:
+	.half	3
+	.word	.L48-.L47
+.L47:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\AURIX-Studio-1.10.6\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0,0
+	.byte	'../code/xf_asr/base64.c',0,0,0,0
+	.byte	'stdio.h',0,1,0,0
+	.byte	'stdint.h',0,1,0,0,0
+.L48:
+.L46:
+	.sdecl	'.debug_info',debug,cluster('base64_encode')
+	.sect	'.debug_info'
+.L20:
+	.word	399
+	.half	3
+	.word	.L21
+	.byte	4,1
+	.byte	'../code/xf_asr/base64.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L23,.L22
+	.byte	2
+	.word	.L16
+	.byte	3
+	.byte	'base64_encode',0,1,3,6,1,1,1
+	.word	.L15,.L25,.L14
+	.byte	4
+	.byte	'input',0,1,3,29
+	.word	.L26,.L27
+	.byte	4
+	.byte	'output',0,1,3,42
+	.word	.L28,.L29
+	.byte	4
+	.byte	'len',0,1,3,59
+	.word	.L30,.L31
+	.byte	5
+	.word	.L15,.L25
+	.byte	6
+	.byte	'base64_table',0,1,5,23
+	.word	.L32
+	.byte	5,3
+	.word	_999001_base64_table
+	.byte	7
+	.byte	'i',0,1,6,14
+	.word	.L30,.L33
+	.byte	7
+	.byte	'j',0,1,6,17
+	.word	.L30,.L34
+	.byte	5
+	.word	.L3,.L35
+	.byte	7
+	.byte	'octet_a',0,1,9,18
+	.word	.L30,.L36
+	.byte	7
+	.byte	'octet_b',0,1,10,18
+	.word	.L30,.L37
+	.byte	7
+	.byte	'octet_c',0,1,11,18
+	.word	.L30,.L38
+	.byte	7
+	.byte	'triple',0,1,13,18
+	.word	.L30,.L39
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('base64_encode')
+	.sect	'.debug_abbrev'
+.L21:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,9,0,0,7,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('base64_encode')
+	.sect	'.debug_line'
+.L22:
+	.word	.L50-.L49
+.L49:
+	.half	3
+	.word	.L52-.L51
+.L51:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/xf_asr/base64.c',0,0,0,0,0
+.L52:
+	.byte	5,11,7,0,5,2
+	.word	.L15
+	.byte	3,6,1,5,18,9
+	.half	.L40-.L15
+	.byte	1,5,30,9
+	.half	.L41-.L40
+	.byte	1,5,28,9
+	.half	.L3-.L41
+	.byte	3,2,1,5,43,7,9
+	.half	.L53-.L3
+	.byte	1,5,47,9
+	.half	.L54-.L53
+	.byte	1,5,36,9
+	.half	.L4-.L54
+	.byte	1,5,31,9
+	.half	.L5-.L4
+	.byte	3,1,1,5,28,9
+	.half	.L55-.L5
+	.byte	1,5,49,7,9
+	.half	.L56-.L55
+	.byte	1,5,57,9
+	.half	.L57-.L56
+	.byte	1,5,42,9
+	.half	.L6-.L57
+	.byte	1,5,31,9
+	.half	.L7-.L6
+	.byte	3,1,1,5,28,9
+	.half	.L58-.L7
+	.byte	1,5,49,7,9
+	.half	.L59-.L58
+	.byte	1,5,57,9
+	.half	.L60-.L59
+	.byte	1,5,42,9
+	.half	.L8-.L60
+	.byte	1,5,36,9
+	.half	.L9-.L8
+	.byte	3,2,1,5,54,9
+	.half	.L61-.L9
+	.byte	1,5,43,9
+	.half	.L62-.L61
+	.byte	1,5,60,9
+	.half	.L43-.L62
+	.byte	1,5,15,9
+	.half	.L63-.L43
+	.byte	3,2,1,5,51,9
+	.half	.L64-.L63
+	.byte	1,5,23,9
+	.half	.L65-.L64
+	.byte	1,5,35,9
+	.half	.L66-.L65
+	.byte	1,5,21,9
+	.half	.L67-.L66
+	.byte	1,5,17,9
+	.half	.L68-.L67
+	.byte	1,5,15,9
+	.half	.L42-.L68
+	.byte	3,1,1,5,51,9
+	.half	.L69-.L42
+	.byte	1,5,23,9
+	.half	.L70-.L69
+	.byte	1,5,35,9
+	.half	.L71-.L70
+	.byte	1,5,21,9
+	.half	.L72-.L71
+	.byte	1,5,17,9
+	.half	.L73-.L72
+	.byte	1,5,26,9
+	.half	.L74-.L73
+	.byte	3,1,1,5,23,9
+	.half	.L75-.L74
+	.byte	1,5,66,7,9
+	.half	.L76-.L75
+	.byte	1,5,39,9
+	.half	.L77-.L76
+	.byte	1,5,51,9
+	.half	.L78-.L77
+	.byte	1,5,74,9
+	.half	.L79-.L78
+	.byte	1,5,37,9
+	.half	.L10-.L79
+	.byte	1,5,15,9
+	.half	.L11-.L10
+	.byte	1,5,21,9
+	.half	.L80-.L11
+	.byte	1,5,17,9
+	.half	.L81-.L80
+	.byte	1,5,26,9
+	.half	.L44-.L81
+	.byte	3,1,1,5,23,9
+	.half	.L82-.L44
+	.byte	1,5,59,7,9
+	.half	.L83-.L82
+	.byte	1,5,39,9
+	.half	.L84-.L83
+	.byte	1,5,51,9
+	.half	.L85-.L84
+	.byte	1,5,67,9
+	.half	.L86-.L85
+	.byte	1,5,37,9
+	.half	.L12-.L86
+	.byte	1,5,15,9
+	.half	.L13-.L12
+	.byte	1,5,21,9
+	.half	.L87-.L13
+	.byte	1,5,17,9
+	.half	.L88-.L87
+	.byte	1,5,34,9
+	.half	.L35-.L88
+	.byte	3,117,1,5,30,9
+	.half	.L2-.L35
+	.byte	1,5,11,7,9
+	.half	.L89-.L2
+	.byte	3,13,1,5,17,9
+	.half	.L90-.L89
+	.byte	1,5,15,9
+	.half	.L91-.L90
+	.byte	1,5,1,9
+	.half	.L92-.L91
+	.byte	3,1,1,7,9
+	.half	.L24-.L92
+	.byte	0,1,1
+.L50:
+	.sdecl	'.debug_ranges',debug,cluster('base64_encode')
+	.sect	'.debug_ranges'
+.L23:
+	.word	-1,.L15,0,.L24-.L15,0,0
+	.sdecl	'.debug_loc',debug,cluster('base64_encode')
+	.sect	'.debug_loc'
+.L14:
+	.word	-1,.L15,0,.L25-.L15
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L33:
+	.word	-1,.L15,.L40-.L15,.L25-.L15
+	.half	1
+	.byte	83
+	.word	0,0
+.L27:
+	.word	-1,.L15,0,.L25-.L15
+	.half	1
+	.byte	100
+	.word	0,0
+.L34:
+	.word	-1,.L15,.L41-.L15,.L42-.L15
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L42-.L15,.L44-.L15
+	.half	1
+	.byte	95
+	.word	.L44-.L15,.L25-.L15
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L31:
+	.word	-1,.L15,0,.L25-.L15
+	.half	1
+	.byte	84
+	.word	0,0
+.L36:
+	.word	0,0
+.L37:
+	.word	0,0
+.L38:
+	.word	0,0
+.L29:
+	.word	-1,.L15,0,.L25-.L15
+	.half	1
+	.byte	101
+	.word	0,0
+.L39:
+	.word	-1,.L15,.L43-.L15,.L2-.L15
+	.half	1
+	.byte	81
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L93:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('base64_encode')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L93,.L15,.L25-.L15
+	.byte	8,19,8,22,8,23,0,0
+	; Module end
