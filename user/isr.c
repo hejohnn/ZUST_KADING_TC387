@@ -53,7 +53,7 @@ IFX_INTERRUPT(cc60_pit_ch0_isr, 0, CCU6_0_CH0_ISR_PRIORITY)
     Menu_Event_Flush();             //菜单按键触发
 
 
-//    Menu_Page_Update();  //菜单刷新
+   Menu_Page_Update();  //菜单刷新
 
 }
 
@@ -64,13 +64,6 @@ IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
     interrupt_global_enable(0);                     // 开启中断嵌套
     pit_clear_flag(CCU60_CH1);
 
-//    static uint32 flush_cnt = 0;
-//    flush_cnt ++;
-//
-//    if(flush_cnt%4 == 0)                     //20ms中断
-//    {
-//
-//    }
     Beep_Timer_ShortRing_Stop();
     Get_Switch_Num();
 
