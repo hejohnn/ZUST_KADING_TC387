@@ -56,13 +56,13 @@
 
 #define DOT_MATRIX_SCREEN_SYNC_PIN      (ERU_CH7_REQ11_P20_9)   // 使用P20_9接收同步信号
 
-#define DOT_MATRIX_SCREEN_SR0_PIN       (P02_5)
-#define DOT_MATRIX_SCREEN_SR1_PIN       (P00_12)
-#define DOT_MATRIX_SCREEN_SR2_PIN       (P13_1)
-#define DOT_MATRIX_SCREEN_SR3_PIN       (P13_0)                 // 摩托组可以将引脚定义修改为P33_8
-#define DOT_MATRIX_SCREEN_SR4_PIN       (P02_8)
-#define DOT_MATRIX_SCREEN_SR5_PIN       (P13_2)
-#define DOT_MATRIX_SCREEN_SR6_PIN       (P11_2)
+#define DOT_MATRIX_SCREEN_SR0_PIN       (P11_6)
+#define DOT_MATRIX_SCREEN_SR1_PIN       (P11_3)
+#define DOT_MATRIX_SCREEN_SR2_PIN       (P11_2)
+#define DOT_MATRIX_SCREEN_SR3_PIN       (P13_3)                 // 摩托组可以将引脚定义修改为P33_8
+#define DOT_MATRIX_SCREEN_SR4_PIN       (P13_2)
+#define DOT_MATRIX_SCREEN_SR5_PIN       (P13_1)
+#define DOT_MATRIX_SCREEN_SR6_PIN       (P13_0)
 
 #define DOT_MATRIX_SCREEN_ROW_NUM       (7)
 
