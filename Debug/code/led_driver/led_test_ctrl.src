@@ -1,0 +1,1528 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc20812a --dep-file=code/led_driver/led_test_ctrl.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/led_driver/led_test_ctrl.src ../code/led_driver/led_test_ctrl.c"
+	.compiler_name		"ctc"
+	;source	'../code/led_driver/led_test_ctrl.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.led_test_ctrl.led_test_tld_init_if_needed',code,cluster('led_test_tld_init_if_needed')
+	.sect	'.text.led_test_ctrl.led_test_tld_init_if_needed'
+	.align	2
+	
+; Function led_test_tld_init_if_needed
+.L13:
+led_test_tld_init_if_needed:	.type	func
+	movh.a	a15,#@his(led_tld_inited)
+	lea	a15,[a15]@los(led_tld_inited)
+	ld.bu	d15,[a15]
+	jne	d15,#0,.L2
+.L213:
+	call	tld7002_init
+.L214:
+	movh.a	a15,#@his(led_tld_inited)
+	lea	a15,[a15]@los(led_tld_inited)
+.L215:
+	mov	d15,#1
+.L216:
+	st.b	[a15],d15
+.L2:
+	ret
+.L103:
+	
+__led_test_tld_init_if_needed_function_end:
+	.size	led_test_tld_init_if_needed,__led_test_tld_init_if_needed_function_end-led_test_tld_init_if_needed
+.L68:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_dot_matrix_init_if_needed',code,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.text.led_test_ctrl.led_test_dot_matrix_init_if_needed'
+	.align	2
+	
+; Function led_test_dot_matrix_init_if_needed
+.L15:
+led_test_dot_matrix_init_if_needed:	.type	func
+	movh.a	a15,#@his(led_dot_matrix_inited)
+	lea	a15,[a15]@los(led_dot_matrix_inited)
+	ld.bu	d15,[a15]
+	jne	d15,#0,.L3
+.L221:
+	call	dot_matrix_screen_init
+.L222:
+	movh.a	a15,#@his(led_dot_matrix_inited)
+	lea	a15,[a15]@los(led_dot_matrix_inited)
+.L223:
+	mov	d15,#1
+.L224:
+	st.b	[a15],d15
+.L3:
+	ret
+.L104:
+	
+__led_test_dot_matrix_init_if_needed_function_end:
+	.size	led_test_dot_matrix_init_if_needed,__led_test_dot_matrix_init_if_needed_function_end-led_test_dot_matrix_init_if_needed
+.L73:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_apply_all_off',code,cluster('led_test_apply_all_off')
+	.sect	'.text.led_test_ctrl.led_test_apply_all_off'
+	.align	2
+	
+; Function led_test_apply_all_off
+.L17:
+led_test_apply_all_off:	.type	func
+	mov	d4,#1
+	call	tld7002_gpin0_set_level
+.L229:
+	mov	d0,#0
+.L111:
+	j	.L4
+.L5:
+	mul	d15,d0,#2
+.L230:
+	movh.a	a15,#@his(tld7002_duty)
+	lea	a15,[a15]@los(tld7002_duty)
+.L231:
+	addsc.a	a15,a15,d15,#0
+.L232:
+	mov	d15,#0
+.L233:
+	st.h	[a15],d15
+.L234:
+	add	d0,#1
+.L4:
+	jlt.u	d0,#15,.L5
+.L235:
+	movh.a	a15,#@his(tld7002_duty)
+	lea	a15,[a15]@los(tld7002_duty)
+.L236:
+	mov	d15,#5000
+.L237:
+	st.h	[a15]30,d15
+.L238:
+	mov	d4,#1
+	call	tld7002_set_duty
+.L112:
+	ret
+.L105:
+	
+__led_test_apply_all_off_function_end:
+	.size	led_test_apply_all_off,__led_test_apply_all_off_function_end-led_test_apply_all_off
+.L78:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_on',code,cluster('led_test_on')
+	.sect	'.text.led_test_ctrl.led_test_on'
+	.align	2
+	
+	.global	led_test_on
+; Function led_test_on
+.L19:
+led_test_on:	.type	func
+	call	led_test_tld_init_if_needed
+.L126:
+	call	led_test_dot_matrix_init_if_needed
+.L127:
+	movh.a	a15,#@his(led_force_off_lock)
+	lea	a15,[a15]@los(led_force_off_lock)
+.L128:
+	mov	d15,#0
+.L129:
+	st.b	[a15],d15
+.L130:
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L131:
+	mov	d15,#0
+.L132:
+	st.b	[a15],d15
+.L133:
+	mov	d4,#1
+	call	tld7002_gpin0_set_level
+.L134:
+	call	dot_matrix_screen_reset_scan_phase
+.L135:
+	mov	d4,#9000
+	call	dot_matrix_screen_set_brightness
+.L136:
+	movh.a	a4,#@his(led_all_on_bitmap)
+	lea	a4,[a4]@los(led_all_on_bitmap)
+	call	dot_matrix_screen_show_bitmap_7x15
+.L137:
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L138:
+	mov	d15,#1
+.L139:
+	st.b	[a15],d15
+.L140:
+	ret
+.L93:
+	
+__led_test_on_function_end:
+	.size	led_test_on,__led_test_on_function_end-led_test_on
+.L38:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_off',code,cluster('led_test_off')
+	.sect	'.text.led_test_ctrl.led_test_off'
+	.align	2
+	
+	.global	led_test_off
+; Function led_test_off
+.L21:
+led_test_off:	.type	func
+	call	led_test_tld_init_if_needed
+.L145:
+	call	led_test_dot_matrix_init_if_needed
+.L146:
+	movh.a	a15,#@his(led_force_off_lock)
+	lea	a15,[a15]@los(led_force_off_lock)
+.L147:
+	mov	d15,#1
+.L148:
+	st.b	[a15],d15
+.L149:
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L150:
+	mov	d15,#0
+.L151:
+	st.b	[a15],d15
+.L152:
+	call	dot_matrix_screen_reset_scan_phase
+.L153:
+	movh.a	a4,#@his(led_all_off_bitmap)
+	lea	a4,[a4]@los(led_all_off_bitmap)
+	call	dot_matrix_screen_show_bitmap_7x15
+.L154:
+	call	led_test_apply_all_off
+.L155:
+	ret
+.L94:
+	
+__led_test_off_function_end:
+	.size	led_test_off,__led_test_off_function_end-led_test_off
+.L43:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_left_arrow',code,cluster('led_test_left_arrow')
+	.sect	'.text.led_test_ctrl.led_test_left_arrow'
+	.align	2
+	
+	.global	led_test_left_arrow
+; Function led_test_left_arrow
+.L23:
+led_test_left_arrow:	.type	func
+	call	led_test_dot_matrix_init_if_needed
+.L160:
+	movh.a	a15,#@his(led_force_off_lock)
+	lea	a15,[a15]@los(led_force_off_lock)
+.L161:
+	mov	d15,#0
+.L162:
+	st.b	[a15],d15
+.L163:
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L164:
+	mov	d15,#0
+.L165:
+	st.b	[a15],d15
+.L166:
+	call	dot_matrix_screen_reset_scan_phase
+.L167:
+	mov	d4,#9000
+	call	dot_matrix_screen_set_brightness
+.L168:
+	movh.a	a4,#@his(led_left_arrow_bitmap)
+	lea	a4,[a4]@los(led_left_arrow_bitmap)
+	call	dot_matrix_screen_show_bitmap_7x15
+.L169:
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L170:
+	mov	d15,#1
+.L171:
+	st.b	[a15],d15
+.L172:
+	ret
+.L95:
+	
+__led_test_left_arrow_function_end:
+	.size	led_test_left_arrow,__led_test_left_arrow_function_end-led_test_left_arrow
+.L48:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_show_custom_bitmap',code,cluster('led_test_show_custom_bitmap')
+	.sect	'.text.led_test_ctrl.led_test_show_custom_bitmap'
+	.align	2
+	
+	.global	led_test_show_custom_bitmap
+; Function led_test_show_custom_bitmap
+.L25:
+led_test_show_custom_bitmap:	.type	func
+	mov.aa	a15,a4
+.L114:
+	jnz.a	a15,.L6
+.L177:
+	j	.L7
+.L6:
+	call	led_test_dot_matrix_init_if_needed
+.L113:
+	movh.a	a2,#@his(led_force_off_lock)
+	lea	a2,[a2]@los(led_force_off_lock)
+.L178:
+	mov	d15,#0
+.L179:
+	st.b	[a2],d15
+.L180:
+	movh.a	a2,#@his(led_need_dot_scan)
+	lea	a2,[a2]@los(led_need_dot_scan)
+.L181:
+	mov	d15,#0
+.L182:
+	st.b	[a2],d15
+.L183:
+	call	dot_matrix_screen_reset_scan_phase
+.L184:
+	mov	d4,#9000
+	call	dot_matrix_screen_set_brightness
+.L185:
+	mov.aa	a4,a15
+.L116:
+	call	dot_matrix_screen_show_bitmap_7x15
+.L117:
+	movh.a	a15,#@his(led_need_dot_scan)
+.L115:
+	lea	a15,[a15]@los(led_need_dot_scan)
+.L186:
+	mov	d15,#1
+.L187:
+	st.b	[a15],d15
+.L7:
+	ret
+.L96:
+	
+__led_test_show_custom_bitmap_function_end:
+	.size	led_test_show_custom_bitmap,__led_test_show_custom_bitmap_function_end-led_test_show_custom_bitmap
+.L53:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_need_dot_scan',code,cluster('led_test_need_dot_scan')
+	.sect	'.text.led_test_ctrl.led_test_need_dot_scan'
+	.align	2
+	
+	.global	led_test_need_dot_scan
+; Function led_test_need_dot_scan
+.L27:
+led_test_need_dot_scan:	.type	func
+	movh.a	a15,#@his(led_need_dot_scan)
+	lea	a15,[a15]@los(led_need_dot_scan)
+	ld.bu	d2,[a15]
+.L208:
+	j	.L8
+.L8:
+	ret
+.L102:
+	
+__led_test_need_dot_scan_function_end:
+	.size	led_test_need_dot_scan,__led_test_need_dot_scan_function_end-led_test_need_dot_scan
+.L63:
+	; End of function
+	
+	.sdecl	'.text.led_test_ctrl.led_test_task',code,cluster('led_test_task')
+	.sect	'.text.led_test_ctrl.led_test_task'
+	.align	2
+	
+	.global	led_test_task
+; Function led_test_task
+.L29:
+led_test_task:	.type	func
+	movh.a	a15,#@his(led_force_off_lock)
+	lea	a15,[a15]@los(led_force_off_lock)
+	ld.bu	d15,[a15]
+.L192:
+	jeq	d15,#0,.L9
+.L193:
+	movh.a	a15,#@his(_999001_led_keep_off_div)
+	lea	a15,[a15]@los(_999001_led_keep_off_div)
+	movh.a	a2,#@his(_999001_led_keep_off_div)
+	lea	a2,[a2]@los(_999001_led_keep_off_div)
+	ld.hu	d15,[a2]0
+.L194:
+	add	d15,#1
+	st.h	[a15],d15
+.L195:
+	movh.a	a15,#@his(_999001_led_keep_off_div)
+	lea	a15,[a15]@los(_999001_led_keep_off_div)
+	ld.hu	d0,[a15]0
+.L196:
+	mov	d15,#20
+.L197:
+	jlt.u	d0,d15,.L10
+.L198:
+	movh.a	a15,#@his(_999001_led_keep_off_div)
+	lea	a15,[a15]@los(_999001_led_keep_off_div)
+.L199:
+	mov	d15,#0
+.L200:
+	st.h	[a15],d15
+.L201:
+	call	led_test_apply_all_off
+.L10:
+	j	.L11
+.L9:
+	movh.a	a15,#@his(_999001_led_keep_off_div)
+	lea	a15,[a15]@los(_999001_led_keep_off_div)
+.L202:
+	mov	d15,#0
+.L203:
+	st.h	[a15],d15
+.L11:
+	ret
+.L99:
+	
+__led_test_task_function_end:
+	.size	led_test_task,__led_test_task_function_end-led_test_task
+.L58:
+	; End of function
+	
+	.sdecl	'.data.led_test_ctrl.led_tld_inited',data,cluster('led_tld_inited')
+	.sect	'.data.led_test_ctrl.led_tld_inited'
+led_tld_inited:	.type	object
+	.size	led_tld_inited,1
+	.space	1
+	.sdecl	'.data.led_test_ctrl.led_dot_matrix_inited',data,cluster('led_dot_matrix_inited')
+	.sect	'.data.led_test_ctrl.led_dot_matrix_inited'
+led_dot_matrix_inited:	.type	object
+	.size	led_dot_matrix_inited,1
+	.space	1
+	.sdecl	'.data.led_test_ctrl.led_force_off_lock',data,cluster('led_force_off_lock')
+	.sect	'.data.led_test_ctrl.led_force_off_lock'
+led_force_off_lock:	.type	object
+	.size	led_force_off_lock,1
+	.space	1
+	.sdecl	'.data.led_test_ctrl.led_need_dot_scan',data,cluster('led_need_dot_scan')
+	.sect	'.data.led_test_ctrl.led_need_dot_scan'
+led_need_dot_scan:	.type	object
+	.size	led_need_dot_scan,1
+	.space	1
+	.sdecl	'.rodata.led_test_ctrl.led_all_off_bitmap',data,rom,cluster('led_all_off_bitmap')
+	.sect	'.rodata.led_test_ctrl.led_all_off_bitmap'
+	.align	2
+led_all_off_bitmap:	.type	object
+	.size	led_all_off_bitmap,14
+	.space	14
+	.sdecl	'.rodata.led_test_ctrl.led_all_on_bitmap',data,rom,cluster('led_all_on_bitmap')
+	.sect	'.rodata.led_test_ctrl.led_all_on_bitmap'
+	.align	2
+led_all_on_bitmap:	.type	object
+	.size	led_all_on_bitmap,14
+	.half	32767,32767,32767,32767
+	.half	32767,32767,32767
+	.sdecl	'.rodata.led_test_ctrl.led_left_arrow_bitmap',data,rom,cluster('led_left_arrow_bitmap')
+	.sect	'.rodata.led_test_ctrl.led_left_arrow_bitmap'
+	.align	2
+led_left_arrow_bitmap:	.type	object
+	.size	led_left_arrow_bitmap,14
+	.half	1
+	.space	12
+	.sdecl	'.data.led_test_ctrl._999001_led_keep_off_div',data,cluster('_999001_led_keep_off_div')
+	.sect	'.data.led_test_ctrl._999001_led_keep_off_div'
+	.align	2
+_999001_led_keep_off_div:	.type	object
+	.size	_999001_led_keep_off_div,2
+	.space	2
+	.calls	'led_test_tld_init_if_needed','tld7002_init'
+	.calls	'led_test_dot_matrix_init_if_needed','dot_matrix_screen_init'
+	.calls	'led_test_apply_all_off','tld7002_gpin0_set_level'
+	.calls	'led_test_apply_all_off','tld7002_set_duty'
+	.calls	'led_test_on','led_test_tld_init_if_needed'
+	.calls	'led_test_on','led_test_dot_matrix_init_if_needed'
+	.calls	'led_test_on','tld7002_gpin0_set_level'
+	.calls	'led_test_on','dot_matrix_screen_reset_scan_phase'
+	.calls	'led_test_on','dot_matrix_screen_set_brightness'
+	.calls	'led_test_on','dot_matrix_screen_show_bitmap_7x15'
+	.calls	'led_test_off','led_test_tld_init_if_needed'
+	.calls	'led_test_off','led_test_dot_matrix_init_if_needed'
+	.calls	'led_test_off','dot_matrix_screen_reset_scan_phase'
+	.calls	'led_test_off','dot_matrix_screen_show_bitmap_7x15'
+	.calls	'led_test_off','led_test_apply_all_off'
+	.calls	'led_test_left_arrow','led_test_dot_matrix_init_if_needed'
+	.calls	'led_test_left_arrow','dot_matrix_screen_reset_scan_phase'
+	.calls	'led_test_left_arrow','dot_matrix_screen_set_brightness'
+	.calls	'led_test_left_arrow','dot_matrix_screen_show_bitmap_7x15'
+	.calls	'led_test_show_custom_bitmap','led_test_dot_matrix_init_if_needed'
+	.calls	'led_test_show_custom_bitmap','dot_matrix_screen_reset_scan_phase'
+	.calls	'led_test_show_custom_bitmap','dot_matrix_screen_set_brightness'
+	.calls	'led_test_show_custom_bitmap','dot_matrix_screen_show_bitmap_7x15'
+	.calls	'led_test_task','led_test_apply_all_off'
+	.calls	'led_test_tld_init_if_needed','',0
+	.calls	'led_test_dot_matrix_init_if_needed','',0
+	.calls	'led_test_apply_all_off','',0
+	.calls	'led_test_on','',0
+	.calls	'led_test_off','',0
+	.calls	'led_test_left_arrow','',0
+	.calls	'led_test_show_custom_bitmap','',0
+	.calls	'led_test_need_dot_scan','',0
+	.extern	tld7002_duty
+	.extern	tld7002_gpin0_set_level
+	.extern	tld7002_set_duty
+	.extern	tld7002_init
+	.extern	dot_matrix_screen_reset_scan_phase
+	.extern	dot_matrix_screen_show_bitmap_7x15
+	.extern	dot_matrix_screen_set_brightness
+	.extern	dot_matrix_screen_init
+	.calls	'led_test_task','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L31:
+	.word	1074
+	.half	3
+	.word	.L32
+	.byte	4
+.L30:
+	.byte	1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L33
+.L100:
+	.byte	2
+	.byte	'unsigned short int',0,2,7,3
+	.word	163
+.L97:
+	.byte	4
+	.word	185
+.L101:
+	.byte	2
+	.byte	'unsigned char',0,1,8,5
+	.byte	'tld7002_gpin0_set_level',0,1,66,9,1,1,1,1,6
+	.byte	'state',0,1,66,40
+	.word	195
+	.byte	0,5
+	.byte	'tld7002_set_duty',0,1,67,9,1,1,1,1,6
+	.byte	'tld7002_id',0,1,67,40
+	.word	195
+	.byte	0,7
+	.byte	'tld7002_init',0,1,69,9,1,1,1,1,7
+	.byte	'dot_matrix_screen_reset_scan_phase',0,2,74,6,1,1,1,1,5
+	.byte	'dot_matrix_screen_show_bitmap_7x15',0,2,76,6,1,1,1,1,6
+	.byte	'bitmap_rows',0,2,76,55
+	.word	190
+	.byte	0,5
+	.byte	'dot_matrix_screen_set_brightness',0,2,78,6,1,1,1,1,6
+	.byte	'brightness',0,2,78,49
+	.word	163
+	.byte	0,7
+	.byte	'dot_matrix_screen_init',0,2,79,6,1,1,1,1,2
+	.byte	'short int',0,2,5,8
+	.byte	'__wchar_t',0,3,1,1
+	.word	524
+	.byte	2
+	.byte	'unsigned int',0,4,7,8
+	.byte	'__size_t',0,3,1,1
+	.word	555
+	.byte	2
+	.byte	'int',0,4,5,8
+	.byte	'__ptrdiff_t',0,3,1,1
+	.word	588
+	.byte	9,1,4
+	.word	615
+	.byte	8
+	.byte	'__codeptr',0,3,1,1
+	.word	617
+	.byte	8
+	.byte	'__intptr_t',0,3,1,1
+	.word	588
+	.byte	8
+	.byte	'__uintptr_t',0,3,1,1
+	.word	555
+	.byte	8
+	.byte	'_iob_flag_t',0,4,82,25
+	.word	163
+	.byte	8
+	.byte	'uint8',0,5,105,29
+	.word	195
+	.byte	8
+	.byte	'uint16',0,5,109,29
+	.word	163
+	.byte	2
+	.byte	'unsigned long int',0,4,7,8
+	.byte	'uint32',0,5,113,29
+	.word	728
+	.byte	2
+	.byte	'unsigned long long int',0,8,7,8
+	.byte	'uint64',0,5,118,29
+	.word	764
+	.byte	8
+	.byte	'sint16',0,5,126,29
+	.word	524
+	.byte	2
+	.byte	'long int',0,4,5,8
+	.byte	'sint32',0,5,131,1,29
+	.word	820
+	.byte	2
+	.byte	'long long int',0,8,5,8
+	.byte	'sint64',0,5,138,1,29
+	.word	848
+	.byte	2
+	.byte	'float',0,4,4,8
+	.byte	'float32',0,5,167,1,29
+	.word	881
+	.byte	10
+	.byte	'void',0,4
+	.word	907
+	.byte	8
+	.byte	'pvoid',0,6,57,28
+	.word	913
+	.byte	8
+	.byte	'Ifx_TickTime',0,6,79,28
+	.word	848
+	.byte	2
+	.byte	'char',0,1,6,8
+	.byte	'int8',0,7,54,29
+	.word	953
+	.byte	8
+	.byte	'int16',0,7,55,29
+	.word	524
+	.byte	8
+	.byte	'int32',0,7,56,29
+	.word	588
+	.byte	8
+	.byte	'int64',0,7,57,29
+	.word	848
+	.byte	11,32
+	.word	163
+	.byte	12,15,0,13
+	.byte	'tld7002_duty',0,1,64,15
+	.word	1016
+	.byte	1,1
+.L107:
+	.byte	14
+	.word	195
+	.byte	11,14
+	.word	163
+	.byte	12,6,0
+.L108:
+	.byte	3
+	.word	1053
+.L109:
+	.byte	3
+	.word	1053
+.L110:
+	.byte	3
+	.word	1053
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L32:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,38,0,73,19,0,0,4,15,0,73,19
+	.byte	0,0,5,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,6,5,0,3,8,58,15,59,15,57,15,73,19,0,0,7,46
+	.byte	0,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,8,22,0,3,8,58,15,59,15,57,15,73,19,0,0,9,21,0,54,15
+	.byte	0,0,10,59,0,3,8,0,0,11,1,1,11,15,73,19,0,0,12,33,0,47,15,0,0,13,52,0,3,8,58,15,59,15,57,15,73,19,63,12
+	.byte	60,12,0,0,14,53,0,73,19,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L33:
+	.word	.L119-.L118
+.L118:
+	.half	3
+	.word	.L121-.L120
+.L120:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\AURIX-Studio-1.10.6\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common',0,0
+	.byte	'..\\code\\led_driver\\zf_device_tld7002.h',0,0,0,0
+	.byte	'..\\code\\led_driver\\zf_device_dot_matrix_screen.h',0,0,0,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0
+	.byte	'stdio.h',0,1,0,0
+	.byte	'Platform_Types.h',0,2,0,0
+	.byte	'ifx_types.h',0,2,0,0
+	.byte	'zf_common_typedef.h',0,3,0,0,0
+.L121:
+.L119:
+	.sdecl	'.debug_info',debug,cluster('led_test_on')
+	.sect	'.debug_info'
+.L34:
+	.word	210
+	.half	3
+	.word	.L35
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L37,.L36
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_on',0,1,70,6,1,1,1
+	.word	.L19,.L93,.L18
+	.byte	4
+	.word	.L19,.L93
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_on')
+	.sect	'.debug_abbrev'
+.L35:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_on')
+	.sect	'.debug_line'
+.L36:
+	.word	.L123-.L122
+.L122:
+	.half	3
+	.word	.L125-.L124
+.L124:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L125:
+	.byte	5,32,7,0,5,2
+	.word	.L19
+	.byte	3,199,0,1,5,39,9
+	.half	.L126-.L19
+	.byte	3,1,1,5,5,9
+	.half	.L127-.L126
+	.byte	3,1,1,5,26,9
+	.half	.L128-.L127
+	.byte	1,5,24,9
+	.half	.L129-.L128
+	.byte	1,5,5,9
+	.half	.L130-.L129
+	.byte	3,1,1,5,25,9
+	.half	.L131-.L130
+	.byte	1,5,23,9
+	.half	.L132-.L131
+	.byte	1,5,29,9
+	.half	.L133-.L132
+	.byte	3,2,1,5,39,9
+	.half	.L134-.L133
+	.byte	3,1,1,5,38,9
+	.half	.L135-.L134
+	.byte	3,1,1,5,40,9
+	.half	.L136-.L135
+	.byte	3,1,1,5,5,9
+	.half	.L137-.L136
+	.byte	3,1,1,5,25,9
+	.half	.L138-.L137
+	.byte	1,5,23,9
+	.half	.L139-.L138
+	.byte	1,5,1,9
+	.half	.L140-.L139
+	.byte	3,1,1,7,9
+	.half	.L38-.L140
+	.byte	0,1,1
+.L123:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_on')
+	.sect	'.debug_ranges'
+.L37:
+	.word	-1,.L19,0,.L38-.L19,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_off')
+	.sect	'.debug_info'
+.L39:
+	.word	211
+	.half	3
+	.word	.L40
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L42,.L41
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_off',0,1,84,6,1,1,1
+	.word	.L21,.L94,.L20
+	.byte	4
+	.word	.L21,.L94
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_off')
+	.sect	'.debug_abbrev'
+.L40:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_off')
+	.sect	'.debug_line'
+.L41:
+	.word	.L142-.L141
+.L141:
+	.half	3
+	.word	.L144-.L143
+.L143:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L144:
+	.byte	5,32,7,0,5,2
+	.word	.L21
+	.byte	3,213,0,1,5,39,9
+	.half	.L145-.L21
+	.byte	3,1,1,5,5,9
+	.half	.L146-.L145
+	.byte	3,1,1,5,26,9
+	.half	.L147-.L146
+	.byte	1,5,24,9
+	.half	.L148-.L147
+	.byte	1,5,5,9
+	.half	.L149-.L148
+	.byte	3,1,1,5,25,9
+	.half	.L150-.L149
+	.byte	1,5,23,9
+	.half	.L151-.L150
+	.byte	1,5,39,9
+	.half	.L152-.L151
+	.byte	3,1,1,5,40,9
+	.half	.L153-.L152
+	.byte	3,1,1,5,27,9
+	.half	.L154-.L153
+	.byte	3,1,1,5,1,9
+	.half	.L155-.L154
+	.byte	3,1,1,7,9
+	.half	.L43-.L155
+	.byte	0,1,1
+.L142:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_off')
+	.sect	'.debug_ranges'
+.L42:
+	.word	-1,.L21,0,.L43-.L21,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_info'
+.L44:
+	.word	218
+	.half	3
+	.word	.L45
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L47,.L46
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_left_arrow',0,1,95,6,1,1,1
+	.word	.L23,.L95,.L22
+	.byte	4
+	.word	.L23,.L95
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_abbrev'
+.L45:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_line'
+.L46:
+	.word	.L157-.L156
+.L156:
+	.half	3
+	.word	.L159-.L158
+.L158:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L159:
+	.byte	5,39,7,0,5,2
+	.word	.L23
+	.byte	3,224,0,1,5,5,9
+	.half	.L160-.L23
+	.byte	3,2,1,5,26,9
+	.half	.L161-.L160
+	.byte	1,5,24,9
+	.half	.L162-.L161
+	.byte	1,5,5,9
+	.half	.L163-.L162
+	.byte	3,1,1,5,25,9
+	.half	.L164-.L163
+	.byte	1,5,23,9
+	.half	.L165-.L164
+	.byte	1,5,39,9
+	.half	.L166-.L165
+	.byte	3,1,1,5,38,9
+	.half	.L167-.L166
+	.byte	3,1,1,5,40,9
+	.half	.L168-.L167
+	.byte	3,1,1,5,5,9
+	.half	.L169-.L168
+	.byte	3,1,1,5,25,9
+	.half	.L170-.L169
+	.byte	1,5,23,9
+	.half	.L171-.L170
+	.byte	1,5,1,9
+	.half	.L172-.L171
+	.byte	3,1,1,7,9
+	.half	.L48-.L172
+	.byte	0,1,1
+.L157:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_ranges'
+.L47:
+	.word	-1,.L23,0,.L48-.L23,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_info'
+.L49:
+	.word	250
+	.half	3
+	.word	.L50
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L52,.L51
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_show_custom_bitmap',0,1,107,6,1,1,1
+	.word	.L25,.L96,.L24
+	.byte	4
+	.byte	'bitmap_rows',0,1,107,48
+	.word	.L97,.L98
+	.byte	5
+	.word	.L25,.L96
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_abbrev'
+.L50:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_line'
+.L51:
+	.word	.L174-.L173
+.L173:
+	.half	3
+	.word	.L176-.L175
+.L175:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L176:
+	.byte	5,6,7,0,5,2
+	.word	.L25
+	.byte	3,234,0,1,5,5,9
+	.half	.L114-.L25
+	.byte	3,2,1,5,9,7,9
+	.half	.L177-.L114
+	.byte	3,2,1,5,39,9
+	.half	.L6-.L177
+	.byte	3,3,1,5,5,9
+	.half	.L113-.L6
+	.byte	3,2,1,5,26,9
+	.half	.L178-.L113
+	.byte	1,5,24,9
+	.half	.L179-.L178
+	.byte	1,5,5,9
+	.half	.L180-.L179
+	.byte	3,1,1,5,25,9
+	.half	.L181-.L180
+	.byte	1,5,23,9
+	.half	.L182-.L181
+	.byte	1,5,39,9
+	.half	.L183-.L182
+	.byte	3,1,1,5,38,9
+	.half	.L184-.L183
+	.byte	3,1,1,5,40,9
+	.half	.L185-.L184
+	.byte	3,1,1,5,5,9
+	.half	.L117-.L185
+	.byte	3,1,1,5,25,9
+	.half	.L186-.L117
+	.byte	1,5,23,9
+	.half	.L187-.L186
+	.byte	1,5,1,9
+	.half	.L7-.L187
+	.byte	3,1,1,7,9
+	.half	.L53-.L7
+	.byte	0,1,1
+.L174:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_ranges'
+.L52:
+	.word	-1,.L25,0,.L53-.L25,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_task')
+	.sect	'.debug_info'
+.L54:
+	.word	246
+	.half	3
+	.word	.L55
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L57,.L56
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_task',0,1,129,1,6,1,1,1
+	.word	.L29,.L99,.L28
+	.byte	4
+	.word	.L29,.L99
+	.byte	5
+	.byte	'led_keep_off_div',0,1,131,1,19
+	.word	.L100
+	.byte	5,3
+	.word	_999001_led_keep_off_div
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_task')
+	.sect	'.debug_abbrev'
+.L55:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_task')
+	.sect	'.debug_line'
+.L56:
+	.word	.L189-.L188
+.L188:
+	.half	3
+	.word	.L191-.L190
+.L190:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L191:
+	.byte	5,8,7,0,5,2
+	.word	.L29
+	.byte	3,132,1,1,5,5,9
+	.half	.L192-.L29
+	.byte	1,5,14,7,9
+	.half	.L193-.L192
+	.byte	3,2,1,5,12,9
+	.half	.L194-.L193
+	.byte	1,5,14,9
+	.half	.L195-.L194
+	.byte	1,5,34,9
+	.half	.L196-.L195
+	.byte	1,5,9,9
+	.half	.L197-.L196
+	.byte	1,5,13,7,9
+	.half	.L198-.L197
+	.byte	3,2,1,5,32,9
+	.half	.L199-.L198
+	.byte	1,5,30,9
+	.half	.L200-.L199
+	.byte	1,5,35,9
+	.half	.L201-.L200
+	.byte	3,1,1,5,9,9
+	.half	.L10-.L201
+	.byte	3,125,1,9
+	.half	.L9-.L10
+	.byte	3,8,1,5,28,9
+	.half	.L202-.L9
+	.byte	1,5,26,9
+	.half	.L203-.L202
+	.byte	1,5,1,9
+	.half	.L11-.L203
+	.byte	3,2,1,7,9
+	.half	.L58-.L11
+	.byte	0,1,1
+.L189:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_task')
+	.sect	'.debug_ranges'
+.L57:
+	.word	-1,.L29,0,.L58-.L29,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_info'
+.L59:
+	.word	225
+	.half	3
+	.word	.L60
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L62,.L61
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_need_dot_scan',0,1,124,7
+	.word	.L101
+	.byte	1,1,1
+	.word	.L27,.L102,.L26
+	.byte	4
+	.word	.L27,.L102
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_abbrev'
+.L60:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_line'
+.L61:
+	.word	.L205-.L204
+.L204:
+	.half	3
+	.word	.L207-.L206
+.L206:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L207:
+	.byte	5,12,7,0,5,2
+	.word	.L27
+	.byte	3,253,0,1,5,5,9
+	.half	.L208-.L27
+	.byte	1,5,1,9
+	.half	.L8-.L208
+	.byte	3,1,1,7,9
+	.half	.L63-.L8
+	.byte	0,1,1
+.L205:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_ranges'
+.L62:
+	.word	-1,.L27,0,.L63-.L27,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_info'
+.L64:
+	.word	225
+	.half	3
+	.word	.L65
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L67,.L66
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_tld_init_if_needed',0,1,39,13,1,1
+	.word	.L13,.L103,.L12
+	.byte	4
+	.word	.L13,.L103
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_abbrev'
+.L65:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_line'
+.L66:
+	.word	.L210-.L209
+.L209:
+	.half	3
+	.word	.L212-.L211
+.L211:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L212:
+	.byte	5,9,7,0,5,2
+	.word	.L13
+	.byte	3,40,1,5,21,9
+	.half	.L213-.L13
+	.byte	3,2,1,5,9,9
+	.half	.L214-.L213
+	.byte	3,1,1,5,26,9
+	.half	.L215-.L214
+	.byte	1,5,24,9
+	.half	.L216-.L215
+	.byte	1,5,1,9
+	.half	.L2-.L216
+	.byte	3,2,1,7,9
+	.half	.L68-.L2
+	.byte	0,1,1
+.L210:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_ranges'
+.L67:
+	.word	-1,.L13,0,.L68-.L13,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_info'
+.L69:
+	.word	232
+	.half	3
+	.word	.L70
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L72,.L71
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_dot_matrix_init_if_needed',0,1,48,13,1,1
+	.word	.L15,.L104,.L14
+	.byte	4
+	.word	.L15,.L104
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_abbrev'
+.L70:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_line'
+.L71:
+	.word	.L218-.L217
+.L217:
+	.half	3
+	.word	.L220-.L219
+.L219:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L220:
+	.byte	5,9,7,0,5,2
+	.word	.L15
+	.byte	3,49,1,5,31,9
+	.half	.L221-.L15
+	.byte	3,2,1,5,9,9
+	.half	.L222-.L221
+	.byte	3,1,1,5,33,9
+	.half	.L223-.L222
+	.byte	1,5,31,9
+	.half	.L224-.L223
+	.byte	1,5,1,9
+	.half	.L3-.L224
+	.byte	3,2,1,7,9
+	.half	.L73-.L3
+	.byte	0,1,1
+.L218:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_ranges'
+.L72:
+	.word	-1,.L15,0,.L73-.L15,0,0
+	.sdecl	'.debug_info',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_info'
+.L74:
+	.word	235
+	.half	3
+	.word	.L75
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L77,.L76
+	.byte	2
+	.word	.L30
+	.byte	3
+	.byte	'led_test_apply_all_off',0,1,57,13,1,1
+	.word	.L17,.L105,.L16
+	.byte	4
+	.word	.L17,.L105
+	.byte	5
+	.byte	'i',0,1,59,11
+	.word	.L101,.L106
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_abbrev'
+.L75:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_line'
+.L76:
+	.word	.L226-.L225
+.L225:
+	.half	3
+	.word	.L228-.L227
+.L227:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/led_driver/led_test_ctrl.c',0,0,0,0,0
+.L228:
+	.byte	5,29,7,0,5,2
+	.word	.L17
+	.byte	3,60,1,5,11,9
+	.half	.L229-.L17
+	.byte	3,1,1,5,22,9
+	.half	.L111-.L229
+	.byte	1,5,21,9
+	.half	.L5-.L111
+	.byte	3,2,1,5,9,9
+	.half	.L230-.L5
+	.byte	1,5,21,9
+	.half	.L231-.L230
+	.byte	1,5,27,9
+	.half	.L232-.L231
+	.byte	1,5,25,9
+	.half	.L233-.L232
+	.byte	1,9
+	.half	.L234-.L233
+	.byte	3,126,1,5,22,9
+	.half	.L4-.L234
+	.byte	1,5,5,7,9
+	.half	.L235-.L4
+	.byte	3,4,1,5,24,9
+	.half	.L236-.L235
+	.byte	1,5,22,9
+	.half	.L237-.L236
+	.byte	1,9
+	.half	.L238-.L237
+	.byte	3,1,1,5,1,9
+	.half	.L112-.L238
+	.byte	3,1,1,7,9
+	.half	.L78-.L112
+	.byte	0,1,1
+.L226:
+	.sdecl	'.debug_ranges',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_ranges'
+.L77:
+	.word	-1,.L17,0,.L78-.L17,0,0
+	.sdecl	'.debug_info',debug,cluster('led_tld_inited')
+	.sect	'.debug_info'
+.L79:
+	.word	190
+	.half	3
+	.word	.L80
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_tld_inited',0,3,7,14
+	.word	.L101
+	.byte	5,3
+	.word	led_tld_inited
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_tld_inited')
+	.sect	'.debug_abbrev'
+.L80:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_dot_matrix_inited')
+	.sect	'.debug_info'
+.L81:
+	.word	197
+	.half	3
+	.word	.L82
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_dot_matrix_inited',0,3,8,14
+	.word	.L101
+	.byte	5,3
+	.word	led_dot_matrix_inited
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_dot_matrix_inited')
+	.sect	'.debug_abbrev'
+.L82:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_force_off_lock')
+	.sect	'.debug_info'
+.L83:
+	.word	194
+	.half	3
+	.word	.L84
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_force_off_lock',0,3,9,14
+	.word	.L101
+	.byte	5,3
+	.word	led_force_off_lock
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_force_off_lock')
+	.sect	'.debug_abbrev'
+.L84:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_need_dot_scan')
+	.sect	'.debug_info'
+.L85:
+	.word	193
+	.half	3
+	.word	.L86
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_need_dot_scan',0,3,10,23
+	.word	.L107
+	.byte	5,3
+	.word	led_need_dot_scan
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_need_dot_scan')
+	.sect	'.debug_abbrev'
+.L86:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_all_off_bitmap')
+	.sect	'.debug_info'
+.L87:
+	.word	194
+	.half	3
+	.word	.L88
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_all_off_bitmap',0,3,15,21
+	.word	.L108
+	.byte	5,3
+	.word	led_all_off_bitmap
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_all_off_bitmap')
+	.sect	'.debug_abbrev'
+.L88:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_all_on_bitmap')
+	.sect	'.debug_info'
+.L89:
+	.word	193
+	.half	3
+	.word	.L90
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_all_on_bitmap',0,3,16,21
+	.word	.L109
+	.byte	5,3
+	.word	led_all_on_bitmap
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_all_on_bitmap')
+	.sect	'.debug_abbrev'
+.L90:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('led_left_arrow_bitmap')
+	.sect	'.debug_info'
+.L91:
+	.word	197
+	.half	3
+	.word	.L92
+	.byte	4,1
+	.byte	'../code/led_driver/led_test_ctrl.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
+	.word	.L30
+	.byte	3
+	.byte	'led_left_arrow_bitmap',0,3,18,21
+	.word	.L110
+	.byte	5,3
+	.word	led_left_arrow_bitmap
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('led_left_arrow_bitmap')
+	.sect	'.debug_abbrev'
+.L92:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_loc'
+.L106:
+	.word	-1,.L17,.L111-.L17,.L112-.L17
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L16:
+	.word	-1,.L17,0,.L105-.L17
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_loc'
+.L14:
+	.word	-1,.L15,0,.L104-.L15
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_loc'
+.L22:
+	.word	-1,.L23,0,.L95-.L23
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_loc'
+.L26:
+	.word	-1,.L27,0,.L102-.L27
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_off')
+	.sect	'.debug_loc'
+.L20:
+	.word	-1,.L21,0,.L94-.L21
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_on')
+	.sect	'.debug_loc'
+.L18:
+	.word	-1,.L19,0,.L93-.L19
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_loc'
+.L98:
+	.word	-1,.L25,0,.L113-.L25
+	.half	1
+	.byte	100
+	.word	.L114-.L25,.L115-.L25
+	.half	1
+	.byte	111
+	.word	.L116-.L25,.L117-.L25
+	.half	1
+	.byte	100
+	.word	0,0
+.L24:
+	.word	-1,.L25,0,.L96-.L25
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_task')
+	.sect	'.debug_loc'
+.L28:
+	.word	-1,.L29,0,.L99-.L29
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_loc'
+.L12:
+	.word	-1,.L13,0,.L103-.L13
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L239:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('led_test_tld_init_if_needed')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L13,.L103-.L13
+	.sdecl	'.debug_frame',debug,cluster('led_test_dot_matrix_init_if_needed')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L15,.L104-.L15
+	.sdecl	'.debug_frame',debug,cluster('led_test_apply_all_off')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L17,.L105-.L17
+	.sdecl	'.debug_frame',debug,cluster('led_test_on')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L19,.L93-.L19
+	.sdecl	'.debug_frame',debug,cluster('led_test_off')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L21,.L94-.L21
+	.sdecl	'.debug_frame',debug,cluster('led_test_left_arrow')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L23,.L95-.L23
+	.sdecl	'.debug_frame',debug,cluster('led_test_show_custom_bitmap')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L25,.L96-.L25
+	.sdecl	'.debug_frame',debug,cluster('led_test_need_dot_scan')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L239,.L27,.L102-.L27
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('led_test_task')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L239,.L29,.L99-.L29
+	; Module end

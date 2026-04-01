@@ -2,6 +2,7 @@
 #include "isr.h"
 #include "MYHEADFILE.h"
 #include "asr_audio.h"
+#include "led_test_ctrl.h"
 uint8 menu_key_event = menu_release;
 uint8 menu_update_flag = 0;
 uint8 menu_wait_flag = 0;
@@ -57,6 +58,9 @@ void test_Page_Init(void)
 //        MENU_ITEM_INT_EDIT("threshold", (int16*)&binary_threshold, 10, 2, 0),
 //        MENU_ITEM_INT_EDIT("threshold", (int16*)&binary_threshold, 10, 2, 0),
 //        MENU_ITEM_INT_EDIT("threshold", (int16*)&binary_threshold, 10, 2, 0),
+    MENU_ITEM_ENTER_FUNC("LED_ON", led_test_on, 0),
+    MENU_ITEM_ENTER_FUNC("LED_OFF", led_test_off, 0),
+    MENU_ITEM_ENTER_FUNC("LED_LEFT", led_test_left_arrow, 0),
         {".", }
     };
 
@@ -263,6 +267,8 @@ void Menu_Init(void)
 void MENU_RUN(void)
 {
     static uint8 i = 0;
+
+    led_test_task();
 
     my_assert(menu_head_page_node != NULL);
     Menu_Key_Process();

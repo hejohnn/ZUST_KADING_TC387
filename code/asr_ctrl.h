@@ -8,7 +8,7 @@
 
 #define ASR_AUDIO_ADC           ADC0_CH0_A0        //采样所用使用的ADC
 
-#define ASR_BUTTON              P20_9
+#define ASR_BUTTON              P20_7
 #define ASR_BUTTON_ACTIVE_HIGH   0
 #define ASR_PIT                 CCU61_CH1
 

@@ -65,10 +65,16 @@
 #define DOT_MATRIX_SCREEN_SR6_PIN       (P13_0)
 
 #define DOT_MATRIX_SCREEN_ROW_NUM       (7)
+// 行选通信号电平配置：当前板卡现象符合低电平选通（0有效）
+#define DOT_MATRIX_SCREEN_ROW_ACTIVE_LEVEL (0)
 
 void OK(void);
 void dot_matrix_screen_scan             (void);
+void dot_matrix_screen_all_rows_off     (void);
+void dot_matrix_screen_reset_scan_phase (void);
 void dot_matrix_screen_show_string      (const char *str);
+void dot_matrix_screen_show_bitmap_7x15(const uint16 *bitmap_rows);
+void dot_matrix_screen_use_ascii_mode   (void);
 void dot_matrix_screen_set_brightness   (uint16 brightness);
 void dot_matrix_screen_init             (void);
 

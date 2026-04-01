@@ -62,6 +62,19 @@ const uint32 dot_matrix_screen_row_pin[] = {DOT_MATRIX_SCREEN_SR0_PIN, DOT_MATRI
 int8    dot_matrix_screen_data[3];          // 屏幕显示缓冲区
 int8    dot_matrix_screen_data_backup[3];   // 屏幕显示缓冲区备份数组，避免显示到一半，显示内容被更新
 uint16  dot_matrix_screen_brightness = 8000;       // 屏幕亮度
+static uint8  dot_matrix_custom_mode = 0;   // 0: ASCII模式 1: 自定义位图模式
+static uint16 dot_matrix_custom_bitmap[DOT_MATRIX_SCREEN_ROW_NUM]; // 每行15位，bit14为最左列
+static uint8  dot_matrix_scan_entry_num = 0; // 扫描相位计数，用于模式切换时相位复位
+
+#if DOT_MATRIX_SCREEN_ROW_ACTIVE_LEVEL
+    #define DOT_MATRIX_ROW_ON(pin)   gpio_high(pin)
+    #define DOT_MATRIX_ROW_OFF(pin)  gpio_low(pin)
+    #define DOT_MATRIX_ROW_INIT_OFF  (0)
+#else
+    #define DOT_MATRIX_ROW_ON(pin)   gpio_low(pin)
+    #define DOT_MATRIX_ROW_OFF(pin)  gpio_high(pin)
+    #define DOT_MATRIX_ROW_INIT_OFF  (1)
+#endif
 
 
 // 点阵屏幕取模数组
@@ -172,62 +185,72 @@ const uint8 tld7002_ascii_font_5x7[][7] =
 void dot_matrix_screen_scan(void)
 {
     uint8 i;
-    static uint8 entry_num; // 进入此函数的次数
     uint8 display_row_now;  // 当前正在显示第几行
 
-    display_row_now = entry_num / 2;
-    if(0 == (entry_num % 2))
-    {
-        if(0 == display_row_now)
-        {
-            // 关闭行信号
-            gpio_low(dot_matrix_screen_row_pin[DOT_MATRIX_SCREEN_ROW_NUM - 1]);
-        }
-        else
-        {
-            // 关闭行信号
-            gpio_low(dot_matrix_screen_row_pin[display_row_now - 1]);
-        }
+    display_row_now = dot_matrix_scan_entry_num / 2;
 
+    // 每次扫描前先关闭所有行，避免行串扰导致“整屏/整列全亮”
+    dot_matrix_screen_all_rows_off();
+
+    if(0 == (dot_matrix_scan_entry_num % 2))
+    {
         // 更新占空比
         if(7 > display_row_now)
         {
-            // 准备第一个点阵屏的数据
-            for(i = 0; 5 > i; i++)
+            if(dot_matrix_custom_mode)
             {
-                if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[0] - ' '][display_row_now]) & ((uint16)1 << (i + 1))) // (i + 1)中的+1 是为了去掉取模的第一列空白
+                uint16 row_bits = dot_matrix_custom_bitmap[display_row_now] & 0x7FFF;
+                for(i = 0; i < 15; i++)
                 {
-                    tld7002_duty[i] = dot_matrix_screen_brightness;
-                }
-                else
-                {
-                    tld7002_duty[i] = 0;
+                    if(row_bits & ((uint16)1 << (14 - i)))
+                    {
+                        tld7002_duty[i] = dot_matrix_screen_brightness;
+                    }
+                    else
+                    {
+                        tld7002_duty[i] = 0;
+                    }
                 }
             }
-
-            // 准备第二个点阵屏的数据
-            for(; 10 > i; i++)
+            else
             {
-                if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[1] - ' '][display_row_now]) & ((uint16)1 << (i - 5 + 1)))// (i - 5 + 1)中的+1 是为了去掉取模的第一列空白
+                // 准备第一个点阵屏的数据
+                for(i = 0; 5 > i; i++)
                 {
-                    tld7002_duty[i] = dot_matrix_screen_brightness;
+                    if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[0] - ' '][display_row_now]) & ((uint16)1 << (i + 1))) // (i + 1)中的+1 是为了去掉取模的第一列空白
+                    {
+                        tld7002_duty[i] = dot_matrix_screen_brightness;
+                    }
+                    else
+                    {
+                        tld7002_duty[i] = 0;
+                    }
                 }
-                else
-                {
-                    tld7002_duty[i] = 0;
-                }
-            }
 
-            // 准备第三个点阵屏的数据
-            for(; 15 > i; i++)
-            {
-                if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[2] - ' '][display_row_now]) & ((uint16)1 << (i - 10 + 1)))// (i - 10 + 1)中的+1 是为了去掉取模的第一列空白
+                // 准备第二个点阵屏的数据
+                for(; 10 > i; i++)
                 {
-                    tld7002_duty[i] = dot_matrix_screen_brightness;
+                    if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[1] - ' '][display_row_now]) & ((uint16)1 << (i - 5 + 1)))// (i - 5 + 1)中的+1 是为了去掉取模的第一列空白
+                    {
+                        tld7002_duty[i] = dot_matrix_screen_brightness;
+                    }
+                    else
+                    {
+                        tld7002_duty[i] = 0;
+                    }
                 }
-                else
+
+                // 准备第三个点阵屏的数据
+                for(; 15 > i; i++)
                 {
-                    tld7002_duty[i] = 0;
+                    if((tld7002_ascii_font_5x7[dot_matrix_screen_data_backup[2] - ' '][display_row_now]) & ((uint16)1 << (i - 10 + 1)))// (i - 10 + 1)中的+1 是为了去掉取模的第一列空白
+                    {
+                        tld7002_duty[i] = dot_matrix_screen_brightness;
+                    }
+                    else
+                    {
+                        tld7002_duty[i] = 0;
+                    }
                 }
             }
         }
@@ -235,22 +258,51 @@ void dot_matrix_screen_scan(void)
     }
     else
     {
-        // 奇数 开启行信号
-        gpio_high(dot_matrix_screen_row_pin[display_row_now]);
+        // 奇数 开启目标行信号
+        if(display_row_now < DOT_MATRIX_SCREEN_ROW_NUM)
+        {
+            DOT_MATRIX_ROW_ON(dot_matrix_screen_row_pin[display_row_now]);
+        }
 
         // 采用偶数行关闭行信号 奇数行打开行信号
         // 这是因为当更新TLD7002的通道占空比后，并不会立即生效，需要等待下一个PWM周期才会生效
         // 因此我们更新占空比之后需要等待下一个周期再打开行信号
     }
 
-    entry_num++;
-    if((DOT_MATRIX_SCREEN_ROW_NUM * 2) <= entry_num)
+    dot_matrix_scan_entry_num++;
+    if((DOT_MATRIX_SCREEN_ROW_NUM * 2) <= dot_matrix_scan_entry_num)
     {
         // 全部显示完成 进入次数清零
-        entry_num = 0;
+        dot_matrix_scan_entry_num = 0;
         // 更新备份数组
         memcpy((uint8 *)dot_matrix_screen_data_backup, (uint8 *)dot_matrix_screen_data, sizeof(dot_matrix_screen_data_backup));
     }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      关闭所有行选通
+//  参数说明      void
+//  返回参数      void
+//-------------------------------------------------------------------------------------------------------------------
+void dot_matrix_screen_all_rows_off(void)
+{
+    uint8 i;
+
+    for(i = 0; i < DOT_MATRIX_SCREEN_ROW_NUM; i++)
+    {
+        DOT_MATRIX_ROW_OFF(dot_matrix_screen_row_pin[i]);
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      重置扫描相位并关闭所有行
+//  参数说明      void
+//  返回参数      void
+//-------------------------------------------------------------------------------------------------------------------
+void dot_matrix_screen_reset_scan_phase(void)
+{
+    dot_matrix_scan_entry_num = 0;
+    dot_matrix_screen_all_rows_off();
 }
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -262,6 +314,7 @@ void dot_matrix_screen_scan(void)
 void dot_matrix_screen_show_string(const char *str)
 {
     uint8 i;
+    dot_matrix_custom_mode = 0;
     for(i = 0; i < 3; i++)
     {
         if(0 == str[i])
@@ -270,6 +323,37 @@ void dot_matrix_screen_show_string(const char *str)
         }
         dot_matrix_screen_data[i] = str[i];
     }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      点阵屏自定义位图显示函数（7x15）
+//  参数说明      *bitmap_rows  行数据数组，长度为7，每行使用低15位，bit14为最左列
+//  返回参数      void
+//-------------------------------------------------------------------------------------------------------------------
+void dot_matrix_screen_show_bitmap_7x15(const uint16 *bitmap_rows)
+{
+    uint8 row;
+
+    if(0 == bitmap_rows)
+    {
+        return;
+    }
+
+    for(row = 0; row < DOT_MATRIX_SCREEN_ROW_NUM; row++)
+    {
+        dot_matrix_custom_bitmap[row] = bitmap_rows[row] & 0x7FFF;
+    }
+    dot_matrix_custom_mode = 1;
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      切换回ASCII显示模式
+//  参数说明      void
+//  返回参数      void
+//-------------------------------------------------------------------------------------------------------------------
+void dot_matrix_screen_use_ascii_mode(void)
+{
+    dot_matrix_custom_mode = 0;
 }
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -296,13 +380,13 @@ void dot_matrix_screen_init(void)
 
     exti_init(DOT_MATRIX_SCREEN_SYNC_PIN, EXTI_TRIGGER_FALLING);
 
-    gpio_init(dot_matrix_screen_row_pin[0], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[1], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[2], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[3], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[4], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[5], GPO, 0, GPO_PUSH_PULL);
-    gpio_init(dot_matrix_screen_row_pin[6], GPO, 0, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[0], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[1], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[2], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[3], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[4], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[5], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
+    gpio_init(dot_matrix_screen_row_pin[6], GPO, DOT_MATRIX_ROW_INIT_OFF, GPO_PUSH_PULL);
 
     // 打开一个通道 此通道不能关闭，用于捕获同步信号
     tld7002_duty[15] = 5000;
@@ -313,6 +397,7 @@ void dot_matrix_screen_init(void)
     dot_matrix_screen_set_brightness(dot_matrix_screen_brightness);
     // 清空显示
     dot_matrix_screen_show_string("   ");
+    dot_matrix_screen_reset_scan_phase();
 }
 
 void OK(void)

@@ -37,6 +37,8 @@
 #include "isr.h"
 #include "MYHEADFILE.h"
 #include "asr_audio.h"
+#include "zf_device_dot_matrix_screen.h"
+#include "led_test_ctrl.h"
 
 // 对于TC系列默认是不支持中断嵌套的，希望支持中断嵌套需要在中断内使用 interrupt_global_enable(0); 来开启中断嵌套
 // 简单点说实际上进入中断后TC系列的硬件自动调用了 interrupt_global_disable(); 来拒绝响应任何的中断，因此需要我们自己手动调用 interrupt_global_enable(0); 来开启中断的响应。
@@ -165,13 +167,13 @@ IFX_INTERRUPT(exti_ch3_ch7_isr, EXTI_CH3_CH7_INT_VECTAB_NUM, EXTI_CH3_CH7_INT_PR
         exti_flag_clear(ERU_CH3_REQ6_P02_0);
         camera_vsync_handler();                     // 摄像头触发采集统一回调函数
     }
-    if(exti_flag_get(ERU_CH7_REQ16_P15_1))          // 通道7中断
+    if(exti_flag_get(DOT_MATRIX_SCREEN_SYNC_PIN))   // 点阵同步中断（按头文件宏配置）
     {
-        exti_flag_clear(ERU_CH7_REQ16_P15_1);
-
-
-
-
+        exti_flag_clear(DOT_MATRIX_SCREEN_SYNC_PIN);
+        if(led_test_need_dot_scan())
+        {
+            dot_matrix_screen_scan();
+        }
     }
 }
 // **************************** 外部中断函数 ****************************
@@ -217,7 +219,7 @@ IFX_INTERRUPT(uart1_tx_isr, UART1_INT_VECTAB_NUM, UART1_TX_INT_PRIO)
 IFX_INTERRUPT(uart1_rx_isr, UART1_INT_VECTAB_NUM, UART1_RX_INT_PRIO)
 {
     interrupt_global_enable(0);                     // 开启中断嵌套
-    camera_uart_handler();                          // 摄像头参数配置统一回调函数
+    tld7002_callback();                             // TLD7002 串口接收回调
 }
 
 // 串口2默认连接到无线转串口模块

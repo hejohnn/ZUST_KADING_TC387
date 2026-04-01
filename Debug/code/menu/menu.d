@@ -400,3 +400,5 @@ menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\xf_asr\asr_audio.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\xf_asr\asr_audio.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\zf_common\zf_common_headfile.h"
 "D:\\work\\ZUST_KADING_TC387\\libraries\\zf_common\zf_common_headfile.h" :
+menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\led_driver\led_test_ctrl.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\led_driver\led_test_ctrl.h" :

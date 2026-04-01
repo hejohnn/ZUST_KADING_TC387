@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc24736a --dep-file=code/led_driver/zf_device_tld7002.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/led_driver/zf_device_tld7002.src ../code/led_driver/zf_device_tld7002.c"
+	.compiler_invocation	"ctc -f cc53076a --dep-file=code/led_driver/zf_device_tld7002.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/led_driver/zf_device_tld7002.src ../code/led_driver/zf_device_tld7002.c"
 	.compiler_name		"ctc"
 	;source	'../code/led_driver/zf_device_tld7002.c'
 
@@ -25,7 +25,7 @@ tld7002_send_buffer:	.type	func
 	call	fifo_clear
 .L104:
 	mov	d4,#1
-.L179:
+.L183:
 	mov.aa	a4,a15
 .L107:
 	mov	d5,d15
@@ -33,11 +33,11 @@ tld7002_send_buffer:	.type	func
 	call	uart_write_buffer
 .L108:
 	ret
-.L83:
+.L85:
 	
 __tld7002_send_buffer_function_end:
 	.size	tld7002_send_buffer,__tld7002_send_buffer_function_end-tld7002_send_buffer
-.L46:
+.L51:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_read_buffer',code,cluster('tld7002_read_buffer')
@@ -57,56 +57,56 @@ tld7002_read_buffer:	.type	func
 	mov	d9,#0
 .L115:
 	mov	d15,#0
-.L184:
+.L188:
 	st.w	[a10]50,d15
-.L185:
+.L189:
 	mov	d15,#0
 .L116:
 	mov	d0,#50
-.L186:
+.L190:
 	st.w	[a10]50,d0
-.L187:
+.L191:
 	movh.a	a4,#@his(tld7002_fifo)
 .L111:
 	lea	a4,[a4]@los(tld7002_fifo)
-.L188:
+.L192:
 	lea	a5,[a10]0
-.L189:
+.L193:
 	lea	a6,[a10]50
-.L190:
+.L194:
 	mov	d4,#0
 .L112:
 	call	fifo_read_buffer
-.L191:
+.L195:
 	ld.w	d0,[a10]50
-.L192:
+.L196:
 	jge.u	d8,d0,.L2
-.L193:
+.L197:
 	ld.w	d15,[a10]50
 .L117:
 	sub	d15,d8
-.L194:
+.L198:
 	extr.u	d15,d15,#0,#8
 .L2:
 	jeq	d15,#0,.L3
-.L195:
+.L199:
 	j	.L4
 .L5:
 	addsc.a	a2,a10,d15,#0
 	ld.bu	d0,[a2]
-.L196:
+.L200:
 	st.b	[a15],d0
-.L197:
+.L201:
 	add.a	a15,#1
-.L198:
+.L202:
 	add	d15,#1
 .L118:
 	extr.u	d15,d15,#0,#8
 .L4:
 	ld.w	d0,[a10]50
-.L199:
+.L203:
 	jlt.u	d15,d0,.L5
-.L200:
+.L204:
 	mov	d9,#1
 .L3:
 	mov	d2,d9
@@ -114,11 +114,11 @@ tld7002_read_buffer:	.type	func
 	j	.L6
 .L6:
 	ret
-.L87:
+.L89:
 	
 __tld7002_read_buffer_function_end:
 	.size	tld7002_read_buffer,__tld7002_read_buffer_function_end-tld7002_read_buffer
-.L51:
+.L56:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_clean_buffer',code,cluster('tld7002_clean_buffer')
@@ -132,13 +132,13 @@ tld7002_clean_buffer:	.type	func
 	movh.a	a4,#@his(tld7002_fifo)
 	lea	a4,[a4]@los(tld7002_fifo)
 	call	fifo_clear
-.L205:
+.L209:
 	ret
-.L95:
+.L97:
 	
 __tld7002_clean_buffer_function_end:
 	.size	tld7002_clean_buffer,__tld7002_clean_buffer_function_end-tld7002_clean_buffer
-.L56:
+.L61:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_gpin0_set_level',code,cluster('tld7002_gpin0_set_level')
@@ -151,16 +151,16 @@ __tld7002_clean_buffer_function_end:
 tld7002_gpin0_set_level:	.type	func
 	mov	d5,d4
 .L121:
-	mov	d4,#674
+	mov	d4,#1028
 .L120:
 	call	gpio_set_level
 .L122:
 	ret
-.L96:
+.L74:
 	
 __tld7002_gpin0_set_level_function_end:
 	.size	tld7002_gpin0_set_level,__tld7002_gpin0_set_level_function_end-tld7002_gpin0_set_level
-.L61:
+.L31:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_set_duty',code,cluster('tld7002_set_duty')
@@ -173,10 +173,10 @@ __tld7002_gpin0_set_level_function_end:
 tld7002_set_duty:	.type	func
 	movh.a	a4,#@his(tld7002_duty)
 	lea	a4,[a4]@los(tld7002_duty)
-.L135:
+.L139:
 	movh.a	a5,#@his(tld7002_device)
 	lea	a5,[a5]@los(tld7002_device)
-.L136:
+.L140:
 	call	TLD7002setDutyReadDiag
 .L123:
 	extr.u	d15,d2,#0,#16
@@ -185,17 +185,17 @@ tld7002_set_duty:	.type	func
 .L7:
 	mov	d4,#70
 	call	system_delay_us
-.L137:
+.L141:
 	movh.a	a4,#@his(tld7002_device)
 	lea	a4,[a4]@los(tld7002_device)
 	call	TLD7002broadcastDCsync
-.L138:
+.L142:
 	ret
-.L74:
+.L77:
 	
 __tld7002_set_duty_function_end:
 	.size	tld7002_set_duty,__tld7002_set_duty_function_end-tld7002_set_duty
-.L31:
+.L36:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_callback',code,cluster('tld7002_callback')
@@ -209,25 +209,25 @@ tld7002_callback:	.type	func
 	movh.a	a15,#@his(tld7002_init_flag)
 	lea	a15,[a15]@los(tld7002_init_flag)
 	ld.bu	d15,[a15]
-.L143:
+.L147:
 	jeq	d15,#0,.L8
-.L144:
+.L148:
 	mov	d4,#1
 	call	uart_read_byte
 .L125:
 	movh.a	a4,#@his(tld7002_fifo)
 	lea	a4,[a4]@los(tld7002_fifo)
-.L145:
+.L149:
 	mov	d4,d2
 .L126:
 	call	fifo_write_element
 .L8:
 	ret
-.L79:
+.L81:
 	
 __tld7002_callback_function_end:
 	.size	tld7002_callback,__tld7002_callback_function_end-tld7002_callback
-.L36:
+.L41:
 	; End of function
 	
 	.sdecl	'.text.zf_device_tld7002.tld7002_init',code,cluster('tld7002_init')
@@ -240,76 +240,76 @@ __tld7002_callback_function_end:
 tld7002_init:	.type	func
 	movh.a	a4,#@his(tld7002_fifo)
 	lea	a4,[a4]@los(tld7002_fifo)
-.L150:
+.L154:
 	mov	d4,#0
-.L151:
+.L155:
 	movh.a	a5,#@his(tld7002_buffer)
 	lea	a5,[a5]@los(tld7002_buffer)
-.L152:
+.L156:
 	mov	d5,#100
 	call	fifo_init
-.L153:
-	mov	d4,#674
-.L154:
+.L157:
+	mov	d4,#1028
+.L158:
 	mov	d5,#1
-.L155:
+.L159:
 	mov	d6,#0
-.L156:
+.L160:
 	mov	d7,#3
 	call	gpio_init
-.L157:
-	mov	d4,#1
-.L158:
-	mov	d5,#15625
-	sh	d5,#7
-.L159:
-	mov	d6,#11
-.L160:
-	mov	d7,#7
-	call	uart_init
 .L161:
 	mov	d4,#1
 .L162:
+	mov	d5,#15625
+	sh	d5,#7
+.L163:
+	mov	d6,#5
+.L164:
+	mov	d7,#3
+	call	uart_init
+.L165:
+	mov	d4,#1
+.L166:
 	mov	d5,#1
 	call	uart_rx_interrupt
-.L163:
+.L167:
 	movh.a	a15,#@his(tld7002_init_flag)
 	lea	a15,[a15]@los(tld7002_init_flag)
-.L164:
+.L168:
 	mov	d15,#1
-.L165:
+.L169:
 	st.b	[a15],d15
-.L166:
+.L170:
 	movh.a	a4,#@his(tld7002_device)
 	lea	a4,[a4]@los(tld7002_device)
 	call	TLD7002initDrivers
-.L167:
+.L171:
 	movh.a	a4,#@his(tld7002_otp_reg)
 	lea	a4,[a4]@los(tld7002_otp_reg)
-.L168:
+.L172:
 	movh.a	a5,#@his(tld7002_device)
 	lea	a5,[a5]@los(tld7002_device)
-.L169:
+.L173:
 	mov	d4,#1
-.L170:
+.L174:
 	mov	d5,#100
 	call	OTPemuComplete
-.L171:
+.L175:
 	movh.a	a4,#@his(tld7002_device)
 	lea	a4,[a4]@los(tld7002_device)
-.L172:
+.L176:
 	mov	d4,#1
 	call	TLD7002initDevice
-.L173:
+.L177:
 	mov	d4,#100
 	call	system_delay_us
-.L174:
+.L178:
 	ret
-.L82:
+.L84:
 	
 __tld7002_init_function_end:
 	.size	tld7002_init,__tld7002_init_function_end-tld7002_init
-.L41:
+.L46:
 	; End of function
 	
 	.sdecl	'.bss.zf_device_tld7002.tld7002_device',data,cluster('tld7002_device')
@@ -480,7 +480,7 @@ tld7002_otp_reg:	.type	object
 .L75:
 	.byte	7
 	.byte	'unsigned char',0,1,8
-.L77:
+.L79:
 	.byte	7
 	.byte	'unsigned short int',0,2,7,10
 	.byte	'_Ifx_SCU_WDTCPU_CON1_Bits',0,4,229,9,16,4,11
@@ -2000,7 +2000,7 @@ tld7002_otp_reg:	.type	object
 	.byte	'enabled',0,7,133,8,50
 	.word	606
 	.byte	6,0
-.L80:
+.L82:
 	.byte	7
 	.byte	'unsigned long int',0,4,7,8
 	.byte	'IfxCpu_getPerformanceCounter',0,3,7,254,6,19
@@ -4761,10 +4761,10 @@ tld7002_otp_reg:	.type	object
 	.byte	'HSLInetwork',0,22,71,56
 	.word	27977
 	.byte	0
-.L84:
+.L86:
 	.byte	3
 	.word	606
-.L91:
+.L93:
 	.byte	15,50
 	.word	606
 	.byte	16,49,0,31
@@ -16848,10 +16848,10 @@ tld7002_otp_reg:	.type	object
 	.byte	'TLD7002.h',0,5,0,0,0
 .L130:
 .L128:
-	.sdecl	'.debug_info',debug,cluster('tld7002_set_duty')
+	.sdecl	'.debug_info',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_info'
 .L27:
-	.word	267
+	.word	246
 	.half	3
 	.word	.L28
 	.byte	4,1
@@ -16862,24 +16862,20 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_set_duty',0,1,152,1,6,1,1,1
-	.word	.L18,.L74,.L17
+	.byte	'tld7002_gpin0_set_level',0,1,140,1,6,1,1,1
+	.word	.L16,.L74,.L15
 	.byte	4
-	.byte	'tld7002_id',0,1,152,1,29
+	.byte	'state',0,1,140,1,36
 	.word	.L75,.L76
 	.byte	5
-	.word	.L18,.L74
-	.byte	6
-	.byte	'err_flag',0,1,154,1,12
-	.word	.L77,.L78
-	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_set_duty')
+	.word	.L16,.L74
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_abbrev'
 .L28:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
-	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_set_duty')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_line'
 .L29:
 	.word	.L132-.L131
@@ -16890,34 +16886,26 @@ tld7002_otp_reg:	.type	object
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
 .L134:
-	.byte	5,49,7,0,5,2
-	.word	.L18
-	.byte	3,156,1,1,5,64,9
-	.half	.L135-.L18
-	.byte	1,5,80,9
-	.half	.L136-.L135
-	.byte	1,5,38,9
-	.half	.L123-.L136
-	.byte	1,5,5,9
-	.half	.L124-.L123
-	.byte	3,1,1,5,21,7,9
-	.half	.L7-.L124
-	.byte	3,4,1,5,29,9
-	.half	.L137-.L7
-	.byte	3,1,1,5,1,9
-	.half	.L138-.L137
+	.byte	5,6,7,0,5,2
+	.word	.L16
+	.byte	3,139,1,1,5,20,9
+	.half	.L121-.L16
+	.byte	3,2,1,5,39,9
+	.half	.L120-.L121
+	.byte	1,5,1,9
+	.half	.L122-.L120
 	.byte	3,1,1,7,9
-	.half	.L31-.L138
+	.half	.L31-.L122
 	.byte	0,1,1
 .L132:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_set_duty')
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_ranges'
 .L30:
-	.word	-1,.L18,0,.L31-.L18,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_callback')
+	.word	-1,.L16,0,.L31-.L16,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_info'
 .L32:
-	.word	244
+	.word	267
 	.half	3
 	.word	.L33
 	.byte	4,1
@@ -16928,54 +16916,62 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_callback',0,1,173,1,6,1,1,1
-	.word	.L20,.L79,.L19
+	.byte	'tld7002_set_duty',0,1,152,1,6,1,1,1
+	.word	.L18,.L77,.L17
 	.byte	4
-	.word	.L20,.L79
+	.byte	'tld7002_id',0,1,152,1,29
+	.word	.L75,.L78
 	.byte	5
-	.byte	'temp_data',0,1,175,1,12
-	.word	.L80,.L81
+	.word	.L18,.L77
+	.byte	6
+	.byte	'err_flag',0,1,154,1,12
+	.word	.L79,.L80
 	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_callback')
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_abbrev'
 .L33:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_callback')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_line'
 .L34:
-	.word	.L140-.L139
-.L139:
+	.word	.L136-.L135
+.L135:
 	.half	3
-	.word	.L142-.L141
-.L141:
+	.word	.L138-.L137
+.L137:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L142:
-	.byte	5,8,7,0,5,2
-	.word	.L20
-	.byte	3,175,1,1,5,5,9
-	.half	.L143-.L20
-	.byte	1,5,36,7,9
-	.half	.L144-.L143
-	.byte	3,2,1,5,29,9
-	.half	.L125-.L144
-	.byte	3,1,1,5,43,9
-	.half	.L145-.L125
-	.byte	1,5,1,9
-	.half	.L8-.L145
-	.byte	3,2,1,7,9
-	.half	.L36-.L8
+.L138:
+	.byte	5,49,7,0,5,2
+	.word	.L18
+	.byte	3,156,1,1,5,64,9
+	.half	.L139-.L18
+	.byte	1,5,80,9
+	.half	.L140-.L139
+	.byte	1,5,38,9
+	.half	.L123-.L140
+	.byte	1,5,5,9
+	.half	.L124-.L123
+	.byte	3,1,1,5,21,7,9
+	.half	.L7-.L124
+	.byte	3,4,1,5,29,9
+	.half	.L141-.L7
+	.byte	3,1,1,5,1,9
+	.half	.L142-.L141
+	.byte	3,1,1,7,9
+	.half	.L36-.L142
 	.byte	0,1,1
-.L140:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_callback')
+.L136:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_ranges'
 .L35:
-	.word	-1,.L20,0,.L36-.L20,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_init')
+	.word	-1,.L18,0,.L36-.L18,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_callback')
 	.sect	'.debug_info'
 .L37:
-	.word	216
+	.word	244
 	.half	3
 	.word	.L38
 	.byte	4,1
@@ -16986,91 +16982,54 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_init',0,1,190,1,6,1,1,1
-	.word	.L22,.L82,.L21
+	.byte	'tld7002_callback',0,1,173,1,6,1,1,1
+	.word	.L20,.L81,.L19
 	.byte	4
-	.word	.L22,.L82
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_init')
+	.word	.L20,.L81
+	.byte	5
+	.byte	'temp_data',0,1,175,1,12
+	.word	.L82,.L83
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_callback')
 	.sect	'.debug_abbrev'
 .L38:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_init')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_callback')
 	.sect	'.debug_line'
 .L39:
-	.word	.L147-.L146
-.L146:
+	.word	.L144-.L143
+.L143:
 	.half	3
-	.word	.L149-.L148
-.L148:
+	.word	.L146-.L145
+.L145:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L149:
-	.byte	5,16,7,0,5,2
-	.word	.L22
-	.byte	3,191,1,1,5,30,9
-	.half	.L150-.L22
-	.byte	1,5,46,9
-	.half	.L151-.L150
-	.byte	1,5,62,9
-	.half	.L152-.L151
-	.byte	1,5,15,9
-	.half	.L153-.L152
-	.byte	3,2,1,5,34,9
-	.half	.L154-.L153
-	.byte	1,5,39,9
-	.half	.L155-.L154
-	.byte	1,5,42,9
-	.half	.L156-.L155
-	.byte	1,5,16,9
-	.half	.L157-.L156
-	.byte	3,1,1,5,36,9
-	.half	.L158-.L157
-	.byte	1,5,55,9
-	.half	.L159-.L158
-	.byte	1,5,72,9
-	.half	.L160-.L159
-	.byte	1,5,23,9
-	.half	.L161-.L160
+.L146:
+	.byte	5,8,7,0,5,2
+	.word	.L20
+	.byte	3,175,1,1,5,5,9
+	.half	.L147-.L20
+	.byte	1,5,36,7,9
+	.half	.L148-.L147
+	.byte	3,2,1,5,29,9
+	.half	.L125-.L148
 	.byte	3,1,1,5,43,9
-	.half	.L162-.L161
-	.byte	1,5,5,9
-	.half	.L163-.L162
-	.byte	3,1,1,5,25,9
-	.half	.L164-.L163
-	.byte	1,5,23,9
-	.half	.L165-.L164
-	.byte	1,5,25,9
-	.half	.L166-.L165
-	.byte	3,3,1,5,20,9
-	.half	.L167-.L166
-	.byte	3,3,1,5,38,9
-	.half	.L168-.L167
-	.byte	1,5,54,9
-	.half	.L169-.L168
-	.byte	1,5,57,9
-	.half	.L170-.L169
-	.byte	1,5,24,9
-	.half	.L171-.L170
-	.byte	3,3,1,5,40,9
-	.half	.L172-.L171
-	.byte	1,5,21,9
-	.half	.L173-.L172
-	.byte	3,1,1,5,1,9
-	.half	.L174-.L173
-	.byte	3,1,1,7,9
-	.half	.L41-.L174
+	.half	.L149-.L125
+	.byte	1,5,1,9
+	.half	.L8-.L149
+	.byte	3,2,1,7,9
+	.half	.L41-.L8
 	.byte	0,1,1
-.L147:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_init')
+.L144:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_callback')
 	.sect	'.debug_ranges'
 .L40:
-	.word	-1,.L22,0,.L41-.L22,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_send_buffer')
+	.word	-1,.L20,0,.L41-.L20,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_init')
 	.sect	'.debug_info'
 .L42:
-	.word	260
+	.word	216
 	.half	3
 	.word	.L43
 	.byte	4,1
@@ -17081,55 +17040,91 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_send_buffer',0,1,81,6,1,1,1
-	.word	.L10,.L83,.L9
+	.byte	'tld7002_init',0,1,190,1,6,1,1,1
+	.word	.L22,.L84,.L21
 	.byte	4
-	.byte	'buffer',0,1,81,33
-	.word	.L84,.L85
-	.byte	4
-	.byte	'length',0,1,81,48
-	.word	.L80,.L86
-	.byte	5
-	.word	.L10,.L83
+	.word	.L22,.L84
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_send_buffer')
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_init')
 	.sect	'.debug_abbrev'
 .L43:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_send_buffer')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_init')
 	.sect	'.debug_line'
 .L44:
-	.word	.L176-.L175
-.L175:
+	.word	.L151-.L150
+.L150:
 	.half	3
-	.word	.L178-.L177
-.L177:
+	.word	.L153-.L152
+.L152:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L178:
-	.byte	5,6,7,0,5,2
-	.word	.L10
-	.byte	3,208,0,1,5,17,9
-	.half	.L106-.L10
-	.byte	3,3,1,5,23,9
-	.half	.L104-.L106
-	.byte	3,2,1,5,51,9
-	.half	.L179-.L104
-	.byte	1,5,1,9
-	.half	.L108-.L179
+.L153:
+	.byte	5,16,7,0,5,2
+	.word	.L22
+	.byte	3,191,1,1,5,30,9
+	.half	.L154-.L22
+	.byte	1,5,46,9
+	.half	.L155-.L154
+	.byte	1,5,62,9
+	.half	.L156-.L155
+	.byte	1,5,15,9
+	.half	.L157-.L156
+	.byte	3,2,1,5,34,9
+	.half	.L158-.L157
+	.byte	1,5,39,9
+	.half	.L159-.L158
+	.byte	1,5,42,9
+	.half	.L160-.L159
+	.byte	1,5,16,9
+	.half	.L161-.L160
+	.byte	3,1,1,5,36,9
+	.half	.L162-.L161
+	.byte	1,5,55,9
+	.half	.L163-.L162
+	.byte	1,5,72,9
+	.half	.L164-.L163
+	.byte	1,5,23,9
+	.half	.L165-.L164
+	.byte	3,1,1,5,43,9
+	.half	.L166-.L165
+	.byte	1,5,5,9
+	.half	.L167-.L166
+	.byte	3,1,1,5,25,9
+	.half	.L168-.L167
+	.byte	1,5,23,9
+	.half	.L169-.L168
+	.byte	1,5,25,9
+	.half	.L170-.L169
+	.byte	3,3,1,5,20,9
+	.half	.L171-.L170
+	.byte	3,3,1,5,38,9
+	.half	.L172-.L171
+	.byte	1,5,54,9
+	.half	.L173-.L172
+	.byte	1,5,57,9
+	.half	.L174-.L173
+	.byte	1,5,24,9
+	.half	.L175-.L174
+	.byte	3,3,1,5,40,9
+	.half	.L176-.L175
+	.byte	1,5,21,9
+	.half	.L177-.L176
+	.byte	3,1,1,5,1,9
+	.half	.L178-.L177
 	.byte	3,1,1,7,9
-	.half	.L46-.L108
+	.half	.L46-.L178
 	.byte	0,1,1
-.L176:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_send_buffer')
+.L151:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_init')
 	.sect	'.debug_ranges'
 .L45:
-	.word	-1,.L10,0,.L46-.L10,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_read_buffer')
+	.word	-1,.L22,0,.L46-.L22,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_info'
 .L47:
-	.word	365
+	.word	260
 	.half	3
 	.word	.L48
 	.byte	4,1
@@ -17140,114 +17135,55 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_read_buffer',0,1,96,9
-	.word	.L75
-	.byte	1,1,1
-	.word	.L12,.L87,.L11
+	.byte	'tld7002_send_buffer',0,1,81,6,1,1,1
+	.word	.L10,.L85,.L9
 	.byte	4
-	.byte	'buffer',0,1,96,36
-	.word	.L84,.L88
+	.byte	'buffer',0,1,81,33
+	.word	.L86,.L87
 	.byte	4
-	.byte	'length',0,1,96,51
-	.word	.L80,.L89
+	.byte	'length',0,1,81,48
+	.word	.L82,.L88
 	.byte	5
-	.word	.L12,.L87
-	.byte	6
-	.byte	'copy_successful',0,1,98,13
-	.word	.L75,.L90
-	.byte	6
-	.byte	'read_buffer',0,1,99,13
-	.word	.L91,.L92
-	.byte	6
-	.byte	'read_size',0,1,100,13
-	.word	.L80,.L93
-	.byte	6
-	.byte	'read_position',0,1,101,13
-	.word	.L75,.L94
-	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_read_buffer')
+	.word	.L10,.L85
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_abbrev'
 .L48:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
-	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_read_buffer')
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_line'
 .L49:
-	.word	.L181-.L180
-.L180:
+	.word	.L180-.L179
+.L179:
 	.half	3
-	.word	.L183-.L182
-.L182:
+	.word	.L182-.L181
+.L181:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L183:
-	.byte	5,9,7,0,5,2
-	.word	.L12
-	.byte	3,223,0,1,5,29,9
-	.half	.L114-.L12
-	.byte	3,2,1,5,25,9
-	.half	.L115-.L114
-	.byte	3,2,1,5,23,9
-	.half	.L184-.L115
-	.byte	1,5,27,9
-	.half	.L185-.L184
-	.byte	3,1,1,5,17,9
-	.half	.L116-.L185
-	.byte	3,2,1,5,15,9
-	.half	.L186-.L116
-	.byte	1,5,23,9
-	.half	.L187-.L186
-	.byte	3,1,1,5,37,9
-	.half	.L188-.L187
-	.byte	1,5,51,9
-	.half	.L189-.L188
-	.byte	1,5,62,9
-	.half	.L190-.L189
-	.byte	1,5,9,9
-	.half	.L191-.L190
-	.byte	3,2,1,5,5,9
-	.half	.L192-.L191
-	.byte	1,5,33,7,9
-	.half	.L193-.L192
-	.byte	3,2,1,5,43,9
-	.half	.L117-.L193
-	.byte	1,5,25,9
-	.half	.L194-.L117
-	.byte	1,5,5,9
-	.half	.L2-.L194
-	.byte	3,3,1,5,40,7,9
-	.half	.L195-.L2
-	.byte	3,2,1,5,36,9
-	.half	.L5-.L195
-	.byte	3,2,1,5,23,9
-	.half	.L196-.L5
-	.byte	1,5,20,9
-	.half	.L197-.L196
-	.byte	1,5,55,9
-	.half	.L198-.L197
-	.byte	3,126,1,5,31,9
-	.half	.L4-.L198
-	.byte	1,5,40,9
-	.half	.L199-.L4
-	.byte	1,5,25,7,9
-	.half	.L200-.L199
-	.byte	3,4,1,5,5,9
-	.half	.L3-.L200
-	.byte	3,2,1,5,1,9
-	.half	.L6-.L3
+.L182:
+	.byte	5,6,7,0,5,2
+	.word	.L10
+	.byte	3,208,0,1,5,17,9
+	.half	.L106-.L10
+	.byte	3,3,1,5,23,9
+	.half	.L104-.L106
+	.byte	3,2,1,5,51,9
+	.half	.L183-.L104
+	.byte	1,5,1,9
+	.half	.L108-.L183
 	.byte	3,1,1,7,9
-	.half	.L51-.L6
+	.half	.L51-.L108
 	.byte	0,1,1
-.L181:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_read_buffer')
+.L180:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_ranges'
 .L50:
-	.word	-1,.L12,0,.L51-.L12,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_clean_buffer')
+	.word	-1,.L10,0,.L51-.L10,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_info'
 .L52:
-	.word	224
+	.word	365
 	.half	3
 	.word	.L53
 	.byte	4,1
@@ -17258,43 +17194,114 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_clean_buffer',0,1,128,1,6,1,1,1
-	.word	.L14,.L95,.L13
+	.byte	'tld7002_read_buffer',0,1,96,9
+	.word	.L75
+	.byte	1,1,1
+	.word	.L12,.L89,.L11
 	.byte	4
-	.word	.L14,.L95
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_clean_buffer')
+	.byte	'buffer',0,1,96,36
+	.word	.L86,.L90
+	.byte	4
+	.byte	'length',0,1,96,51
+	.word	.L82,.L91
+	.byte	5
+	.word	.L12,.L89
+	.byte	6
+	.byte	'copy_successful',0,1,98,13
+	.word	.L75,.L92
+	.byte	6
+	.byte	'read_buffer',0,1,99,13
+	.word	.L93,.L94
+	.byte	6
+	.byte	'read_size',0,1,100,13
+	.word	.L82,.L95
+	.byte	6
+	.byte	'read_position',0,1,101,13
+	.word	.L75,.L96
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_abbrev'
 .L53:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_clean_buffer')
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_line'
 .L54:
-	.word	.L202-.L201
-.L201:
+	.word	.L185-.L184
+.L184:
 	.half	3
-	.word	.L204-.L203
-.L203:
+	.word	.L187-.L186
+.L186:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L204:
-	.byte	5,17,7,0,5,2
-	.word	.L14
-	.byte	3,129,1,1,5,1,9
-	.half	.L205-.L14
+.L187:
+	.byte	5,9,7,0,5,2
+	.word	.L12
+	.byte	3,223,0,1,5,29,9
+	.half	.L114-.L12
+	.byte	3,2,1,5,25,9
+	.half	.L115-.L114
+	.byte	3,2,1,5,23,9
+	.half	.L188-.L115
+	.byte	1,5,27,9
+	.half	.L189-.L188
+	.byte	3,1,1,5,17,9
+	.half	.L116-.L189
+	.byte	3,2,1,5,15,9
+	.half	.L190-.L116
+	.byte	1,5,23,9
+	.half	.L191-.L190
+	.byte	3,1,1,5,37,9
+	.half	.L192-.L191
+	.byte	1,5,51,9
+	.half	.L193-.L192
+	.byte	1,5,62,9
+	.half	.L194-.L193
+	.byte	1,5,9,9
+	.half	.L195-.L194
+	.byte	3,2,1,5,5,9
+	.half	.L196-.L195
+	.byte	1,5,33,7,9
+	.half	.L197-.L196
+	.byte	3,2,1,5,43,9
+	.half	.L117-.L197
+	.byte	1,5,25,9
+	.half	.L198-.L117
+	.byte	1,5,5,9
+	.half	.L2-.L198
+	.byte	3,3,1,5,40,7,9
+	.half	.L199-.L2
+	.byte	3,2,1,5,36,9
+	.half	.L5-.L199
+	.byte	3,2,1,5,23,9
+	.half	.L200-.L5
+	.byte	1,5,20,9
+	.half	.L201-.L200
+	.byte	1,5,55,9
+	.half	.L202-.L201
+	.byte	3,126,1,5,31,9
+	.half	.L4-.L202
+	.byte	1,5,40,9
+	.half	.L203-.L4
+	.byte	1,5,25,7,9
+	.half	.L204-.L203
+	.byte	3,4,1,5,5,9
+	.half	.L3-.L204
+	.byte	3,2,1,5,1,9
+	.half	.L6-.L3
 	.byte	3,1,1,7,9
-	.half	.L56-.L205
+	.half	.L56-.L6
 	.byte	0,1,1
-.L202:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_clean_buffer')
+.L185:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_ranges'
 .L55:
-	.word	-1,.L14,0,.L56-.L14,0,0
-	.sdecl	'.debug_info',debug,cluster('tld7002_gpin0_set_level')
+	.word	-1,.L12,0,.L56-.L12,0,0
+	.sdecl	'.debug_info',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_info'
 .L57:
-	.word	246
+	.word	224
 	.half	3
 	.word	.L58
 	.byte	4,1
@@ -17305,46 +17312,39 @@ tld7002_otp_reg:	.type	object
 	.byte	2
 	.word	.L23
 	.byte	3
-	.byte	'tld7002_gpin0_set_level',0,1,140,1,6,1,1,1
-	.word	.L16,.L96,.L15
+	.byte	'tld7002_clean_buffer',0,1,128,1,6,1,1,1
+	.word	.L14,.L97,.L13
 	.byte	4
-	.byte	'state',0,1,140,1,36
-	.word	.L75,.L97
-	.byte	5
-	.word	.L16,.L96
+	.word	.L14,.L97
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('tld7002_gpin0_set_level')
+	.sdecl	'.debug_abbrev',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_abbrev'
 .L58:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('tld7002_gpin0_set_level')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_line'
 .L59:
-	.word	.L207-.L206
-.L206:
+	.word	.L206-.L205
+.L205:
 	.half	3
-	.word	.L209-.L208
-.L208:
+	.word	.L208-.L207
+.L207:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/led_driver/zf_device_tld7002.c',0,0,0,0,0
-.L209:
-	.byte	5,6,7,0,5,2
-	.word	.L16
-	.byte	3,139,1,1,5,20,9
-	.half	.L121-.L16
-	.byte	3,2,1,5,39,9
-	.half	.L120-.L121
-	.byte	1,5,1,9
-	.half	.L122-.L120
+.L208:
+	.byte	5,17,7,0,5,2
+	.word	.L14
+	.byte	3,129,1,1,5,1,9
+	.half	.L209-.L14
 	.byte	3,1,1,7,9
-	.half	.L61-.L122
+	.half	.L61-.L209
 	.byte	0,1,1
-.L207:
-	.sdecl	'.debug_ranges',debug,cluster('tld7002_gpin0_set_level')
+.L206:
+	.sdecl	'.debug_ranges',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_ranges'
 .L60:
-	.word	-1,.L16,0,.L61-.L16,0,0
+	.word	-1,.L14,0,.L61-.L14,0,0
 	.sdecl	'.debug_info',debug,cluster('tld7002_duty')
 	.sect	'.debug_info'
 .L62:
@@ -17479,7 +17479,7 @@ tld7002_otp_reg:	.type	object
 	.byte	0,0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_callback')
 	.sect	'.debug_loc'
-.L81:
+.L83:
 	.word	-1,.L20,.L125-.L20,.L8-.L20
 	.half	1
 	.byte	82
@@ -17488,20 +17488,20 @@ tld7002_otp_reg:	.type	object
 	.byte	84
 	.word	0,0
 .L19:
-	.word	-1,.L20,0,.L79-.L20
+	.word	-1,.L20,0,.L81-.L20
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_loc'
 .L13:
-	.word	-1,.L14,0,.L95-.L14
+	.word	-1,.L14,0,.L97-.L14
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_loc'
-.L97:
+.L76:
 	.word	-1,.L16,0,.L120-.L16
 	.half	1
 	.byte	84
@@ -17510,61 +17510,61 @@ tld7002_otp_reg:	.type	object
 	.byte	85
 	.word	0,0
 .L15:
-	.word	-1,.L16,0,.L96-.L16
+	.word	-1,.L16,0,.L74-.L16
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_init')
 	.sect	'.debug_loc'
 .L21:
-	.word	-1,.L22,0,.L82-.L22
+	.word	-1,.L22,0,.L84-.L22
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_loc'
-.L88:
+.L90:
 	.word	-1,.L12,0,.L111-.L12
 	.half	1
 	.byte	100
-	.word	.L113-.L12,.L87-.L12
+	.word	.L113-.L12,.L89-.L12
 	.half	1
 	.byte	111
 	.word	0,0
-.L90:
-	.word	-1,.L12,.L115-.L12,.L87-.L12
+.L92:
+	.word	-1,.L12,.L115-.L12,.L89-.L12
 	.half	1
 	.byte	89
-	.word	.L119-.L12,.L87-.L12
+	.word	.L119-.L12,.L89-.L12
 	.half	1
 	.byte	82
 	.word	0,0
-.L89:
+.L91:
 	.word	-1,.L12,0,.L112-.L12
 	.half	1
 	.byte	84
-	.word	.L114-.L12,.L87-.L12
+	.word	.L114-.L12,.L89-.L12
 	.half	1
 	.byte	88
 	.word	0,0
-.L92:
-	.word	-1,.L12,0,.L87-.L12
+.L94:
+	.word	-1,.L12,0,.L89-.L12
 	.half	2
 	.byte	145,72
 	.word	0,0
-.L94:
+.L96:
 	.word	-1,.L12,.L116-.L12,.L117-.L12
 	.half	1
 	.byte	95
 	.word	.L2-.L12,.L118-.L12
 	.half	1
 	.byte	95
-	.word	.L4-.L12,.L87-.L12
+	.word	.L4-.L12,.L89-.L12
 	.half	1
 	.byte	95
 	.word	0,0
-.L93:
-	.word	-1,.L12,0,.L87-.L12
+.L95:
+	.word	-1,.L12,0,.L89-.L12
 	.half	2
 	.byte	145,122
 	.word	0,0
@@ -17572,31 +17572,31 @@ tld7002_otp_reg:	.type	object
 	.word	-1,.L12,0,.L110-.L12
 	.half	2
 	.byte	138,0
-	.word	.L110-.L12,.L87-.L12
+	.word	.L110-.L12,.L89-.L12
 	.half	2
 	.byte	138,56
-	.word	.L87-.L12,.L87-.L12
+	.word	.L89-.L12,.L89-.L12
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_loc'
-.L85:
+.L87:
 	.word	-1,.L10,0,.L103-.L10
 	.half	1
 	.byte	100
-	.word	.L105-.L10,.L83-.L10
+	.word	.L105-.L10,.L85-.L10
 	.half	1
 	.byte	111
 	.word	.L107-.L10,.L108-.L10
 	.half	1
 	.byte	100
 	.word	0,0
-.L86:
+.L88:
 	.word	-1,.L10,0,.L104-.L10
 	.half	1
 	.byte	84
-	.word	.L106-.L10,.L83-.L10
+	.word	.L106-.L10,.L85-.L10
 	.half	1
 	.byte	95
 	.word	.L109-.L10,.L108-.L10
@@ -17604,24 +17604,24 @@ tld7002_otp_reg:	.type	object
 	.byte	85
 	.word	0,0
 .L9:
-	.word	-1,.L10,0,.L83-.L10
+	.word	-1,.L10,0,.L85-.L10
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_loc'
-.L78:
-	.word	-1,.L18,.L124-.L18,.L74-.L18
+.L80:
+	.word	-1,.L18,.L124-.L18,.L77-.L18
 	.half	1
 	.byte	95
 	.word	0,0
-.L76:
+.L78:
 	.word	-1,.L18,0,.L123-.L18
 	.half	1
 	.byte	84
 	.word	0,0
 .L17:
-	.word	-1,.L18,0,.L74-.L18
+	.word	-1,.L18,0,.L77-.L18
 	.half	2
 	.byte	138,0
 	.word	0,0
@@ -17635,34 +17635,34 @@ tld7002_otp_reg:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('tld7002_send_buffer')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L10,.L83-.L10
+	.word	.L210,.L10,.L85-.L10
 	.sdecl	'.debug_frame',debug,cluster('tld7002_read_buffer')
 	.sect	'.debug_frame'
 	.word	36
-	.word	.L210,.L12,.L87-.L12
+	.word	.L210,.L12,.L89-.L12
 	.byte	4
 	.word	(.L110-.L12)/2
 	.byte	19,56,22,26,3,19,138,56,4
-	.word	(.L87-.L110)/2
+	.word	(.L89-.L110)/2
 	.byte	19,0,8,26,0,0
 	.sdecl	'.debug_frame',debug,cluster('tld7002_clean_buffer')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L14,.L95-.L14
+	.word	.L210,.L14,.L97-.L14
 	.sdecl	'.debug_frame',debug,cluster('tld7002_gpin0_set_level')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L16,.L96-.L16
+	.word	.L210,.L16,.L74-.L16
 	.sdecl	'.debug_frame',debug,cluster('tld7002_set_duty')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L18,.L74-.L18
+	.word	.L210,.L18,.L77-.L18
 	.sdecl	'.debug_frame',debug,cluster('tld7002_callback')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L20,.L79-.L20
+	.word	.L210,.L20,.L81-.L20
 	.sdecl	'.debug_frame',debug,cluster('tld7002_init')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L210,.L22,.L82-.L22
+	.word	.L210,.L22,.L84-.L22
 	; Module end
