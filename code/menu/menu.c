@@ -10,7 +10,37 @@ static uint8 menu_cfg_flag = 0;
 static uint8 menu_global_line = 0;
 static uint8 last_menu_global_line = 0;
 static uint8 menu_global_line_buff_flag = 0;
+static float turn_menu_target_angle_deg = 0.0f;
+static float turn_menu_encoder_value = 0.0f;
+static float turn_menu_angle_deg = 0.0f;
+static uint8 turn_menu_motor_enable = 0;
+
+#define TURN_ENC_FULL_SCALE      45000.0f
+#define TURN_ANGLE_FULL_SCALE    60.0f
+
+static float Turn_EncToAngel(float enc_val)
+{
+    return enc_val * (TURN_ANGLE_FULL_SCALE / TURN_ENC_FULL_SCALE);
+}
+
+static float Turn_AngelToEnc(float angle_val)
+{
+    return angle_val * (TURN_ENC_FULL_SCALE / TURN_ANGLE_FULL_SCALE);
+}
+
 MenuPage_Linked_List *menu_head_page_node = NULL; // 菜单链表头指针
+
+static void Turn_Menu_Target_Angle_Sync(void)
+{
+    Turn_SetTargetAngleDeg(Turn_AngelToEnc(turn_menu_target_angle_deg));
+}
+
+static void Turn_Menu_Encoder_Value_Update(void)
+{
+    turn_menu_encoder_value = (float)Turn_GetEncoderCount();
+    turn_menu_angle_deg = Turn_EncToAngel(turn_menu_encoder_value);
+    Turn_SetMotorEnable(turn_menu_motor_enable);
+}
 
 /*
 {"Test1", FLOAT_VALUE_SHOW_TYPE, .line_extends.float_value_show_line.show_value = &Test,.display_line_count = 0},
@@ -71,16 +101,23 @@ void test_Page_Init(void)
 }
 
 /***********************************************
-* @brief : 舵机页面
+* @brief : 前轮转向页面
 * @param : void
 * @return: void
 * @date  : 2025年3月20日14:26:28
 * @author: SJX
 ************************************************/
 
-void Servo_Page_Init(void)
+void Turn_Page_Init(void)
 {
     static MenuLine LineList[] = {
+
+            MENU_ITEM_FLOAT_EDIT("Angel", &turn_menu_target_angle_deg, 1.0f, 0),
+            MENU_ITEM_CONFIG_SHOW("Motor", &turn_menu_motor_enable, 0),
+            MENU_ITEM_ENTER_FUNC("ON", Turn_Menu_Target_Angle_Sync, 0),
+            MENU_ITEM_FLOAT_SHOW("Enc", &turn_menu_encoder_value, 0),
+            MENU_ITEM_FLOAT_SHOW("Angle", &turn_menu_angle_deg, 0),
+            MENU_ITEM_STATIC_FUNC(" ", Turn_Menu_Encoder_Value_Update, 0),
 
 //            MENU_ITEM_FLOAT_EDIT("Angle_Kp", &Angle_PID.Kp, 0.1f, 0),
 //            MENU_ITEM_FLOAT_EDIT("Angle_Ki", &Angle_PID.Ki, 0.1f, 0),
@@ -89,10 +126,9 @@ void Servo_Page_Init(void)
 //            MENU_ITEM_INT_EDIT("STEER_MID", (int16*)&STEER_MID, 1, 1, 0),
 //            MENU_ITEM_CONFIG_SHOW("Servo_Status",&servo_run_flag,0),
 
-
         {".", }
     };
-    static MenuPage Page = {"Servo_Control", .line = LineList, .open_status = 0};
+    static MenuPage Page = {"Turn_Control", .line = LineList, .open_status = 0};
 
     Menu_Push_Node(&Page);
 }
@@ -159,44 +195,44 @@ void ASR_Page_Init(void)
 * @date  : 2025年3月20日14:26:28
 * @author: SJX
 ************************************************/
-//void Motor_Page_Init(void)
-//{
-//    static MenuLine  LineList[] = {
-//   //         MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
-////            MENU_ITEM_PAGE_JUMP("Camera",Camera_Page_Init, 7),
-////            MENU_ITEM_FLOAT_EDIT("LeftKp", &Motor_Speed_PID_Left.Kp, 0.1f, 0),
-////            MENU_ITEM_FLOAT_EDIT("Leftki",&Motor_Speed_PID_Left.Ki, 0.1f,0),
-////            MENU_ITEM_FLOAT_EDIT("Leftkd",&Motor_Speed_PID_Left.Kd,0.1f, 0),
-////            MENU_ITEM_FLOAT_EDIT("RightKp", &Motor_Speed_PID_Right.Kp, 0.1f, 0),
-////            MENU_ITEM_FLOAT_EDIT("Rightki",&Motor_Speed_PID_Right.Ki, 0.1f,0),
-////            MENU_ITEM_FLOAT_EDIT("Rightkd",&Motor_Speed_PID_Right.Kd,0.1f, 0),
-////            MENU_ITEM_INT_EDIT("V0", &V0, 1, 2, 0),
-////            MENU_ITEM_INT_SHOW("L.tar_V",&Left_Motor.target_speed,0),
-////            MENU_ITEM_INT_SHOW("R.tar_V",&Right_Motor.target_speed,0),
-////            MENU_ITEM_FLOAT_EDIT("Left_set_pwm", &left_set_pwm, 10.0f, 1, 0),
-////            MENU_ITEM_FLOAT_EDIT("Right_set_pwm", &right_set_pwm, 10.0f, 1, 0),
-////            MENU_ITEM_FLOAT_EDIT("SetValue_Left", &SetValue_Left, 100.0f, 0),
-////            MENU_ITEM_FLOAT_EDIT("SetValue_Right", &SetValue_Right, 100.0f, 0),
-////            MENU_ITEM_PAGE_JUMP("Start",Start_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Config",Config_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Value",Value_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Data",Data_Page_Init, 1),
-////            MENU_ITEM_PAGE_JUMP("Speed",Speed_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Element",element_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Element_CFG",element_Config_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Leg",leg_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Motor",Motor_Page_Init, 0),
-////
-//////            MENU_ITEM_PAGE_JUMP("UB",UB_Page_Init, 1),
-////            MENU_ITEM_PAGE_JUMP("Preset",Preset_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Race_Preset",Race_Preset_Page_Init, 0),
-////            MENU_ITEM_PAGE_JUMP("Race_Time",Race_Time_Page_Init, 0),
-//            {".",  }
-//    };
-//    static MenuPage Page = {"Motor", .line = LineList, .open_status = 0} ;
+void Motor_Page_Init(void)
+{
+   static MenuLine  LineList[] = {
+  //         MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
+//            MENU_ITEM_PAGE_JUMP("Camera",Camera_Page_Init, 7),
+//            MENU_ITEM_FLOAT_EDIT("LeftKp", &Motor_Speed_PID_Left.Kp, 0.1f, 0),
+//            MENU_ITEM_FLOAT_EDIT("Leftki",&Motor_Speed_PID_Left.Ki, 0.1f,0),
+//            MENU_ITEM_FLOAT_EDIT("Leftkd",&Motor_Speed_PID_Left.Kd,0.1f, 0),
+//            MENU_ITEM_FLOAT_EDIT("RightKp", &Motor_Speed_PID_Right.Kp, 0.1f, 0),
+//            MENU_ITEM_FLOAT_EDIT("Rightki",&Motor_Speed_PID_Right.Ki, 0.1f,0),
+//            MENU_ITEM_FLOAT_EDIT("Rightkd",&Motor_Speed_PID_Right.Kd,0.1f, 0),
+//            MENU_ITEM_INT_EDIT("V0", &V0, 1, 2, 0),
+//            MENU_ITEM_INT_SHOW("L.tar_V",&Left_Motor.target_speed,0),
+//            MENU_ITEM_INT_SHOW("R.tar_V",&Right_Motor.target_speed,0),
+//            MENU_ITEM_FLOAT_EDIT("Left_set_pwm", &left_set_pwm, 10.0f, 1, 0),
+//            MENU_ITEM_FLOAT_EDIT("Right_set_pwm", &right_set_pwm, 10.0f, 1, 0),
+//            MENU_ITEM_FLOAT_EDIT("SetValue_Left", &SetValue_Left, 100.0f, 0),
+//            MENU_ITEM_FLOAT_EDIT("SetValue_Right", &SetValue_Right, 100.0f, 0),
+//            MENU_ITEM_PAGE_JUMP("Start",Start_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Config",Config_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Value",Value_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Data",Data_Page_Init, 1),
+//            MENU_ITEM_PAGE_JUMP("Speed",Speed_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Element",element_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Element_CFG",element_Config_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Leg",leg_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Motor",Motor_Page_Init, 0),
 //
-//    Menu_Push_Node(&Page);
-//}
+////            MENU_ITEM_PAGE_JUMP("UB",UB_Page_Init, 1),
+//            MENU_ITEM_PAGE_JUMP("Preset",Preset_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Race_Preset",Race_Preset_Page_Init, 0),
+//            MENU_ITEM_PAGE_JUMP("Race_Time",Race_Time_Page_Init, 0),
+           {".",  }
+   };
+   static MenuPage Page = {"Motor", .line = LineList, .open_status = 0} ;
+
+   Menu_Push_Node(&Page);
+}
 
 
 
@@ -213,8 +249,8 @@ void Main_Page_Init(void)
     static MenuLine LineList[] = {
 //        MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
           MENU_ITEM_PAGE_JUMP("test",test_Page_Init, 0),
-//        MENU_ITEM_PAGE_JUMP("Motor", Motor_Page_Init, 7),
-          MENU_ITEM_PAGE_JUMP("Servo_Control ", Servo_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("Motor", Motor_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("Turn_Control ", Turn_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("ASR ",ASR_Page_Init, 0),
 //        MENU_ITEM_PAGE_JUMP("Camera_Page ", Camera_Page_Init, 0),
    //     MENU_ITEM_INT_EDIT("PWM", &Left_Motor.set_pwm, 10, 2, 0),
@@ -222,13 +258,6 @@ void Main_Page_Init(void)
 //        MENU_ITEM_INT_SHOW("L_Enc_Num", &Left_Motor.encoder_num, 0),
 //        MENU_ITEM_INT_SHOW("R_Enc_Num", &Right_Motor.encoder_num, 0),
 //        MENU_ITEM_INT_SHOW("gnss.state", (int16*)&gnss.state, 0),
-//        MENU_ITEM_INT_SHOW("GPS_getdata", (int16*)&gnss_flag, 0),
-//
-//        MENU_ITEM_DOUBLE_SHOW("gnss.latitude" , &gnss.latitude, 0),
-//        MENU_ITEM_DOUBLE_SHOW("gnss.longitude", &gnss.longitude, 0),
-//        MENU_ITEM_FLOAT_SHOW("gnss.longitude", &gnss.longitude, 0),
-//        MENU_ITEM_FLOAT_SHOW("icm42688_acc_x", &icm42688_acc_x, 0),
-//        MENU_ITEM_FLOAT_SHOW("icm42688_gyro_x", &icm42688_gyro_x, 0),
 
 //        MENU_ITEM_INT_SHOW("GPS_parse", &gnss_data_parse, 0),
 

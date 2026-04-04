@@ -362,6 +362,8 @@ MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
+MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\\Gpt12\\IncrEnc\IfxGpt12_IncrEnc.h"
 "D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\\Gpt12\\IncrEnc\IfxGpt12_IncrEnc.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Service\\CpuGeneric\StdIf\IfxStdIf_Pos.h"

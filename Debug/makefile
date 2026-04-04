@@ -51,6 +51,7 @@ RM := rm -rf
 -include code/loudspeak/subdir.mk
 -include code/led_driver/TLD7002_driver/subdir.mk
 -include code/led_driver/subdir.mk
+-include code/Turn/subdir.mk
 -include code/SysTimer/subdir.mk
 -include code/Status/subdir.mk
 -include code/PID/subdir.mk

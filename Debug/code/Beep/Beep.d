@@ -394,3 +394,5 @@ Beep.o :	"D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h" :
 Beep.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
+Beep.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :

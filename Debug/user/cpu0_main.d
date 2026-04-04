@@ -394,3 +394,5 @@ cpu0_main.o :	"D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h" :
 cpu0_main.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
+cpu0_main.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :

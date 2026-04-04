@@ -390,3 +390,5 @@ MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
+MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
