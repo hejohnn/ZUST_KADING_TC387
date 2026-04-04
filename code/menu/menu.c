@@ -61,6 +61,7 @@ void test_Page_Init(void)
     MENU_ITEM_ENTER_FUNC("LED_ON", led_test_on, 0),
     MENU_ITEM_ENTER_FUNC("LED_OFF", led_test_off, 0),
     MENU_ITEM_ENTER_FUNC("LED_LEFT", led_test_left_arrow, 0),
+    MENU_ITEM_ENTER_FUNC("LED_RIGHT", led_test_right_arrow, 0),
         {".", }
     };
 

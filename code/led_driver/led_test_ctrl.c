@@ -36,6 +36,17 @@ static const uint16 led_left_arrow_bitmap[7] =
     // 0x0018,
     // 0x0010,
 };
+
+static const uint16 led_right_arrow_bitmap[7] =
+{
+    0x0010,
+    0x0018,
+    0x3FFC,
+    0x3FFE,
+    0x3FFC,
+    0x0018,
+    0x0010,
+};
 static void led_test_tld_init_if_needed(void)
 {
     if(!led_tld_inited)
@@ -101,6 +112,18 @@ void led_test_left_arrow(void)
     dot_matrix_screen_reset_scan_phase();
     dot_matrix_screen_set_brightness(9000);
     dot_matrix_screen_show_bitmap_7x15(led_left_arrow_bitmap);
+    led_need_dot_scan = 1;
+}
+
+void led_test_right_arrow(void)
+{
+    led_test_dot_matrix_init_if_needed();
+
+    led_force_off_lock = 0;
+    led_need_dot_scan = 0;
+    dot_matrix_screen_reset_scan_phase();
+    dot_matrix_screen_set_brightness(9000);
+    dot_matrix_screen_show_bitmap_7x15(led_right_arrow_bitmap);
     led_need_dot_scan = 1;
 }
 
