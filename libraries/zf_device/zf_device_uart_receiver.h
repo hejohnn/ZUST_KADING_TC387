@@ -49,7 +49,7 @@
 
 #define UART_RECEVIER_UART_INDEX            UART_2              // 定义串口接收机使用的串口
 #define UART_RECEVIER_TX_PIN                UART2_TX_P10_5      // 遥控器接收机没有这个引脚，仅用于串口初始化时占位使用
-#define UART_RECEVIER_RX_PIN                UART2_RX_P10_6      // 串口接收机的TX引脚 连接单片机的RX引脚
+#define UART_RECEVIER_RX_PIN                UART2_RX_P33_8      // 串口接收机的TX引脚 连接单片机的RX引脚
 #define SBUS_UART_BAUDRATE                  (100000)            // 指定 SBUS 串口所使用的的串口波特率 (用户不可修改)
 #define UART_RECEVIER_CHANNEL_NUM           ( 6 )               // 定义遥控器通道数量 (用户不可修改)
 

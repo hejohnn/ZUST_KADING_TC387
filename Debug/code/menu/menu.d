@@ -396,6 +396,8 @@ menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
+menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\user\isr.h"
 "D:\\work\\ZUST_KADING_TC387\\user\isr.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\xf_asr\asr_audio.h"

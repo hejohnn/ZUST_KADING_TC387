@@ -54,6 +54,7 @@ RM := rm -rf
 -include code/Turn/subdir.mk
 -include code/SysTimer/subdir.mk
 -include code/Status/subdir.mk
+-include code/Remote/subdir.mk
 -include code/PID/subdir.mk
 -include code/MyKey/subdir.mk
 -include code/MyEncoder/subdir.mk

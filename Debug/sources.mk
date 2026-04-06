@@ -28,6 +28,7 @@ code/Beep \
 code/MyEncoder \
 code/MyKey \
 code/PID \
+code/Remote \
 code/Status \
 code/SysTimer \
 code/Turn \

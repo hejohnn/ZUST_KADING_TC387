@@ -1126,8 +1126,8 @@ void audio_loop()
             asr_next_boot_wifi_retry_ms = 0;
             asr_boot_wifi_retry_count = 0;
             asr_result_reset();
-            asr_display_status("Press P20.8 to start ASR");
-            printf("按下P20.8按键开始连接服务器，连接完成后开始识别，开始识别后再次按下按键停止识别\r\n");
+            asr_display_status("Press P20.7 to start ASR");
+            printf("按下P20.7按键开始连接服务器，连接完成后开始识别，开始识别后再次按下按键停止识别\r\n");
         }
         return;
     }
@@ -1273,7 +1273,7 @@ void audio_loop()
 
             pit_enable(ASR_PIT);
             printf("\r\n语音识别完成，可再次按下按键开始识别\r\n");
-            asr_display_status("Recognition finished. Press P20.8 to restart.");
+            asr_display_status("Recognition finished. Press P20.7 to restart.");
             audio_get_count = -1;
             audio_need_net_flag = 0;
             asr_finalize_phase = ASR_FINALIZE_IDLE;

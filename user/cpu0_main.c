@@ -87,6 +87,7 @@ int core0_main(void)
     clock_init();                   // 获取时钟频率<务必保留>
     debug_init();                   // 初始化默认调试串口
     Turn_Init();                    //转向电机闭环初始化(优先接管P14_5/P14_6防误驱动)
+    Remote_Init();                  //遥控模块初始化(SBUS接收)
     // 此处编写用户代码 例如外设初始化代码等
     Beep_Init();                    //蜂鸣器初始化
     LoudSpeak_Init();               //PWM喇叭初始化(P33.5)

@@ -10,37 +10,8 @@ static uint8 menu_cfg_flag = 0;
 static uint8 menu_global_line = 0;
 static uint8 last_menu_global_line = 0;
 static uint8 menu_global_line_buff_flag = 0;
-static float turn_menu_target_angle_deg = 0.0f;
-static float turn_menu_encoder_value = 0.0f;
-static float turn_menu_angle_deg = 0.0f;
-static uint8 turn_menu_motor_enable = 0;
-
-#define TURN_ENC_FULL_SCALE      45000.0f
-#define TURN_ANGLE_FULL_SCALE    60.0f
-
-static float Turn_EncToAngel(float enc_val)
-{
-    return enc_val * (TURN_ANGLE_FULL_SCALE / TURN_ENC_FULL_SCALE);
-}
-
-static float Turn_AngelToEnc(float angle_val)
-{
-    return angle_val * (TURN_ENC_FULL_SCALE / TURN_ANGLE_FULL_SCALE);
-}
 
 MenuPage_Linked_List *menu_head_page_node = NULL; // 菜单链表头指针
-
-static void Turn_Menu_Target_Angle_Sync(void)
-{
-    Turn_SetTargetAngleDeg(Turn_AngelToEnc(turn_menu_target_angle_deg));
-}
-
-static void Turn_Menu_Encoder_Value_Update(void)
-{
-    turn_menu_encoder_value = (float)Turn_GetEncoderCount();
-    turn_menu_angle_deg = Turn_EncToAngel(turn_menu_encoder_value);
-    Turn_SetMotorEnable(turn_menu_motor_enable);
-}
 
 /*
 {"Test1", FLOAT_VALUE_SHOW_TYPE, .line_extends.float_value_show_line.show_value = &Test,.display_line_count = 0},
@@ -100,39 +71,6 @@ void test_Page_Init(void)
     Menu_Push_Node(&Page);
 }
 
-/***********************************************
-* @brief : 前轮转向页面
-* @param : void
-* @return: void
-* @date  : 2025年3月20日14:26:28
-* @author: SJX
-************************************************/
-
-void Turn_Page_Init(void)
-{
-    static MenuLine LineList[] = {
-
-            MENU_ITEM_FLOAT_EDIT("Angel", &turn_menu_target_angle_deg, 1.0f, 0),
-            MENU_ITEM_CONFIG_SHOW("Motor", &turn_menu_motor_enable, 0),
-            MENU_ITEM_ENTER_FUNC("ON", Turn_Menu_Target_Angle_Sync, 0),
-            MENU_ITEM_FLOAT_SHOW("Enc", &turn_menu_encoder_value, 0),
-            MENU_ITEM_FLOAT_SHOW("Angle", &turn_menu_angle_deg, 0),
-            MENU_ITEM_STATIC_FUNC(" ", Turn_Menu_Encoder_Value_Update, 0),
-
-//            MENU_ITEM_FLOAT_EDIT("Angle_Kp", &Angle_PID.Kp, 0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("Angle_Ki", &Angle_PID.Ki, 0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("Angle_Kd", &Angle_PID.Kd, 0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("turn_speed", &diff_gain, 1.0f, 0),
-//            MENU_ITEM_INT_EDIT("STEER_MID", (int16*)&STEER_MID, 1, 1, 0),
-//            MENU_ITEM_CONFIG_SHOW("Servo_Status",&servo_run_flag,0),
-
-        {".", }
-    };
-    static MenuPage Page = {"Turn_Control", .line = LineList, .open_status = 0};
-
-    Menu_Push_Node(&Page);
-}
-
 static void ASR_Auto_Run_Entry(void)
 {
     static uint8 asr_inited = 0;
@@ -177,10 +115,55 @@ void ASR_Page_Init(void)
 
 
 
-
         {".", }
     };
     static MenuPage Page = {"ASR", .line = LineList, .open_status = 0};
+
+    Menu_Push_Node(&Page);
+}
+
+
+
+/***********************************************
+* @brief : 遥控器页面
+* @param : void
+* @return: void
+* @date  : 2025年3月20日14:26:28
+* @author: SJX
+************************************************/
+
+void Remote_Page_Init(void)
+{
+    static MenuLine LineList[] = {
+
+        MENU_ITEM_CONFIG_SHOW("CH1_Map", NULL, 0),
+
+        {".", }
+    };
+    static MenuPage Page = {"Remote", .line = LineList, .open_status = 0};
+
+    LineList[0].line_extends.config_value_show_line.show_value = Remote_GetSteerMapEnablePtr();
+
+    Menu_Push_Node(&Page);
+}
+
+void Turn_Page_Init(void)
+{
+    static MenuLine LineList[] = {
+            MENU_ITEM_FLOAT_EDIT("Angel", NULL, 10.0f, 0),
+            MENU_ITEM_CONFIG_SHOW("Motor", NULL, 0),
+            MENU_ITEM_ENTER_FUNC("ON", Turn_MenuTargetAngleSync, 0),
+            MENU_ITEM_FLOAT_SHOW("Enc", NULL, 0),
+            MENU_ITEM_FLOAT_SHOW("Angle", NULL, 0),
+            MENU_ITEM_STATIC_FUNC(" ", Turn_MenuRuntimeUpdate, 0),
+            {".", }
+    };
+
+    static MenuPage Page = {"Turn_Control", .line = LineList, .open_status = 0};
+    LineList[0].line_extends.float_value_edit_line.edit_value = Turn_GetMenuTargetAngleDegPtr();
+    LineList[1].line_extends.config_value_show_line.show_value = Turn_GetMenuMotorEnablePtr();
+    LineList[3].line_extends.float_value_show_line.show_value = Turn_GetMenuEncoderValuePtr();
+    LineList[4].line_extends.float_value_show_line.show_value = Turn_GetMenuAngleDegPtr();
 
     Menu_Push_Node(&Page);
 }
@@ -252,6 +235,8 @@ void Main_Page_Init(void)
           MENU_ITEM_PAGE_JUMP("Motor", Motor_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("Turn_Control ", Turn_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("ASR ",ASR_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("Remote ",Remote_Page_Init, 0),
+
 //        MENU_ITEM_PAGE_JUMP("Camera_Page ", Camera_Page_Init, 0),
    //     MENU_ITEM_INT_EDIT("PWM", &Left_Motor.set_pwm, 10, 2, 0),
   //      MENU_ITEM_INT_EDIT("TarSpeed", &Left_Motor.target_speed, 1, 2, 0),
