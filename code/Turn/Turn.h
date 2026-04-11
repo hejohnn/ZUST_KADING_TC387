@@ -14,7 +14,7 @@
 #define Turn_PWM_SAFE_PIN                P14_6
 #define Turn_PWM_SAFE_LEVEL              0
 #define Turn_MOTOR_FREQ  20000
-#define Turn_Duty_LIMIT  4000
+#define Turn_Duty_LIMIT  5000
 
 #define Turn_DIR_PIN                     P14_5
 #define Turn_DIR_POSITIVE_LEVEL          1
