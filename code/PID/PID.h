@@ -65,14 +65,6 @@ extern PID_IncTypeDef UB_Angle_AccPID;
 extern PID_IncTypeDef UB_Speed_PID;
 extern PID_IncTypeDef Auto_Cornering_PID;
 
-extern PID_IncTypeDef Temp_Speed_PID;
-extern PID_IncTypeDef Temp_Angle_PID;
-extern PID_IncTypeDef Temp_Angle_AccPID;
-extern PID_IncTypeDef Temp_Turnout_PID;
-extern PID_IncTypeDef Temp_Angleroll_PID;
-extern PID_IncTypeDef Temp_Z_Angle_speed_PID;
-extern PID_IncTypeDef Temp_Yaw_Angle_PID;
-
 /*****************************************************函数部分**************************************************************/
 void PID_Inc_Init(PID_IncTypeDef *sptr, float kp, float ki, float kd);
 float Positional_PID(PID_IncTypeDef *PID, float SetValue, float ActualValue, float Max_I);

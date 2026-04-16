@@ -3,6 +3,7 @@
 #include "MYHEADFILE.h"
 #include "asr_audio.h"
 #include "led_test_ctrl.h"
+#include "Uart_rs232.h"
 uint8 menu_key_event = menu_release;
 uint8 menu_update_flag = 0;
 uint8 menu_wait_flag = 0;
@@ -39,7 +40,30 @@ MenuPage_Linked_List *menu_head_page_node = NULL; // 菜单链表头指针
 //
 //    Menu_Push_Node(&Page);
 //}
+/***********************************************
+* @brief : 数据页面
+* @param : void
+* @return: void
+* @date  : 2025年3月20日14:26:28
+* @author: SJX
+************************************************/
 
+void Data_Page_Init(void)
+{
+    static MenuLine LineList[] = {
+        MENU_ITEM_CONFIG_SHOW("Tc264RX",    NULL, 0),
+        MENU_ITEM_FLOAT_SHOW ("Dist_mm",    NULL, 0),
+        MENU_ITEM_FLOAT_SHOW ("Speed_mms",  NULL, 0),
+        {".", }
+    };
+    static MenuPage Page = {"Data", .line = LineList, .open_status = 0};
+
+    LineList[0].line_extends.config_value_show_line.show_value = UartRs232_GetTc264RxEnablePtr();
+    LineList[1].line_extends.float_value_show_line.show_value  = UartRs232_GetTc264DistanceFloatPtr();
+    LineList[2].line_extends.float_value_show_line.show_value  = UartRs232_GetTc264SpeedFloatPtr();
+
+    Menu_Push_Node(&Page);
+}
 
 /***********************************************
 * @brief : 测试页面
@@ -172,47 +196,29 @@ void Turn_Page_Init(void)
 
 
 /***********************************************
-* @brief : 电机页面
+* @brief : 人为页面
 * @param : void
 * @return: void
 * @date  : 2025年3月20日14:26:28
 * @author: SJX
 ************************************************/
-void Motor_Page_Init(void)
+
+void Manual_Page_Init(void)
 {
+   uint8 *pedal_uart_enable = UartRs232_GetPedalEnablePtr();
+   float *pedal_percent_show = UartRs232_GetPedalPercentShowPtr();
+
    static MenuLine  LineList[] = {
-  //         MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
-//            MENU_ITEM_PAGE_JUMP("Camera",Camera_Page_Init, 7),
-//            MENU_ITEM_FLOAT_EDIT("LeftKp", &Motor_Speed_PID_Left.Kp, 0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("Leftki",&Motor_Speed_PID_Left.Ki, 0.1f,0),
-//            MENU_ITEM_FLOAT_EDIT("Leftkd",&Motor_Speed_PID_Left.Kd,0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("RightKp", &Motor_Speed_PID_Right.Kp, 0.1f, 0),
-//            MENU_ITEM_FLOAT_EDIT("Rightki",&Motor_Speed_PID_Right.Ki, 0.1f,0),
-//            MENU_ITEM_FLOAT_EDIT("Rightkd",&Motor_Speed_PID_Right.Kd,0.1f, 0),
-//            MENU_ITEM_INT_EDIT("V0", &V0, 1, 2, 0),
-//            MENU_ITEM_INT_SHOW("L.tar_V",&Left_Motor.target_speed,0),
-//            MENU_ITEM_INT_SHOW("R.tar_V",&Right_Motor.target_speed,0),
-//            MENU_ITEM_FLOAT_EDIT("Left_set_pwm", &left_set_pwm, 10.0f, 1, 0),
-//            MENU_ITEM_FLOAT_EDIT("Right_set_pwm", &right_set_pwm, 10.0f, 1, 0),
-//            MENU_ITEM_FLOAT_EDIT("SetValue_Left", &SetValue_Left, 100.0f, 0),
-//            MENU_ITEM_FLOAT_EDIT("SetValue_Right", &SetValue_Right, 100.0f, 0),
-//            MENU_ITEM_PAGE_JUMP("Start",Start_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Config",Config_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Value",Value_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Data",Data_Page_Init, 1),
-//            MENU_ITEM_PAGE_JUMP("Speed",Speed_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Element",element_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Element_CFG",element_Config_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Leg",leg_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Motor",Motor_Page_Init, 0),
-//
-////            MENU_ITEM_PAGE_JUMP("UB",UB_Page_Init, 1),
-//            MENU_ITEM_PAGE_JUMP("Preset",Preset_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Race_Preset",Race_Preset_Page_Init, 0),
-//            MENU_ITEM_PAGE_JUMP("Race_Time",Race_Time_Page_Init, 0),
+           MENU_ITEM_CONFIG_SHOW("PedalUART", NULL, 0),
+           MENU_ITEM_FLOAT_SHOW("Percent", NULL, 0),
+           MENU_ITEM_STATIC_FUNC(" ", UartRs232_PedalRuntimeUpdate, 0),
            {".",  }
    };
-   static MenuPage Page = {"Motor", .line = LineList, .open_status = 0} ;
+   static MenuPage Page = {"Manual", .line = LineList, .open_status = 0} ;
+
+   /* 将开关变量绑定到菜单行 */
+   LineList[0].line_extends.config_value_show_line.show_value = pedal_uart_enable;
+   LineList[1].line_extends.float_value_show_line.show_value = pedal_percent_show;
 
    Menu_Push_Node(&Page);
 }
@@ -232,11 +238,11 @@ void Main_Page_Init(void)
     static MenuLine LineList[] = {
 //        MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
           MENU_ITEM_PAGE_JUMP("test",test_Page_Init, 0),
-          MENU_ITEM_PAGE_JUMP("Motor", Motor_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("Manual", Manual_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("Turn_Control ", Turn_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("ASR ",ASR_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("Remote ",Remote_Page_Init, 0),
-
+          MENU_ITEM_PAGE_JUMP("Data ",Data_Page_Init, 0),
 //        MENU_ITEM_PAGE_JUMP("Camera_Page ", Camera_Page_Init, 0),
    //     MENU_ITEM_INT_EDIT("PWM", &Left_Motor.set_pwm, 10, 2, 0),
   //      MENU_ITEM_INT_EDIT("TarSpeed", &Left_Motor.target_speed, 1, 2, 0),
@@ -282,8 +288,17 @@ void Menu_Init(void)
 void MENU_RUN(void)
 {
     static uint8 i = 0;
+    static uint32 last_update_time = 0;
+    uint32 current_time = system_getval_ms();
 
     led_test_task();
+    
+    // 限制菜单刷新频率到50Hz（20ms）
+    if(current_time - last_update_time < 20)
+    {
+        return;
+    }
+    last_update_time = current_time;
 
     my_assert(menu_head_page_node != NULL);
     Menu_Key_Process();

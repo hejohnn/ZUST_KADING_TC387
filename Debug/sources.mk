@@ -25,13 +25,16 @@ SECONDARY_SIZE :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 code/Beep \
+code/Motor \
 code/MyEncoder \
 code/MyKey \
 code/PID \
+code/Pedal \
 code/Remote \
 code/Status \
 code/SysTimer \
 code/Turn \
+code/Uart_rs232 \
 code/led_driver/TLD7002_driver \
 code/led_driver \
 code/loudspeak \

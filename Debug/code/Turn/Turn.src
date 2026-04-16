@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc23680a --dep-file=code/Turn/Turn.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Remote -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Turn -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/Turn/Turn.src ../code/Turn/Turn.c"
+	.compiler_invocation	"ctc -f cc14480a --dep-file=code/Turn/Turn.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc38x -D__CPU_TC38X__ --core=tc1.6.2 --fp-model=+float -ID:\\\\work\\\\ZUST_KADING_TC387 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Beep -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Motor -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyEncoder -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\MyKey -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\PID -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Pedal -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Remote -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Status -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\SysTimer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Turn -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\Uart_rs232 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\led_driver\\\\TLD7002_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\loudspeak -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\menu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\code\\\\xf_asr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Ssw\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Adc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Evadc\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12 -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Pms\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Port\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Src\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Impl -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC38A\\\\Tricore\\\\_PinMap -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_common -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_components -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_device -ID:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver -ID:\\\\work\\\\ZUST_KADING_TC387\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o code/Turn/Turn.src ../code/Turn/Turn.c"
 	.compiler_name		"ctc"
 	;source	'../code/Turn/Turn.c'
 
@@ -12,21 +12,21 @@ $TC162
 	.align	2
 	
 ; Function Turn_EncToMenuAngleDeg
-.L28:
+.L31:
 Turn_EncToMenuAngleDeg:	.type	func
 	mov.u	d15,#49982
 	addih	d15,d15,#15022
-.L454:
+.L463:
 	mul.f	d2,d4,d15
-.L455:
+.L464:
 	j	.L2
 .L2:
 	ret
-.L207:
+.L212:
 	
 __Turn_EncToMenuAngleDeg_function_end:
 	.size	Turn_EncToMenuAngleDeg,__Turn_EncToMenuAngleDeg_function_end-Turn_EncToMenuAngleDeg
-.L155:
+.L158:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_MenuAngleDegToEnc',code,cluster('Turn_MenuAngleDegToEnc')
@@ -34,21 +34,21 @@ __Turn_EncToMenuAngleDeg_function_end:
 	.align	2
 	
 ; Function Turn_MenuAngleDegToEnc
-.L30:
+.L33:
 Turn_MenuAngleDegToEnc:	.type	func
 	mov.u	d15,#32768
 	addih	d15,d15,#17467
-.L460:
+.L469:
 	mul.f	d2,d4,d15
-.L461:
+.L470:
 	j	.L3
 .L3:
 	ret
-.L209:
+.L214:
 	
 __Turn_MenuAngleDegToEnc_function_end:
 	.size	Turn_MenuAngleDegToEnc,__Turn_MenuAngleDegToEnc_function_end-Turn_MenuAngleDegToEnc
-.L160:
+.L163:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetDutyFromOutput',code,cluster('Turn_GetDutyFromOutput')
@@ -56,47 +56,47 @@ __Turn_MenuAngleDegToEnc_function_end:
 	.align	2
 	
 ; Function Turn_GetDutyFromOutput
-.L32:
+.L35:
 Turn_GetDutyFromOutput:	.type	func
 	insert	d0,d4,#0,#31,#1
-.L224:
+.L229:
 	movh	d15,#16880
-.L466:
+.L475:
 	cmp.f	d15,d0,d15
 	and	d15,#3
 	ne	d15,d15,#0
-.L467:
+.L476:
 	jeq	d15,#0,.L4
-.L468:
+.L477:
 	mov	d2,#0
-.L469:
+.L478:
 	j	.L5
 .L4:
 	mov	d15,#16384
 	addih	d15,d15,#17820
-.L470:
+.L479:
 	cmp.f	d15,d0,d15
 	and	d15,#6
 	ne	d15,d15,#0
-.L471:
+.L480:
 	jeq	d15,#0,.L6
-.L472:
+.L481:
 	mov	d2,#5000
-.L473:
+.L482:
 	j	.L7
 .L6:
 	ftouz	d2,d0
-.L474:
+.L483:
 	j	.L8
 .L8:
 .L7:
 .L5:
 	ret
-.L212:
+.L217:
 	
 __Turn_GetDutyFromOutput_function_end:
 	.size	Turn_GetDutyFromOutput,__Turn_GetDutyFromOutput_function_end-Turn_GetDutyFromOutput
-.L165:
+.L168:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_ApplyMotorOutput',code,cluster('Turn_ApplyMotorOutput')
@@ -104,64 +104,64 @@ __Turn_GetDutyFromOutput_function_end:
 	.align	2
 	
 ; Function Turn_ApplyMotorOutput
-.L34:
+.L37:
 Turn_ApplyMotorOutput:	.type	func
 	mov	d8,d4
-.L226:
+.L231:
 	mov	d4,d8
 	call	Turn_GetDutyFromOutput
-.L225:
-	mov	d9,d2
-.L228:
-	mov	d5,#1
-.L229:
-	jne	d9,#0,.L9
-.L479:
-	mov	d4,#50
-.L480:
-	mov	d5,#0
 .L230:
+	mov	d9,d2
+.L233:
+	mov	d5,#1
+.L234:
+	jne	d9,#0,.L9
+.L488:
+	mov	d4,#50
+.L489:
+	mov	d5,#0
+.L235:
 	call	pwm_set_duty
-.L227:
+.L232:
 	j	.L10
 .L9:
 	mov	d15,#0
-.L481:
+.L490:
 	cmp.f	d15,d8,d15
 	extr.u	d15,d15,#0,#1
-.L482:
+.L491:
 	jeq	d15,#0,.L11
-.L483:
+.L492:
 	mov	d5,#0
 .L11:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L484:
+.L493:
 	ld.bu	d15,[a15]8
-.L485:
+.L494:
 	jeq	d15,d5,.L12
-.L486:
+.L495:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L487:
+.L496:
 	st.b	[a15]8,d5
-.L488:
+.L497:
 	mov	d4,#453
-.L489:
+.L498:
 	call	gpio_set_level
 .L12:
 	mov	d4,#50
-.L490:
+.L499:
 	mov	d5,d9
-.L231:
+.L236:
 	call	pwm_set_duty
 .L10:
 	ret
-.L215:
+.L220:
 	
 __Turn_ApplyMotorOutput_function_end:
 	.size	Turn_ApplyMotorOutput,__Turn_ApplyMotorOutput_function_end-Turn_ApplyMotorOutput
-.L170:
+.L173:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_MenuTargetAngleSync',code,cluster('Turn_MenuTargetAngleSync')
@@ -170,23 +170,23 @@ __Turn_ApplyMotorOutput_function_end:
 	
 	.global	Turn_MenuTargetAngleSync
 ; Function Turn_MenuTargetAngleSync
-.L36:
+.L39:
 Turn_MenuTargetAngleSync:	.type	func
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L381:
+.L387:
 	ld.w	d4,[a15]
 	call	Turn_MenuAngleDegToEnc
-.L382:
+.L388:
 	mov	d4,d2
 	call	Turn_SetTargetAngleDeg
-.L383:
+.L389:
 	ret
-.L196:
+.L199:
 	
 __Turn_MenuTargetAngleSync_function_end:
 	.size	Turn_MenuTargetAngleSync,__Turn_MenuTargetAngleSync_function_end-Turn_MenuTargetAngleSync
-.L115:
+.L118:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_MenuRuntimeUpdate',code,cluster('Turn_MenuRuntimeUpdate')
@@ -195,40 +195,56 @@ __Turn_MenuTargetAngleSync_function_end:
 	
 	.global	Turn_MenuRuntimeUpdate
 ; Function Turn_MenuRuntimeUpdate
-.L38:
+.L41:
 Turn_MenuRuntimeUpdate:	.type	func
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L388:
+.L394:
 	call	Turn_GetEncoderCount
-.L389:
+.L395:
 	itof	d15,d2
-.L390:
+.L396:
 	st.w	[a15]4,d15
-.L391:
+.L397:
 	movh.a	a12,#@his(turn_menu_state)
 	lea	a12,[a12]@los(turn_menu_state)
-.L392:
+.L398:
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L393:
+.L399:
 	ld.w	d4,[a15]4
 	call	Turn_EncToMenuAngleDeg
-.L394:
+.L400:
 	st.w	[a12]8,d2
-.L395:
+.L201:
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L396:
-	ld.bu	d4,[a15]12
+.L401:
+	ld.bu	d15,[a15]12
+.L402:
+	jeq	d15,#0,.L13
+.L403:
+	mov	d4,#1
+.L237:
+	j	.L14
+.L13:
+	mov	d4,#0
+.L14:
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
+.L404:
+	ld.bu	d15,[a15]12
+.L405:
+	jeq	d15,d4,.L15
+.L406:
 	call	Turn_SetMotorEnable
-.L397:
+.L15:
 	ret
-.L197:
+.L200:
 	
 __Turn_MenuRuntimeUpdate_function_end:
 	.size	Turn_MenuRuntimeUpdate,__Turn_MenuRuntimeUpdate_function_end-Turn_MenuRuntimeUpdate
-.L120:
+.L123:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_Init',code,cluster('Turn_Init')
@@ -237,143 +253,143 @@ __Turn_MenuRuntimeUpdate_function_end:
 	
 	.global	Turn_Init
 ; Function Turn_Init
-.L40:
+.L43:
 Turn_Init:	.type	func
 	mov	d4,#454
-.L245:
+.L251:
 	mov	d5,#1
-.L246:
+.L252:
 	mov	d6,#0
-.L247:
+.L253:
 	mov	d7,#3
 	call	gpio_init
-.L248:
+.L254:
 	mov	d4,#50
-.L249:
+.L255:
 	mov	d5,#20000
-.L250:
+.L256:
 	mov	d6,#0
 	call	pwm_init
-.L251:
+.L257:
 	mov	d4,#50
-.L252:
+.L258:
 	mov	d5,#0
 	call	pwm_set_duty
-.L253:
+.L259:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L254:
+.L260:
 	mov	d15,#1
-.L255:
+.L261:
 	st.b	[a15]8,d15
-.L256:
+.L262:
 	mov	d4,#453
-.L257:
+.L263:
 	mov	d5,#1
-.L258:
+.L264:
 	mov	d6,#1
-.L259:
+.L265:
 	mov	d7,#3
 	call	gpio_init
-.L260:
+.L266:
 	mov	d4,#3
-.L261:
+.L267:
 	mov	d5,#5
-.L262:
+.L268:
 	mov	d6,#6
 	call	encoder_dir_init
-.L263:
+.L269:
 	mov	d4,#3
 	call	encoder_clear_count
-.L264:
+.L270:
 	movh.a	a4,#@his(turn_pid)
 	lea	a4,[a4]@los(turn_pid)
-.L265:
+.L271:
 	movh	d4,#16640
-.L266:
+.L272:
 	mov.u	d5,#55050
 	addih	d5,d5,#15523
-.L267:
+.L273:
 	mov.u	d6,#52429
 	addih	d6,d6,#16076
 	call	PID_Inc_Init
-.L268:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
-.L269:
-	mov	d15,#0
-.L270:
-	st.w	[a15],d15
-.L271:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
-.L272:
-	mov	d15,#0
-.L273:
-	st.w	[a15]4,d15
 .L274:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
 .L275:
-	mov	d15,#120
+	mov	d15,#0
 .L276:
-	st.h	[a15]10,d15
+	st.w	[a15],d15
 .L277:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
 .L278:
 	mov	d15,#0
 .L279:
-	st.b	[a15]12,d15
+	st.w	[a15]4,d15
 .L280:
-	movh.a	a15,#@his(turn_target_angle_deg)
-	lea	a15,[a15]@los(turn_target_angle_deg)
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
 .L281:
-	mov	d15,#0
+	mov	d15,#120
 .L282:
-	st.w	[a15],d15
+	st.h	[a15]10,d15
 .L283:
-	movh.a	a15,#@his(turn_current_angle_deg)
-	lea	a15,[a15]@los(turn_current_angle_deg)
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
 .L284:
 	mov	d15,#0
 .L285:
-	st.w	[a15],d15
+	st.b	[a15]12,d15
 .L286:
-	movh.a	a15,#@his(turn_menu_state)
-	lea	a15,[a15]@los(turn_menu_state)
+	movh.a	a15,#@his(turn_target_angle_deg)
+	lea	a15,[a15]@los(turn_target_angle_deg)
 .L287:
 	mov	d15,#0
 .L288:
 	st.w	[a15],d15
 .L289:
-	movh.a	a15,#@his(turn_menu_state)
-	lea	a15,[a15]@los(turn_menu_state)
+	movh.a	a15,#@his(turn_current_angle_deg)
+	lea	a15,[a15]@los(turn_current_angle_deg)
 .L290:
 	mov	d15,#0
 .L291:
-	st.w	[a15]4,d15
+	st.w	[a15],d15
 .L292:
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
 .L293:
 	mov	d15,#0
 .L294:
-	st.w	[a15]8,d15
+	st.w	[a15],d15
 .L295:
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
 .L296:
 	mov	d15,#0
 .L297:
-	st.b	[a15]12,d15
+	st.w	[a15]4,d15
 .L298:
+	movh.a	a15,#@his(turn_menu_state)
+	lea	a15,[a15]@los(turn_menu_state)
+.L299:
+	mov	d15,#0
+.L300:
+	st.w	[a15]8,d15
+.L301:
+	movh.a	a15,#@his(turn_menu_state)
+	lea	a15,[a15]@los(turn_menu_state)
+.L302:
+	mov	d15,#0
+.L303:
+	st.b	[a15]12,d15
+.L304:
 	ret
-.L181:
+.L184:
 	
 __Turn_Init_function_end:
 	.size	Turn_Init,__Turn_Init_function_end-Turn_Init
-.L75:
+.L78:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_ControlTask',code,cluster('Turn_ControlTask')
@@ -382,129 +398,129 @@ __Turn_Init_function_end:
 	
 	.global	Turn_ControlTask
 ; Function Turn_ControlTask
-.L42:
+.L45:
 Turn_ControlTask:	.type	func
 	mov	d4,#3
 	call	encoder_get_count
-.L232:
+.L238:
 	mov	d15,d2
-.L234:
+.L240:
 	mov	d4,#3
 	call	encoder_clear_count
-.L233:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
-.L303:
-	mov	d0,#1
-.L304:
-	movh.a	a2,#@his(turn_state)
-	lea	a2,[a2]@los(turn_state)
-.L305:
-	ld.w	d1,[a2]
-.L306:
-	madd	d15,d1,d15,d0
-.L235:
-	st.w	[a15],d15
-.L307:
-	movh.a	a2,#@his(turn_current_angle_deg)
-	lea	a2,[a2]@los(turn_current_angle_deg)
-.L308:
+.L239:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
 .L309:
-	ld.w	d0,[a15]
+	mov	d0,#1
 .L310:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
-.L311:
-	ld.w	d15,[a15]4
-.L312:
-	sub	d0,d15
-.L313:
-	itof	d15,d0
-.L314:
-	movh	d0,#16256
-.L315:
-	div.f	d15,d15,d0
-.L316:
-	st.w	[a2],d15
-.L317:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
-.L318:
-	ld.hu	d15,[a15]10
-.L319:
-	jlt.u	d15,#1,.L13
-.L320:
-	movh.a	a15,#@his(turn_state)
-	lea	a15,[a15]@los(turn_state)
 	movh.a	a2,#@his(turn_state)
 	lea	a2,[a2]@los(turn_state)
+.L311:
+	ld.w	d1,[a2]
+.L312:
+	madd	d15,d1,d15,d0
+.L241:
+	st.w	[a15],d15
+.L313:
+	movh.a	a2,#@his(turn_current_angle_deg)
+	lea	a2,[a2]@los(turn_current_angle_deg)
+.L314:
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
+.L315:
+	ld.w	d0,[a15]
+.L316:
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
+.L317:
+	ld.w	d15,[a15]4
+.L318:
+	sub	d0,d15
+.L319:
+	itof	d15,d0
+.L320:
+	movh	d0,#16256
 .L321:
-	ld.hu	d15,[a2]10
+	div.f	d15,d15,d0
 .L322:
-	add	d15,#-1
-	st.h	[a15]10,d15
+	st.w	[a2],d15
 .L323:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
 .L324:
-	movh.a	a2,#@his(turn_state)
-	lea	a2,[a2]@los(turn_state)
+	ld.hu	d15,[a15]10
 .L325:
-	ld.w	d15,[a2]
+	jlt.u	d15,#1,.L16
 .L326:
-	st.w	[a15]4,d15
-.L327:
-	movh.a	a15,#@his(turn_current_angle_deg)
-	lea	a15,[a15]@los(turn_current_angle_deg)
-.L328:
-	mov	d15,#0
-.L329:
-	st.w	[a15],d15
-.L330:
-	mov	d4,#50
-.L331:
-	mov	d5,#0
-	call	pwm_set_duty
-.L332:
-	j	.L14
-.L13:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
+	movh.a	a2,#@his(turn_state)
+	lea	a2,[a2]@los(turn_state)
+.L327:
+	ld.hu	d15,[a2]10
+.L328:
+	add	d15,#-1
+	st.h	[a15]10,d15
+.L329:
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
+.L330:
+	movh.a	a2,#@his(turn_state)
+	lea	a2,[a2]@los(turn_state)
+.L331:
+	ld.w	d15,[a2]
+.L332:
+	st.w	[a15]4,d15
 .L333:
-	ld.bu	d15,[a15]12
+	movh.a	a15,#@his(turn_current_angle_deg)
+	lea	a15,[a15]@los(turn_current_angle_deg)
 .L334:
-	jne	d15,#0,.L15
+	mov	d15,#0
 .L335:
-	call	Turn_Stop
+	st.w	[a15],d15
 .L336:
-	j	.L16
-.L15:
+	mov	d4,#50
+.L337:
+	mov	d5,#0
+	call	pwm_set_duty
+.L338:
+	j	.L17
+.L16:
+	movh.a	a15,#@his(turn_state)
+	lea	a15,[a15]@los(turn_state)
+.L339:
+	ld.bu	d15,[a15]12
+.L340:
+	jne	d15,#0,.L18
+.L341:
+	call	Turn_Stop
+.L342:
+	j	.L19
+.L18:
 	movh.a	a15,#@his(turn_target_angle_deg)
 	lea	a15,[a15]@los(turn_target_angle_deg)
 	ld.w	d4,[a15]
-.L337:
+.L343:
 	movh.a	a15,#@his(turn_current_angle_deg)
 	lea	a15,[a15]@los(turn_current_angle_deg)
 	ld.w	d5,[a15]
-.L338:
+.L344:
 	movh.a	a4,#@his(turn_pid)
 	lea	a4,[a4]@los(turn_pid)
-.L339:
+.L345:
 	movh	d6,#17402
 	call	Positional_PID
-.L340:
+.L346:
 	mov	d4,d2
 	call	Turn_ApplyMotorOutput
-.L16:
-.L14:
+.L19:
+.L17:
 	ret
-.L182:
+.L185:
 	
 __Turn_ControlTask_function_end:
 	.size	Turn_ControlTask,__Turn_ControlTask_function_end-Turn_ControlTask
-.L80:
+.L83:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_SetTargetAngleDeg',code,cluster('Turn_SetTargetAngleDeg')
@@ -513,19 +529,19 @@ __Turn_ControlTask_function_end:
 	
 	.global	Turn_SetTargetAngleDeg
 ; Function Turn_SetTargetAngleDeg
-.L44:
+.L47:
 Turn_SetTargetAngleDeg:	.type	func
 	movh.a	a15,#@his(turn_target_angle_deg)
 	lea	a15,[a15]@los(turn_target_angle_deg)
-.L345:
+.L351:
 	st.w	[a15],d4
-.L346:
+.L352:
 	ret
-.L185:
+.L188:
 	
 __Turn_SetTargetAngleDeg_function_end:
 	.size	Turn_SetTargetAngleDeg,__Turn_SetTargetAngleDeg_function_end-Turn_SetTargetAngleDeg
-.L85:
+.L88:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_SetMenuTargetAngleDeg',code,cluster('Turn_SetMenuTargetAngleDeg')
@@ -534,24 +550,24 @@ __Turn_SetTargetAngleDeg_function_end:
 	
 	.global	Turn_SetMenuTargetAngleDeg
 ; Function Turn_SetMenuTargetAngleDeg
-.L46:
+.L49:
 Turn_SetMenuTargetAngleDeg:	.type	func
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L351:
+.L357:
 	st.w	[a15],d4
-.L352:
+.L358:
 	call	Turn_MenuAngleDegToEnc
-.L236:
+.L242:
 	mov	d4,d2
 	call	Turn_SetTargetAngleDeg
-.L353:
+.L359:
 	ret
-.L188:
+.L191:
 	
 __Turn_SetMenuTargetAngleDeg_function_end:
 	.size	Turn_SetMenuTargetAngleDeg,__Turn_SetMenuTargetAngleDeg_function_end-Turn_SetMenuTargetAngleDeg
-.L90:
+.L93:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetMenuTargetAngleDegPtr',code,cluster('Turn_GetMenuTargetAngleDegPtr')
@@ -560,19 +576,19 @@ __Turn_SetMenuTargetAngleDeg_function_end:
 	
 	.global	Turn_GetMenuTargetAngleDegPtr
 ; Function Turn_GetMenuTargetAngleDegPtr
-.L48:
+.L51:
 Turn_GetMenuTargetAngleDegPtr:	.type	func
 	movh.a	a2,#@his(turn_menu_state)
 	lea	a2,[a2]@los(turn_menu_state)
-.L358:
-	j	.L17
-.L17:
+.L364:
+	j	.L20
+.L20:
 	ret
-.L191:
+.L194:
 	
 __Turn_GetMenuTargetAngleDegPtr_function_end:
 	.size	Turn_GetMenuTargetAngleDegPtr,__Turn_GetMenuTargetAngleDegPtr_function_end-Turn_GetMenuTargetAngleDegPtr
-.L95:
+.L98:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetMenuEncoderValuePtr',code,cluster('Turn_GetMenuEncoderValuePtr')
@@ -581,21 +597,21 @@ __Turn_GetMenuTargetAngleDegPtr_function_end:
 	
 	.global	Turn_GetMenuEncoderValuePtr
 ; Function Turn_GetMenuEncoderValuePtr
-.L50:
+.L53:
 Turn_GetMenuEncoderValuePtr:	.type	func
 	movh.a	a2,#@his(turn_menu_state)
 	lea	a2,[a2]@los(turn_menu_state)
-.L363:
+.L369:
 	add.a	a2,#4
-.L364:
-	j	.L18
-.L18:
+.L370:
+	j	.L21
+.L21:
 	ret
-.L192:
+.L195:
 	
 __Turn_GetMenuEncoderValuePtr_function_end:
 	.size	Turn_GetMenuEncoderValuePtr,__Turn_GetMenuEncoderValuePtr_function_end-Turn_GetMenuEncoderValuePtr
-.L100:
+.L103:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetMenuAngleDegPtr',code,cluster('Turn_GetMenuAngleDegPtr')
@@ -604,21 +620,21 @@ __Turn_GetMenuEncoderValuePtr_function_end:
 	
 	.global	Turn_GetMenuAngleDegPtr
 ; Function Turn_GetMenuAngleDegPtr
-.L52:
+.L55:
 Turn_GetMenuAngleDegPtr:	.type	func
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L369:
+.L375:
 	lea	a2,[a15]8
-.L370:
-	j	.L19
-.L19:
+.L376:
+	j	.L22
+.L22:
 	ret
-.L193:
+.L196:
 	
 __Turn_GetMenuAngleDegPtr_function_end:
 	.size	Turn_GetMenuAngleDegPtr,__Turn_GetMenuAngleDegPtr_function_end-Turn_GetMenuAngleDegPtr
-.L105:
+.L108:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetMenuMotorEnablePtr',code,cluster('Turn_GetMenuMotorEnablePtr')
@@ -627,21 +643,21 @@ __Turn_GetMenuAngleDegPtr_function_end:
 	
 	.global	Turn_GetMenuMotorEnablePtr
 ; Function Turn_GetMenuMotorEnablePtr
-.L54:
+.L57:
 Turn_GetMenuMotorEnablePtr:	.type	func
 	movh.a	a15,#@his(turn_menu_state)
 	lea	a15,[a15]@los(turn_menu_state)
-.L375:
+.L381:
 	lea	a2,[a15]12
-.L376:
-	j	.L20
-.L20:
+.L382:
+	j	.L23
+.L23:
 	ret
-.L195:
+.L198:
 	
 __Turn_GetMenuMotorEnablePtr_function_end:
 	.size	Turn_GetMenuMotorEnablePtr,__Turn_GetMenuMotorEnablePtr_function_end-Turn_GetMenuMotorEnablePtr
-.L110:
+.L113:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_SetCurrentAngleAsZero',code,cluster('Turn_SetCurrentAngleAsZero')
@@ -650,42 +666,42 @@ __Turn_GetMenuMotorEnablePtr_function_end:
 	
 	.global	Turn_SetCurrentAngleAsZero
 ; Function Turn_SetCurrentAngleAsZero
-.L56:
+.L59:
 Turn_SetCurrentAngleAsZero:	.type	func
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L402:
+.L411:
 	movh.a	a2,#@his(turn_state)
 	lea	a2,[a2]@los(turn_state)
-.L403:
+.L412:
 	ld.w	d15,[a2]
-.L404:
+.L413:
 	st.w	[a15]4,d15
-.L405:
+.L414:
 	movh.a	a15,#@his(turn_current_angle_deg)
 	lea	a15,[a15]@los(turn_current_angle_deg)
-.L406:
+.L415:
 	mov	d15,#0
-.L407:
+.L416:
 	st.w	[a15],d15
-.L408:
+.L417:
 	movh.a	a15,#@his(turn_target_angle_deg)
 	lea	a15,[a15]@los(turn_target_angle_deg)
-.L409:
+.L418:
 	mov	d15,#0
-.L410:
+.L419:
 	st.w	[a15],d15
-.L411:
+.L420:
 	movh.a	a4,#@his(turn_pid)
 	lea	a4,[a4]@los(turn_pid)
 	call	PID_clear
-.L412:
+.L421:
 	ret
-.L198:
+.L204:
 	
 __Turn_SetCurrentAngleAsZero_function_end:
 	.size	Turn_SetCurrentAngleAsZero,__Turn_SetCurrentAngleAsZero_function_end-Turn_SetCurrentAngleAsZero
-.L125:
+.L128:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_Stop',code,cluster('Turn_Stop')
@@ -694,23 +710,23 @@ __Turn_SetCurrentAngleAsZero_function_end:
 	
 	.global	Turn_Stop
 ; Function Turn_Stop
-.L58:
+.L61:
 Turn_Stop:	.type	func
 	movh.a	a4,#@his(turn_pid)
 	lea	a4,[a4]@los(turn_pid)
 	call	PID_clear
-.L417:
+.L426:
 	mov	d4,#50
-.L418:
+.L427:
 	mov	d5,#0
 	call	pwm_set_duty
-.L419:
+.L428:
 	ret
-.L199:
+.L205:
 	
 __Turn_Stop_function_end:
 	.size	Turn_Stop,__Turn_Stop_function_end-Turn_Stop
-.L130:
+.L133:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_SetMotorEnable',code,cluster('Turn_SetMotorEnable')
@@ -719,33 +735,33 @@ __Turn_Stop_function_end:
 	
 	.global	Turn_SetMotorEnable
 ; Function Turn_SetMotorEnable
-.L60:
+.L63:
 Turn_SetMotorEnable:	.type	func
-	jeq	d4,#0,.L21
-.L424:
+	jeq	d4,#0,.L24
+.L433:
 	mov	d15,#1
-.L425:
-	j	.L22
-.L21:
+.L434:
+	j	.L25
+.L24:
 	mov	d15,#0
-.L22:
+.L25:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L426:
+.L435:
 	st.b	[a15]12,d15
-.L427:
+.L436:
 	extr.u	d15,d15,#0,#8
-.L428:
-	jne	d15,#0,.L23
-.L429:
+.L437:
+	jne	d15,#0,.L26
+.L438:
 	call	Turn_Stop
-.L23:
+.L26:
 	ret
-.L200:
+.L206:
 	
 __Turn_SetMotorEnable_function_end:
 	.size	Turn_SetMotorEnable,__Turn_SetMotorEnable_function_end-Turn_SetMotorEnable
-.L135:
+.L138:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetMotorEnable',code,cluster('Turn_GetMotorEnable')
@@ -754,21 +770,21 @@ __Turn_SetMotorEnable_function_end:
 	
 	.global	Turn_GetMotorEnable
 ; Function Turn_GetMotorEnable
-.L62:
+.L65:
 Turn_GetMotorEnable:	.type	func
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L434:
+.L443:
 	ld.bu	d2,[a15]12
-.L435:
-	j	.L24
-.L24:
+.L444:
+	j	.L27
+.L27:
 	ret
-.L203:
+.L208:
 	
 __Turn_GetMotorEnable_function_end:
 	.size	Turn_GetMotorEnable,__Turn_GetMotorEnable_function_end-Turn_GetMotorEnable
-.L140:
+.L143:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetEncoderCount',code,cluster('Turn_GetEncoderCount')
@@ -777,28 +793,28 @@ __Turn_GetMotorEnable_function_end:
 	
 	.global	Turn_GetEncoderCount
 ; Function Turn_GetEncoderCount
-.L64:
+.L67:
 Turn_GetEncoderCount:	.type	func
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L440:
+.L449:
 	ld.w	d2,[a15]
-.L441:
+.L450:
 	movh.a	a15,#@his(turn_state)
 	lea	a15,[a15]@los(turn_state)
-.L442:
+.L451:
 	ld.w	d15,[a15]4
-.L443:
+.L452:
 	sub	d2,d15
-.L444:
-	j	.L25
-.L25:
+.L453:
+	j	.L28
+.L28:
 	ret
-.L205:
+.L210:
 	
 __Turn_GetEncoderCount_function_end:
 	.size	Turn_GetEncoderCount,__Turn_GetEncoderCount_function_end-Turn_GetEncoderCount
-.L145:
+.L148:
 	; End of function
 	
 	.sdecl	'.text.Turn.Turn_GetCurrentAngleDeg',code,cluster('Turn_GetCurrentAngleDeg')
@@ -807,20 +823,20 @@ __Turn_GetEncoderCount_function_end:
 	
 	.global	Turn_GetCurrentAngleDeg
 ; Function Turn_GetCurrentAngleDeg
-.L66:
+.L69:
 Turn_GetCurrentAngleDeg:	.type	func
 	movh.a	a15,#@his(turn_current_angle_deg)
 	lea	a15,[a15]@los(turn_current_angle_deg)
 	ld.w	d2,[a15]
-.L449:
-	j	.L26
-.L26:
+.L458:
+	j	.L29
+.L29:
 	ret
-.L206:
+.L211:
 	
 __Turn_GetCurrentAngleDeg_function_end:
 	.size	Turn_GetCurrentAngleDeg,__Turn_GetCurrentAngleDeg_function_end-Turn_GetCurrentAngleDeg
-.L150:
+.L153:
 	; End of function
 	
 	.sdecl	'.data.Turn.turn_target_angle_deg',data,cluster('turn_target_angle_deg')
@@ -915,17 +931,17 @@ turn_menu_state:	.type	object
 	.calls	'Turn_GetCurrentAngleDeg','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L68:
+.L71:
 	.word	169963
 	.half	3
-	.word	.L69
+	.word	.L72
 	.byte	4
-.L67:
+.L70:
 	.byte	1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L70
+	.word	.L73
 	.byte	2,1,1,3
 	.word	148
 	.byte	4
@@ -934,7 +950,7 @@ turn_menu_state:	.type	object
 	.word	151
 	.byte	6,0,7
 	.byte	'__fract',0,4,128,1
-.L186:
+.L189:
 	.byte	7
 	.byte	'float',0,4,4,8
 	.byte	'Ifx__float_to_fract',0,3,1,152,2,18
@@ -962,7 +978,7 @@ turn_menu_state:	.type	object
 	.word	294
 	.byte	6,0,7
 	.byte	'unsigned int',0,4,7
-.L204:
+.L209:
 	.byte	7
 	.byte	'int',0,4,5,7
 	.byte	'unsigned int',0,4,7,10
@@ -988,7 +1004,7 @@ turn_menu_state:	.type	object
 	.byte	'B',0
 	.word	451
 	.byte	4,2,35,0,0
-.L201:
+.L202:
 	.byte	7
 	.byte	'unsigned char',0,1,8,7
 	.byte	'unsigned short int',0,2,7,10
@@ -2516,7 +2532,7 @@ turn_menu_state:	.type	object
 	.byte	'enabled',0,8,133,8,50
 	.word	587
 	.byte	6,0
-.L211:
+.L216:
 	.byte	7
 	.byte	'unsigned long int',0,4,7,8
 	.byte	'IfxCpu_getPerformanceCounter',0,3,8,254,6,19
@@ -5875,7 +5891,7 @@ turn_menu_state:	.type	object
 	.byte	'alti',0,17,218,18,82
 	.word	31583
 	.byte	6,0
-.L183:
+.L186:
 	.byte	7
 	.byte	'short int',0,2,5,7
 	.byte	'long int',0,4,5,20,19,60,9,12,13
@@ -7672,7 +7688,7 @@ turn_menu_state:	.type	object
 	.byte	28
 	.word	38554
 	.byte	6,0
-.L221:
+.L226:
 	.byte	20,27,29,9,56,13
 	.byte	'target_val',0
 	.word	208
@@ -7718,42 +7734,42 @@ turn_menu_state:	.type	object
 	.byte	2,2,35,52,0,3
 	.word	45051
 	.byte	33
-	.byte	'PID_Inc_Init',0,27,77,6,1,1,1,1,5
-	.byte	'sptr',0,27,77,35
+	.byte	'PID_Inc_Init',0,27,69,6,1,1,1,1,5
+	.byte	'sptr',0,27,69,35
 	.word	45264
 	.byte	5
-	.byte	'kp',0,27,77,47
+	.byte	'kp',0,27,69,47
 	.word	208
 	.byte	5
-	.byte	'ki',0,27,77,57
+	.byte	'ki',0,27,69,57
 	.word	208
 	.byte	5
-	.byte	'kd',0,27,77,67
+	.byte	'kd',0,27,69,67
 	.word	208
 	.byte	0,32
-	.byte	'Positional_PID',0,27,78,7
+	.byte	'Positional_PID',0,27,70,7
 	.word	208
 	.byte	1,1,1,1,5
-	.byte	'PID',0,27,78,38
+	.byte	'PID',0,27,70,38
 	.word	45264
 	.byte	5
-	.byte	'SetValue',0,27,78,49
+	.byte	'SetValue',0,27,70,49
 	.word	208
 	.byte	5
-	.byte	'ActualValue',0,27,78,65
+	.byte	'ActualValue',0,27,70,65
 	.word	208
 	.byte	5
-	.byte	'Max_I',0,27,78,84
+	.byte	'Max_I',0,27,70,84
 	.word	208
 	.byte	0,33
-	.byte	'PID_clear',0,27,79,6,1,1,1,1,5
-	.byte	'sptr',0,27,79,32
+	.byte	'PID_clear',0,27,71,6,1,1,1,1,5
+	.byte	'sptr',0,27,71,32
 	.word	45264
 	.byte	0
-.L190:
+.L193:
 	.byte	3
 	.word	208
-.L194:
+.L197:
 	.byte	3
 	.word	587
 	.byte	21
@@ -22878,17 +22894,17 @@ turn_menu_state:	.type	object
 	.byte	4,2,35,8,0,21
 	.byte	'MenuPage',0,59,195,1,2
 	.word	169564
-.L219:
+.L224:
 	.byte	14
 	.word	208
-.L220:
+.L225:
 	.byte	14
 	.word	208
 	.byte	14
 	.word	428
 	.byte	14
 	.word	428
-.L222:
+.L227:
 	.byte	20,28,14,9,16,13
 	.byte	'encoder_count',0
 	.word	169693
@@ -22907,7 +22923,7 @@ turn_menu_state:	.type	object
 	.byte	1,2,35,12,0,21
 	.byte	'Turn_RuntimeState',0,28,21,3
 	.word	169703
-.L223:
+.L228:
 	.byte	20,28,23,9,16,13
 	.byte	'target_angle_deg',0
 	.word	208
@@ -22926,7 +22942,7 @@ turn_menu_state:	.type	object
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L69:
+.L72:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,21,0,54,15,39,12,0,0,3,15,0,73,19,0,0,4,46,1,3,8,32,13
 	.byte	58,15,59,15,57,15,54,15,39,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,11,0,0,0,7,36,0,3,8,11,15,62
 	.byte	15,0,0,8,46,1,3,8,32,13,58,15,59,15,57,15,73,19,54,15,39,12,0,0,9,59,0,3,8,0,0,10,19,1,3,8,58,15,59,15
@@ -22940,12 +22956,12 @@ turn_menu_state:	.type	object
 	.byte	0,36,4,1,3,8,58,15,59,15,57,15,11,15,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L70:
-	.word	.L238-.L237
-.L237:
+.L73:
+	.word	.L244-.L243
+.L243:
 	.half	3
-	.word	.L240-.L239
-.L239:
+	.word	.L246-.L245
+.L245:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC38A\\\\_Reg',0
 	.byte	'D:\\\\work\\\\ZUST_KADING_TC387\\\\libraries\\\\zf_driver',0
@@ -23046,108 +23062,96 @@ turn_menu_state:	.type	object
 	.byte	0,0,0
 	.byte	'IfxGpt12_IncrEnc.h',0,13,0,0
 	.byte	'menu.h',0,14,0,0,0
-.L240:
-.L238:
+.L246:
+.L244:
 	.sdecl	'.debug_info',debug,cluster('Turn_Init')
 	.sect	'.debug_info'
-.L71:
+.L74:
 	.word	193
 	.half	3
-	.word	.L72
+	.word	.L75
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L74,.L73
+	.word	.L77,.L76
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_Init',0,1,109,6,1,1,1
-	.word	.L40,.L181,.L39
+	.byte	'Turn_Init',0,1,115,6,1,1,1
+	.word	.L43,.L184,.L42
 	.byte	4
-	.word	.L40,.L181
+	.word	.L43,.L184
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_Init')
 	.sect	'.debug_abbrev'
-.L72:
+.L75:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_Init')
 	.sect	'.debug_line'
-.L73:
-	.word	.L242-.L241
-.L241:
+.L76:
+	.word	.L248-.L247
+.L247:
 	.half	3
-	.word	.L244-.L243
-.L243:
+	.word	.L250-.L249
+.L249:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L244:
+.L250:
 	.byte	5,15,7,0,5,2
-	.word	.L40
-	.byte	3,239,0,1,5,34,9
-	.half	.L245-.L40
+	.word	.L43
+	.byte	3,245,0,1,5,34,9
+	.half	.L251-.L43
 	.byte	1,5,39,9
-	.half	.L246-.L245
-	.byte	1,5,60,9
-	.half	.L247-.L246
-	.byte	1,5,14,9
-	.half	.L248-.L247
-	.byte	3,3,1,5,24,9
-	.half	.L249-.L248
-	.byte	1,5,41,9
-	.half	.L250-.L249
-	.byte	1,5,18,9
-	.half	.L251-.L250
-	.byte	3,1,1,5,28,9
 	.half	.L252-.L251
-	.byte	1,5,5,9
+	.byte	1,5,60,9
 	.half	.L253-.L252
-	.byte	3,2,1,5,28,9
+	.byte	1,5,14,9
 	.half	.L254-.L253
-	.byte	1,5,26,9
+	.byte	3,3,1,5,24,9
 	.half	.L255-.L254
-	.byte	1,5,15,9
+	.byte	1,5,41,9
 	.half	.L256-.L255
-	.byte	3,1,1,5,29,9
+	.byte	1,5,18,9
 	.half	.L257-.L256
-	.byte	1,5,44,9
+	.byte	3,1,1,5,28,9
 	.half	.L258-.L257
-	.byte	1,5,56,9
+	.byte	1,5,5,9
 	.half	.L259-.L258
-	.byte	1,5,22,9
+	.byte	3,2,1,5,28,9
 	.half	.L260-.L259
-	.byte	3,2,1,5,42,9
+	.byte	1,5,26,9
 	.half	.L261-.L260
-	.byte	1,5,66,9
+	.byte	1,5,15,9
 	.half	.L262-.L261
-	.byte	1,5,25,9
+	.byte	3,1,1,5,29,9
 	.half	.L263-.L262
-	.byte	3,1,1,5,19,9
+	.byte	1,5,44,9
 	.half	.L264-.L263
-	.byte	3,2,1,5,29,9
+	.byte	1,5,56,9
 	.half	.L265-.L264
-	.byte	1,5,42,9
+	.byte	1,5,22,9
 	.half	.L266-.L265
-	.byte	1,5,55,9
+	.byte	3,2,1,5,42,9
 	.half	.L267-.L266
-	.byte	1,5,5,9
+	.byte	1,5,66,9
 	.half	.L268-.L267
-	.byte	3,2,1,5,32,9
+	.byte	1,5,25,9
 	.half	.L269-.L268
-	.byte	1,5,30,9
+	.byte	3,1,1,5,19,9
 	.half	.L270-.L269
-	.byte	1,5,5,9
+	.byte	3,2,1,5,29,9
 	.half	.L271-.L270
-	.byte	3,1,1,5,31,9
+	.byte	1,5,42,9
 	.half	.L272-.L271
-	.byte	1,5,29,9
+	.byte	1,5,55,9
 	.half	.L273-.L272
 	.byte	1,5,5,9
 	.half	.L274-.L273
-	.byte	3,1,1,5,35,9
+	.byte	3,2,1,5,32,9
 	.half	.L275-.L274
-	.byte	1,5,33,9
+	.byte	1,5,30,9
 	.half	.L276-.L275
 	.byte	1,5,5,9
 	.half	.L277-.L276
@@ -23157,268 +23161,228 @@ turn_menu_state:	.type	object
 	.half	.L279-.L278
 	.byte	1,5,5,9
 	.half	.L280-.L279
-	.byte	3,1,1,5,29,9
+	.byte	3,1,1,5,35,9
 	.half	.L281-.L280
-	.byte	1,5,27,9
+	.byte	1,5,33,9
 	.half	.L282-.L281
 	.byte	1,5,5,9
 	.half	.L283-.L282
-	.byte	3,1,1,5,30,9
+	.byte	3,1,1,5,31,9
 	.half	.L284-.L283
-	.byte	1,5,28,9
+	.byte	1,5,29,9
 	.half	.L285-.L284
 	.byte	1,5,5,9
 	.half	.L286-.L285
-	.byte	3,2,1,5,40,9
+	.byte	3,1,1,5,29,9
 	.half	.L287-.L286
-	.byte	1,5,38,9
+	.byte	1,5,27,9
 	.half	.L288-.L287
 	.byte	1,5,5,9
 	.half	.L289-.L288
-	.byte	3,1,1,5,37,9
+	.byte	3,1,1,5,30,9
 	.half	.L290-.L289
-	.byte	1,5,35,9
+	.byte	1,5,28,9
 	.half	.L291-.L290
 	.byte	1,5,5,9
 	.half	.L292-.L291
-	.byte	3,1,1,5,33,9
+	.byte	3,2,1,5,40,9
 	.half	.L293-.L292
-	.byte	1,5,31,9
+	.byte	1,5,38,9
 	.half	.L294-.L293
 	.byte	1,5,5,9
 	.half	.L295-.L294
-	.byte	3,1,1,5,36,9
+	.byte	3,1,1,5,37,9
 	.half	.L296-.L295
-	.byte	1,5,34,9
+	.byte	1,5,35,9
 	.half	.L297-.L296
-	.byte	1,5,1,9
+	.byte	1,5,5,9
 	.half	.L298-.L297
+	.byte	3,1,1,5,33,9
+	.half	.L299-.L298
+	.byte	1,5,31,9
+	.half	.L300-.L299
+	.byte	1,5,5,9
+	.half	.L301-.L300
+	.byte	3,1,1,5,36,9
+	.half	.L302-.L301
+	.byte	1,5,34,9
+	.half	.L303-.L302
+	.byte	1,5,1,9
+	.half	.L304-.L303
 	.byte	3,1,1,7,9
-	.half	.L75-.L298
+	.half	.L78-.L304
 	.byte	0,1,1
-.L242:
+.L248:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_Init')
 	.sect	'.debug_ranges'
-.L74:
-	.word	-1,.L40,0,.L75-.L40,0,0
+.L77:
+	.word	-1,.L43,0,.L78-.L43,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_info'
-.L76:
+.L79:
 	.word	227
 	.half	3
-	.word	.L77
+	.word	.L80
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L79,.L78
+	.word	.L82,.L81
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_ControlTask',0,1,139,1,6,1,1,1
-	.word	.L42,.L182,.L41
+	.byte	'Turn_ControlTask',0,1,145,1,6,1,1,1
+	.word	.L45,.L185,.L44
 	.byte	4
-	.word	.L42,.L182
+	.word	.L45,.L185
 	.byte	5
-	.byte	'delta_count',0,1,141,1,11
-	.word	.L183,.L184
+	.byte	'delta_count',0,1,147,1,11
+	.word	.L186,.L187
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_abbrev'
-.L77:
+.L80:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_line'
-.L78:
-	.word	.L300-.L299
-.L299:
+.L81:
+	.word	.L306-.L305
+.L305:
 	.half	3
-	.word	.L302-.L301
-.L301:
+	.word	.L308-.L307
+.L307:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L302:
+.L308:
 	.byte	5,43,7,0,5,2
-	.word	.L42
-	.byte	3,140,1,1,5,23,9
-	.half	.L232-.L42
+	.word	.L45
+	.byte	3,146,1,1,5,23,9
+	.half	.L238-.L45
 	.byte	1,5,25,9
-	.half	.L234-.L232
+	.half	.L240-.L238
 	.byte	3,1,1,5,5,9
-	.half	.L233-.L234
+	.half	.L239-.L240
 	.byte	3,2,1,5,41,9
-	.half	.L303-.L233
+	.half	.L309-.L239
 	.byte	1,5,5,9
-	.half	.L304-.L303
-	.byte	1,5,15,9
-	.half	.L305-.L304
-	.byte	1,5,30,9
-	.half	.L306-.L305
-	.byte	1,5,5,9
-	.half	.L307-.L306
-	.byte	3,1,1,5,38,9
-	.half	.L308-.L307
-	.byte	1,5,48,9
-	.half	.L309-.L308
-	.byte	1,5,65,9
 	.half	.L310-.L309
-	.byte	1,5,75,9
+	.byte	1,5,15,9
 	.half	.L311-.L310
-	.byte	1,5,63,9
-	.half	.L312-.L311
 	.byte	1,5,30,9
-	.half	.L313-.L312
-	.byte	1,5,92,9
-	.half	.L314-.L313
-	.byte	1,5,90,9
-	.half	.L315-.L314
-	.byte	1,5,28,9
-	.half	.L316-.L315
-	.byte	1,5,8,9
-	.half	.L317-.L316
-	.byte	3,3,1,5,18,9
-	.half	.L318-.L317
+	.half	.L312-.L311
 	.byte	1,5,5,9
+	.half	.L313-.L312
+	.byte	3,1,1,5,38,9
+	.half	.L314-.L313
+	.byte	1,5,48,9
+	.half	.L315-.L314
+	.byte	1,5,65,9
+	.half	.L316-.L315
+	.byte	1,5,75,9
+	.half	.L317-.L316
+	.byte	1,5,63,9
+	.half	.L318-.L317
+	.byte	1,5,30,9
 	.half	.L319-.L318
-	.byte	1,5,9,7,9
+	.byte	1,5,92,9
 	.half	.L320-.L319
-	.byte	3,2,1,5,19,9
+	.byte	1,5,90,9
 	.half	.L321-.L320
-	.byte	1,5,36,9
+	.byte	1,5,28,9
 	.half	.L322-.L321
-	.byte	1,5,9,9
+	.byte	1,5,8,9
 	.half	.L323-.L322
-	.byte	3,1,1,5,35,9
+	.byte	3,3,1,5,18,9
 	.half	.L324-.L323
-	.byte	1,5,45,9
+	.byte	1,5,5,9
 	.half	.L325-.L324
-	.byte	1,5,33,9
+	.byte	1,5,9,7,9
 	.half	.L326-.L325
-	.byte	1,5,9,9
+	.byte	3,2,1,5,19,9
 	.half	.L327-.L326
-	.byte	3,1,1,5,34,9
+	.byte	1,5,36,9
 	.half	.L328-.L327
-	.byte	1,5,32,9
+	.byte	1,5,9,9
 	.half	.L329-.L328
-	.byte	1,5,22,9
+	.byte	3,1,1,5,35,9
 	.half	.L330-.L329
-	.byte	3,1,1,5,32,9
+	.byte	1,5,45,9
 	.half	.L331-.L330
-	.byte	1,5,9,9
+	.byte	1,5,33,9
 	.half	.L332-.L331
-	.byte	3,1,1,9
-	.half	.L13-.L332
-	.byte	3,3,1,5,19,9
-	.half	.L333-.L13
 	.byte	1,5,9,9
+	.half	.L333-.L332
+	.byte	3,1,1,5,34,9
 	.half	.L334-.L333
-	.byte	1,5,18,7,9
+	.byte	1,5,32,9
 	.half	.L335-.L334
-	.byte	3,2,1,5,9,9
+	.byte	1,5,22,9
 	.half	.L336-.L335
-	.byte	3,1,1,5,53,9
-	.half	.L15-.L336
-	.byte	3,3,1,5,76,9
-	.half	.L337-.L15
-	.byte	1,5,43,9
+	.byte	3,1,1,5,32,9
+	.half	.L337-.L336
+	.byte	1,5,9,9
 	.half	.L338-.L337
-	.byte	1,5,100,9
-	.half	.L339-.L338
-	.byte	1,5,41,9
+	.byte	3,1,1,9
+	.half	.L16-.L338
+	.byte	3,3,1,5,19,9
+	.half	.L339-.L16
+	.byte	1,5,9,9
 	.half	.L340-.L339
+	.byte	1,5,18,7,9
+	.half	.L341-.L340
+	.byte	3,2,1,5,9,9
+	.half	.L342-.L341
+	.byte	3,1,1,5,53,9
+	.half	.L18-.L342
+	.byte	3,3,1,5,76,9
+	.half	.L343-.L18
+	.byte	1,5,43,9
+	.half	.L344-.L343
+	.byte	1,5,100,9
+	.half	.L345-.L344
+	.byte	1,5,41,9
+	.half	.L346-.L345
 	.byte	1,5,1,9
-	.half	.L14-.L340
+	.half	.L17-.L346
 	.byte	3,1,1,7,9
-	.half	.L80-.L14
+	.half	.L83-.L17
 	.byte	0,1,1
-.L300:
+.L306:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_ranges'
-.L79:
-	.word	-1,.L42,0,.L80-.L42,0,0
+.L82:
+	.word	-1,.L45,0,.L83-.L45,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_info'
-.L81:
+.L84:
 	.word	231
 	.half	3
-	.word	.L82
+	.word	.L85
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L84,.L83
+	.word	.L87,.L86
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_SetTargetAngleDeg',0,1,166,1,6,1,1,1
-	.word	.L44,.L185,.L43
+	.byte	'Turn_SetTargetAngleDeg',0,1,172,1,6,1,1,1
+	.word	.L47,.L188,.L46
 	.byte	4
-	.byte	'target_deg',0,1,166,1,35
-	.word	.L186,.L187
+	.byte	'target_deg',0,1,172,1,35
+	.word	.L189,.L190
 	.byte	5
-	.word	.L44,.L185
+	.word	.L47,.L188
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_abbrev'
-.L82:
+.L85:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_line'
-.L83:
-	.word	.L342-.L341
-.L341:
-	.half	3
-	.word	.L344-.L343
-.L343:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L344:
-	.byte	5,5,7,0,5,2
-	.word	.L44
-	.byte	3,167,1,1,5,27,9
-	.half	.L345-.L44
-	.byte	1,5,1,9
-	.half	.L346-.L345
-	.byte	3,1,1,7,9
-	.half	.L85-.L346
-	.byte	0,1,1
-.L342:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_SetTargetAngleDeg')
-	.sect	'.debug_ranges'
-.L84:
-	.word	-1,.L44,0,.L85-.L44,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_SetMenuTargetAngleDeg')
-	.sect	'.debug_info'
 .L86:
-	.word	235
-	.half	3
-	.word	.L87
-	.byte	4,1
-	.byte	'../code/Turn/Turn.c',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L89,.L88
-	.byte	2
-	.word	.L67
-	.byte	3
-	.byte	'Turn_SetMenuTargetAngleDeg',0,1,171,1,6,1,1,1
-	.word	.L46,.L188,.L45
-	.byte	4
-	.byte	'target_deg',0,1,171,1,39
-	.word	.L186,.L189
-	.byte	5
-	.word	.L46,.L188
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_SetMenuTargetAngleDeg')
-	.sect	'.debug_abbrev'
-.L87:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_SetMenuTargetAngleDeg')
-	.sect	'.debug_line'
-.L88:
 	.word	.L348-.L347
 .L347:
 	.half	3
@@ -23428,156 +23392,155 @@ turn_menu_state:	.type	object
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
 .L350:
 	.byte	5,5,7,0,5,2
-	.word	.L46
-	.byte	3,172,1,1,5,38,9
-	.half	.L351-.L46
-	.byte	1,5,66,9
-	.half	.L352-.L351
-	.byte	3,1,1,5,50,9
-	.half	.L236-.L352
+	.word	.L47
+	.byte	3,173,1,1,5,27,9
+	.half	.L351-.L47
 	.byte	1,5,1,9
-	.half	.L353-.L236
+	.half	.L352-.L351
 	.byte	3,1,1,7,9
-	.half	.L90-.L353
+	.half	.L88-.L352
 	.byte	0,1,1
 .L348:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_SetMenuTargetAngleDeg')
+	.sdecl	'.debug_ranges',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_ranges'
-.L89:
-	.word	-1,.L46,0,.L90-.L46,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
+.L87:
+	.word	-1,.L47,0,.L88-.L47,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_SetMenuTargetAngleDeg')
 	.sect	'.debug_info'
-.L91:
-	.word	218
+.L89:
+	.word	235
 	.half	3
-	.word	.L92
+	.word	.L90
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L94,.L93
+	.word	.L92,.L91
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_GetMenuTargetAngleDegPtr',0,1,177,1,8
-	.word	.L190
-	.byte	1,1,1
-	.word	.L48,.L191,.L47
+	.byte	'Turn_SetMenuTargetAngleDeg',0,1,177,1,6,1,1,1
+	.word	.L49,.L191,.L48
 	.byte	4
-	.word	.L48,.L191
+	.byte	'target_deg',0,1,177,1,39
+	.word	.L189,.L192
+	.byte	5
+	.word	.L49,.L191
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_SetMenuTargetAngleDeg')
+	.sect	'.debug_abbrev'
+.L90:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Turn_SetMenuTargetAngleDeg')
+	.sect	'.debug_line'
+.L91:
+	.word	.L354-.L353
+.L353:
+	.half	3
+	.word	.L356-.L355
+.L355:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/Turn/Turn.c',0,0,0,0,0
+.L356:
+	.byte	5,5,7,0,5,2
+	.word	.L49
+	.byte	3,178,1,1,5,38,9
+	.half	.L357-.L49
+	.byte	1,5,66,9
+	.half	.L358-.L357
+	.byte	3,1,1,5,50,9
+	.half	.L242-.L358
+	.byte	1,5,1,9
+	.half	.L359-.L242
+	.byte	3,1,1,7,9
+	.half	.L93-.L359
+	.byte	0,1,1
+.L354:
+	.sdecl	'.debug_ranges',debug,cluster('Turn_SetMenuTargetAngleDeg')
+	.sect	'.debug_ranges'
+.L92:
+	.word	-1,.L49,0,.L93-.L49,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
+	.sect	'.debug_info'
+.L94:
+	.word	218
+	.half	3
+	.word	.L95
+	.byte	4,1
+	.byte	'../code/Turn/Turn.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L97,.L96
+	.byte	2
+	.word	.L70
+	.byte	3
+	.byte	'Turn_GetMenuTargetAngleDegPtr',0,1,183,1,8
+	.word	.L193
+	.byte	1,1,1
+	.word	.L51,.L194,.L50
+	.byte	4
+	.word	.L51,.L194
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
 	.sect	'.debug_abbrev'
-.L92:
+.L95:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
 	.sect	'.debug_line'
-.L93:
-	.word	.L355-.L354
-.L354:
+.L96:
+	.word	.L361-.L360
+.L360:
 	.half	3
-	.word	.L357-.L356
-.L356:
+	.word	.L363-.L362
+.L362:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L357:
+.L363:
 	.byte	5,13,7,0,5,2
-	.word	.L48
-	.byte	3,178,1,1,5,5,9
-	.half	.L358-.L48
+	.word	.L51
+	.byte	3,184,1,1,5,5,9
+	.half	.L364-.L51
 	.byte	1,5,1,9
-	.half	.L17-.L358
+	.half	.L20-.L364
 	.byte	3,1,1,7,9
-	.half	.L95-.L17
+	.half	.L98-.L20
 	.byte	0,1,1
-.L355:
+.L361:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
 	.sect	'.debug_ranges'
-.L94:
-	.word	-1,.L48,0,.L95-.L48,0,0
+.L97:
+	.word	-1,.L51,0,.L98-.L51,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_info'
-.L96:
+.L99:
 	.word	216
 	.half	3
-	.word	.L97
+	.word	.L100
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L99,.L98
+	.word	.L102,.L101
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_GetMenuEncoderValuePtr',0,1,182,1,8
-	.word	.L190
+	.byte	'Turn_GetMenuEncoderValuePtr',0,1,188,1,8
+	.word	.L193
 	.byte	1,1,1
-	.word	.L50,.L192,.L49
+	.word	.L53,.L195,.L52
 	.byte	4
-	.word	.L50,.L192
+	.word	.L53,.L195
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_abbrev'
-.L97:
+.L100:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_line'
-.L98:
-	.word	.L360-.L359
-.L359:
-	.half	3
-	.word	.L362-.L361
-.L361:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L362:
-	.byte	5,13,7,0,5,2
-	.word	.L50
-	.byte	3,183,1,1,5,28,9
-	.half	.L363-.L50
-	.byte	1,5,5,9
-	.half	.L364-.L363
-	.byte	1,5,1,9
-	.half	.L18-.L364
-	.byte	3,1,1,7,9
-	.half	.L100-.L18
-	.byte	0,1,1
-.L360:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuEncoderValuePtr')
-	.sect	'.debug_ranges'
-.L99:
-	.word	-1,.L50,0,.L100-.L50,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuAngleDegPtr')
-	.sect	'.debug_info'
 .L101:
-	.word	212
-	.half	3
-	.word	.L102
-	.byte	4,1
-	.byte	'../code/Turn/Turn.c',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L104,.L103
-	.byte	2
-	.word	.L67
-	.byte	3
-	.byte	'Turn_GetMenuAngleDegPtr',0,1,187,1,8
-	.word	.L190
-	.byte	1,1,1
-	.word	.L52,.L193,.L51
-	.byte	4
-	.word	.L52,.L193
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuAngleDegPtr')
-	.sect	'.debug_abbrev'
-.L102:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuAngleDegPtr')
-	.sect	'.debug_line'
-.L103:
 	.word	.L366-.L365
 .L365:
 	.half	3
@@ -23587,50 +23550,50 @@ turn_menu_state:	.type	object
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
 .L368:
 	.byte	5,13,7,0,5,2
-	.word	.L52
-	.byte	3,188,1,1,5,28,9
-	.half	.L369-.L52
+	.word	.L53
+	.byte	3,189,1,1,5,28,9
+	.half	.L369-.L53
 	.byte	1,5,5,9
 	.half	.L370-.L369
 	.byte	1,5,1,9
-	.half	.L19-.L370
+	.half	.L21-.L370
 	.byte	3,1,1,7,9
-	.half	.L105-.L19
+	.half	.L103-.L21
 	.byte	0,1,1
 .L366:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuAngleDegPtr')
+	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_ranges'
-.L104:
-	.word	-1,.L52,0,.L105-.L52,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuMotorEnablePtr')
+.L102:
+	.word	-1,.L53,0,.L103-.L53,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_info'
-.L106:
-	.word	215
+.L104:
+	.word	212
 	.half	3
-	.word	.L107
+	.word	.L105
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L109,.L108
+	.word	.L107,.L106
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_GetMenuMotorEnablePtr',0,1,192,1,8
-	.word	.L194
+	.byte	'Turn_GetMenuAngleDegPtr',0,1,193,1,8
+	.word	.L193
 	.byte	1,1,1
-	.word	.L54,.L195,.L53
+	.word	.L55,.L196,.L54
 	.byte	4
-	.word	.L54,.L195
+	.word	.L55,.L196
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuMotorEnablePtr')
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_abbrev'
-.L107:
+.L105:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuMotorEnablePtr')
+	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_line'
-.L108:
+.L106:
 	.word	.L372-.L371
 .L371:
 	.half	3
@@ -23640,48 +23603,50 @@ turn_menu_state:	.type	object
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
 .L374:
 	.byte	5,13,7,0,5,2
-	.word	.L54
-	.byte	3,193,1,1,5,28,9
-	.half	.L375-.L54
+	.word	.L55
+	.byte	3,194,1,1,5,28,9
+	.half	.L375-.L55
 	.byte	1,5,5,9
 	.half	.L376-.L375
 	.byte	1,5,1,9
-	.half	.L20-.L376
+	.half	.L22-.L376
 	.byte	3,1,1,7,9
-	.half	.L110-.L20
+	.half	.L108-.L22
 	.byte	0,1,1
 .L372:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuMotorEnablePtr')
+	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_ranges'
-.L109:
-	.word	-1,.L54,0,.L110-.L54,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_MenuTargetAngleSync')
+.L107:
+	.word	-1,.L55,0,.L108-.L55,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_info'
-.L111:
-	.word	208
+.L109:
+	.word	215
 	.half	3
-	.word	.L112
+	.word	.L110
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L114,.L113
+	.word	.L112,.L111
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_MenuTargetAngleSync',0,1,97,6,1,1,1
-	.word	.L36,.L196,.L35
+	.byte	'Turn_GetMenuMotorEnablePtr',0,1,198,1,8
+	.word	.L197
+	.byte	1,1,1
+	.word	.L57,.L198,.L56
 	.byte	4
-	.word	.L36,.L196
+	.word	.L57,.L198
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_MenuTargetAngleSync')
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_abbrev'
-.L112:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_MenuTargetAngleSync')
+.L110:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_line'
-.L113:
+.L111:
 	.word	.L378-.L377
 .L377:
 	.half	3
@@ -23690,412 +23655,425 @@ turn_menu_state:	.type	object
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
 .L380:
-	.byte	5,51,7,0,5,2
-	.word	.L36
-	.byte	3,226,0,1,5,66,9
-	.half	.L381-.L36
-	.byte	1,5,50,9
+	.byte	5,13,7,0,5,2
+	.word	.L57
+	.byte	3,199,1,1,5,28,9
+	.half	.L381-.L57
+	.byte	1,5,5,9
 	.half	.L382-.L381
 	.byte	1,5,1,9
-	.half	.L383-.L382
+	.half	.L23-.L382
 	.byte	3,1,1,7,9
-	.half	.L115-.L383
+	.half	.L113-.L23
 	.byte	0,1,1
 .L378:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_MenuTargetAngleSync')
+	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_ranges'
-.L114:
-	.word	-1,.L36,0,.L115-.L36,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_MenuRuntimeUpdate')
+.L112:
+	.word	-1,.L57,0,.L113-.L57,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_info'
-.L116:
-	.word	206
+.L114:
+	.word	208
 	.half	3
-	.word	.L117
+	.word	.L115
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L119,.L118
+	.word	.L117,.L116
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_MenuRuntimeUpdate',0,1,102,6,1,1,1
-	.word	.L38,.L197,.L37
+	.byte	'Turn_MenuTargetAngleSync',0,1,97,6,1,1,1
+	.word	.L39,.L199,.L38
 	.byte	4
-	.word	.L38,.L197
+	.word	.L39,.L199
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_MenuRuntimeUpdate')
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_abbrev'
-.L117:
+.L115:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_MenuRuntimeUpdate')
+	.sdecl	'.debug_line',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_line'
-.L118:
-	.word	.L385-.L384
-.L384:
+.L116:
+	.word	.L384-.L383
+.L383:
 	.half	3
-	.word	.L387-.L386
-.L386:
+	.word	.L386-.L385
+.L385:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L387:
-	.byte	5,5,7,0,5,2
-	.word	.L38
-	.byte	3,231,0,1,5,64,9
-	.half	.L388-.L38
-	.byte	1,5,37,9
-	.half	.L389-.L388
-	.byte	1,5,35,9
-	.half	.L390-.L389
-	.byte	1,5,5,9
-	.half	.L391-.L390
-	.byte	3,1,1,5,56,9
-	.half	.L392-.L391
-	.byte	1,5,71,9
-	.half	.L393-.L392
-	.byte	1,5,31,9
-	.half	.L394-.L393
-	.byte	1,5,25,9
-	.half	.L395-.L394
-	.byte	3,1,1,5,40,9
-	.half	.L396-.L395
+.L386:
+	.byte	5,51,7,0,5,2
+	.word	.L39
+	.byte	3,226,0,1,5,66,9
+	.half	.L387-.L39
+	.byte	1,5,50,9
+	.half	.L388-.L387
 	.byte	1,5,1,9
-	.half	.L397-.L396
+	.half	.L389-.L388
 	.byte	3,1,1,7,9
-	.half	.L120-.L397
+	.half	.L118-.L389
 	.byte	0,1,1
-.L385:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_MenuRuntimeUpdate')
+.L384:
+	.sdecl	'.debug_ranges',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_ranges'
-.L119:
-	.word	-1,.L38,0,.L120-.L38,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_SetCurrentAngleAsZero')
+.L117:
+	.word	-1,.L39,0,.L118-.L39,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_MenuRuntimeUpdate')
 	.sect	'.debug_info'
-.L121:
-	.word	211
+.L119:
+	.word	240
 	.half	3
-	.word	.L122
+	.word	.L120
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L124,.L123
+	.word	.L122,.L121
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_SetCurrentAngleAsZero',0,1,197,1,6,1,1,1
-	.word	.L56,.L198,.L55
+	.byte	'Turn_MenuRuntimeUpdate',0,1,102,6,1,1,1
+	.word	.L41,.L200,.L40
 	.byte	4
-	.word	.L56,.L198
+	.word	.L41,.L200
+	.byte	4
+	.word	.L201,.L200
+	.byte	5
+	.byte	'new_enable',0,1,108,11
+	.word	.L202,.L203
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_MenuRuntimeUpdate')
+	.sect	'.debug_abbrev'
+.L120:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Turn_MenuRuntimeUpdate')
+	.sect	'.debug_line'
+.L121:
+	.word	.L391-.L390
+.L390:
+	.half	3
+	.word	.L393-.L392
+.L392:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/Turn/Turn.c',0,0,0,0,0
+.L393:
+	.byte	5,5,7,0,5,2
+	.word	.L41
+	.byte	3,231,0,1,5,64,9
+	.half	.L394-.L41
+	.byte	1,5,37,9
+	.half	.L395-.L394
+	.byte	1,5,35,9
+	.half	.L396-.L395
+	.byte	1,5,5,9
+	.half	.L397-.L396
+	.byte	3,1,1,5,56,9
+	.half	.L398-.L397
+	.byte	1,5,71,9
+	.half	.L399-.L398
+	.byte	1,5,31,9
+	.half	.L400-.L399
+	.byte	1,5,25,9
+	.half	.L201-.L400
+	.byte	3,3,1,5,40,9
+	.half	.L401-.L201
+	.byte	1,5,24,9
+	.half	.L402-.L401
+	.byte	1,5,60,7,9
+	.half	.L403-.L402
+	.byte	1,5,65,9
+	.half	.L237-.L403
+	.byte	1,5,60,9
+	.half	.L13-.L237
+	.byte	1,5,22,9
+	.half	.L14-.L13
+	.byte	3,1,1,5,32,9
+	.half	.L404-.L14
+	.byte	1,5,5,9
+	.half	.L405-.L404
+	.byte	1,5,29,7,9
+	.half	.L406-.L405
+	.byte	3,2,1,5,1,9
+	.half	.L15-.L406
+	.byte	3,2,1,7,9
+	.half	.L123-.L15
+	.byte	0,1,1
+.L391:
+	.sdecl	'.debug_ranges',debug,cluster('Turn_MenuRuntimeUpdate')
+	.sect	'.debug_ranges'
+.L122:
+	.word	-1,.L41,0,.L123-.L41,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_SetCurrentAngleAsZero')
+	.sect	'.debug_info'
+.L124:
+	.word	211
+	.half	3
+	.word	.L125
+	.byte	4,1
+	.byte	'../code/Turn/Turn.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L127,.L126
+	.byte	2
+	.word	.L70
+	.byte	3
+	.byte	'Turn_SetCurrentAngleAsZero',0,1,203,1,6,1,1,1
+	.word	.L59,.L204,.L58
+	.byte	4
+	.word	.L59,.L204
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_SetCurrentAngleAsZero')
 	.sect	'.debug_abbrev'
-.L122:
+.L125:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_SetCurrentAngleAsZero')
 	.sect	'.debug_line'
-.L123:
-	.word	.L399-.L398
-.L398:
+.L126:
+	.word	.L408-.L407
+.L407:
 	.half	3
-	.word	.L401-.L400
-.L400:
+	.word	.L410-.L409
+.L409:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L401:
+.L410:
 	.byte	5,5,7,0,5,2
-	.word	.L56
-	.byte	3,198,1,1,5,31,9
-	.half	.L402-.L56
+	.word	.L59
+	.byte	3,204,1,1,5,31,9
+	.half	.L411-.L59
 	.byte	1,5,41,9
-	.half	.L403-.L402
-	.byte	1,5,29,9
-	.half	.L404-.L403
-	.byte	1,5,5,9
-	.half	.L405-.L404
-	.byte	3,1,1,5,30,9
-	.half	.L406-.L405
-	.byte	1,5,28,9
-	.half	.L407-.L406
-	.byte	1,5,5,9
-	.half	.L408-.L407
-	.byte	3,1,1,5,29,9
-	.half	.L409-.L408
-	.byte	1,5,27,9
-	.half	.L410-.L409
-	.byte	1,5,16,9
-	.half	.L411-.L410
-	.byte	3,1,1,5,1,9
 	.half	.L412-.L411
+	.byte	1,5,29,9
+	.half	.L413-.L412
+	.byte	1,5,5,9
+	.half	.L414-.L413
+	.byte	3,1,1,5,30,9
+	.half	.L415-.L414
+	.byte	1,5,28,9
+	.half	.L416-.L415
+	.byte	1,5,5,9
+	.half	.L417-.L416
+	.byte	3,1,1,5,29,9
+	.half	.L418-.L417
+	.byte	1,5,27,9
+	.half	.L419-.L418
+	.byte	1,5,16,9
+	.half	.L420-.L419
+	.byte	3,1,1,5,1,9
+	.half	.L421-.L420
 	.byte	3,1,1,7,9
-	.half	.L125-.L412
+	.half	.L128-.L421
 	.byte	0,1,1
-.L399:
+.L408:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_SetCurrentAngleAsZero')
 	.sect	'.debug_ranges'
-.L124:
-	.word	-1,.L56,0,.L125-.L56,0,0
+.L127:
+	.word	-1,.L59,0,.L128-.L59,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_Stop')
 	.sect	'.debug_info'
-.L126:
+.L129:
 	.word	194
 	.half	3
-	.word	.L127
+	.word	.L130
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L129,.L128
+	.word	.L132,.L131
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_Stop',0,1,205,1,6,1,1,1
-	.word	.L58,.L199,.L57
+	.byte	'Turn_Stop',0,1,211,1,6,1,1,1
+	.word	.L61,.L205,.L60
 	.byte	4
-	.word	.L58,.L199
+	.word	.L61,.L205
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_Stop')
 	.sect	'.debug_abbrev'
-.L127:
+.L130:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_Stop')
 	.sect	'.debug_line'
-.L128:
-	.word	.L414-.L413
-.L413:
+.L131:
+	.word	.L423-.L422
+.L422:
 	.half	3
-	.word	.L416-.L415
-.L415:
+	.word	.L425-.L424
+.L424:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L416:
+.L425:
 	.byte	5,16,7,0,5,2
-	.word	.L58
-	.byte	3,206,1,1,5,18,9
-	.half	.L417-.L58
+	.word	.L61
+	.byte	3,212,1,1,5,18,9
+	.half	.L426-.L61
 	.byte	3,1,1,5,28,9
-	.half	.L418-.L417
+	.half	.L427-.L426
 	.byte	1,5,1,9
-	.half	.L419-.L418
+	.half	.L428-.L427
 	.byte	3,1,1,7,9
-	.half	.L130-.L419
+	.half	.L133-.L428
 	.byte	0,1,1
-.L414:
+.L423:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_Stop')
 	.sect	'.debug_ranges'
-.L129:
-	.word	-1,.L58,0,.L130-.L58,0,0
+.L132:
+	.word	-1,.L61,0,.L133-.L61,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_info'
-.L131:
+.L134:
 	.word	224
 	.half	3
-	.word	.L132
+	.word	.L135
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L134,.L133
+	.word	.L137,.L136
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_SetMotorEnable',0,1,211,1,6,1,1,1
-	.word	.L60,.L200,.L59
+	.byte	'Turn_SetMotorEnable',0,1,217,1,6,1,1,1
+	.word	.L63,.L206,.L62
 	.byte	4
-	.byte	'enable',0,1,211,1,32
-	.word	.L201,.L202
+	.byte	'enable',0,1,217,1,32
+	.word	.L202,.L207
 	.byte	5
-	.word	.L60,.L200
+	.word	.L63,.L206
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_abbrev'
-.L132:
+.L135:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_line'
-.L133:
-	.word	.L421-.L420
-.L420:
+.L136:
+	.word	.L430-.L429
+.L429:
 	.half	3
-	.word	.L423-.L422
-.L422:
+	.word	.L432-.L431
+.L431:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L423:
+.L432:
 	.byte	5,31,7,0,5,2
-	.word	.L60
-	.byte	3,212,1,1,5,45,7,9
-	.half	.L424-.L60
+	.word	.L63
+	.byte	3,218,1,1,5,45,7,9
+	.half	.L433-.L63
 	.byte	1,5,49,9
-	.half	.L425-.L424
+	.half	.L434-.L433
 	.byte	1,5,45,9
-	.half	.L21-.L425
+	.half	.L24-.L434
 	.byte	1,5,5,9
-	.half	.L22-.L21
+	.half	.L25-.L24
 	.byte	1,5,29,9
-	.half	.L426-.L22
+	.half	.L435-.L25
 	.byte	1,5,19,9
-	.half	.L427-.L426
+	.half	.L436-.L435
 	.byte	3,1,1,5,9,9
-	.half	.L428-.L427
+	.half	.L437-.L436
 	.byte	1,5,18,7,9
-	.half	.L429-.L428
+	.half	.L438-.L437
 	.byte	3,2,1,5,1,9
-	.half	.L23-.L429
+	.half	.L26-.L438
 	.byte	3,2,1,7,9
-	.half	.L135-.L23
+	.half	.L138-.L26
 	.byte	0,1,1
-.L421:
+.L430:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_ranges'
-.L134:
-	.word	-1,.L60,0,.L135-.L60,0,0
+.L137:
+	.word	-1,.L63,0,.L138-.L63,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_info'
-.L136:
+.L139:
 	.word	208
 	.half	3
-	.word	.L137
+	.word	.L140
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L139,.L138
+	.word	.L142,.L141
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_GetMotorEnable',0,1,220,1,7
-	.word	.L201
+	.byte	'Turn_GetMotorEnable',0,1,226,1,7
+	.word	.L202
 	.byte	1,1,1
-	.word	.L62,.L203,.L61
+	.word	.L65,.L208,.L64
 	.byte	4
-	.word	.L62,.L203
+	.word	.L65,.L208
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_abbrev'
-.L137:
+.L140:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_line'
-.L138:
-	.word	.L431-.L430
-.L430:
+.L141:
+	.word	.L440-.L439
+.L439:
 	.half	3
-	.word	.L433-.L432
-.L432:
+	.word	.L442-.L441
+.L441:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L433:
+.L442:
 	.byte	5,12,7,0,5,2
-	.word	.L62
-	.byte	3,221,1,1,5,22,9
-	.half	.L434-.L62
+	.word	.L65
+	.byte	3,227,1,1,5,22,9
+	.half	.L443-.L65
 	.byte	1,5,5,9
-	.half	.L435-.L434
+	.half	.L444-.L443
 	.byte	1,5,1,9
-	.half	.L24-.L435
+	.half	.L27-.L444
 	.byte	3,1,1,7,9
-	.half	.L140-.L24
+	.half	.L143-.L27
 	.byte	0,1,1
-.L431:
+.L440:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_ranges'
-.L139:
-	.word	-1,.L62,0,.L140-.L62,0,0
+.L142:
+	.word	-1,.L65,0,.L143-.L65,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_info'
-.L141:
+.L144:
 	.word	209
 	.half	3
-	.word	.L142
+	.word	.L145
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L144,.L143
+	.word	.L147,.L146
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
-	.byte	'Turn_GetEncoderCount',0,1,225,1,7
-	.word	.L204
+	.byte	'Turn_GetEncoderCount',0,1,231,1,7
+	.word	.L209
 	.byte	1,1,1
-	.word	.L64,.L205,.L63
+	.word	.L67,.L210,.L66
 	.byte	4
-	.word	.L64,.L205
+	.word	.L67,.L210
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_abbrev'
-.L142:
+.L145:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_line'
-.L143:
-	.word	.L437-.L436
-.L436:
-	.half	3
-	.word	.L439-.L438
-.L438:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L439:
-	.byte	5,13,7,0,5,2
-	.word	.L64
-	.byte	3,226,1,1,5,23,9
-	.half	.L440-.L64
-	.byte	1,5,40,9
-	.half	.L441-.L440
-	.byte	1,5,50,9
-	.half	.L442-.L441
-	.byte	1,5,38,9
-	.half	.L443-.L442
-	.byte	1,5,5,9
-	.half	.L444-.L443
-	.byte	1,5,1,9
-	.half	.L25-.L444
-	.byte	3,1,1,7,9
-	.half	.L145-.L25
-	.byte	0,1,1
-.L437:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_GetEncoderCount')
-	.sect	'.debug_ranges'
-.L144:
-	.word	-1,.L64,0,.L145-.L64,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_GetCurrentAngleDeg')
-	.sect	'.debug_info'
 .L146:
-	.word	212
-	.half	3
-	.word	.L147
-	.byte	4,1
-	.byte	'../code/Turn/Turn.c',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L149,.L148
-	.byte	2
-	.word	.L67
-	.byte	3
-	.byte	'Turn_GetCurrentAngleDeg',0,1,230,1,7
-	.word	.L186
-	.byte	1,1,1
-	.word	.L66,.L206,.L65
-	.byte	4
-	.word	.L66,.L206
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetCurrentAngleDeg')
-	.sect	'.debug_abbrev'
-.L147:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('Turn_GetCurrentAngleDeg')
-	.sect	'.debug_line'
-.L148:
 	.word	.L446-.L445
 .L445:
 	.half	3
@@ -24104,632 +24082,699 @@ turn_menu_state:	.type	object
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
 .L448:
-	.byte	5,12,7,0,5,2
-	.word	.L66
-	.byte	3,231,1,1,5,5,9
-	.half	.L449-.L66
+	.byte	5,13,7,0,5,2
+	.word	.L67
+	.byte	3,232,1,1,5,23,9
+	.half	.L449-.L67
+	.byte	1,5,40,9
+	.half	.L450-.L449
+	.byte	1,5,50,9
+	.half	.L451-.L450
+	.byte	1,5,38,9
+	.half	.L452-.L451
+	.byte	1,5,5,9
+	.half	.L453-.L452
 	.byte	1,5,1,9
-	.half	.L26-.L449
-	.byte	3,2,1,7,9
-	.half	.L150-.L26
+	.half	.L28-.L453
+	.byte	3,1,1,7,9
+	.half	.L148-.L28
 	.byte	0,1,1
 .L446:
-	.sdecl	'.debug_ranges',debug,cluster('Turn_GetCurrentAngleDeg')
+	.sdecl	'.debug_ranges',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_ranges'
-.L149:
-	.word	-1,.L66,0,.L150-.L66,0,0
-	.sdecl	'.debug_info',debug,cluster('Turn_EncToMenuAngleDeg')
+.L147:
+	.word	-1,.L67,0,.L148-.L67,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_GetCurrentAngleDeg')
 	.sect	'.debug_info'
-.L151:
-	.word	229
+.L149:
+	.word	212
 	.half	3
-	.word	.L152
+	.word	.L150
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L154,.L153
+	.word	.L152,.L151
 	.byte	2
-	.word	.L67
+	.word	.L70
+	.byte	3
+	.byte	'Turn_GetCurrentAngleDeg',0,1,236,1,7
+	.word	.L189
+	.byte	1,1,1
+	.word	.L69,.L211,.L68
+	.byte	4
+	.word	.L69,.L211
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetCurrentAngleDeg')
+	.sect	'.debug_abbrev'
+.L150:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Turn_GetCurrentAngleDeg')
+	.sect	'.debug_line'
+.L151:
+	.word	.L455-.L454
+.L454:
+	.half	3
+	.word	.L457-.L456
+.L456:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/Turn/Turn.c',0,0,0,0,0
+.L457:
+	.byte	5,12,7,0,5,2
+	.word	.L69
+	.byte	3,237,1,1,5,5,9
+	.half	.L458-.L69
+	.byte	1,5,1,9
+	.half	.L29-.L458
+	.byte	3,2,1,7,9
+	.half	.L153-.L29
+	.byte	0,1,1
+.L455:
+	.sdecl	'.debug_ranges',debug,cluster('Turn_GetCurrentAngleDeg')
+	.sect	'.debug_ranges'
+.L152:
+	.word	-1,.L69,0,.L153-.L69,0,0
+	.sdecl	'.debug_info',debug,cluster('Turn_EncToMenuAngleDeg')
+	.sect	'.debug_info'
+.L154:
+	.word	229
+	.half	3
+	.word	.L155
+	.byte	4,1
+	.byte	'../code/Turn/Turn.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
+	.word	.L157,.L156
+	.byte	2
+	.word	.L70
 	.byte	3
 	.byte	'Turn_EncToMenuAngleDeg',0,1,46,14
-	.word	.L186
+	.word	.L189
 	.byte	1,1
-	.word	.L28,.L207,.L27
+	.word	.L31,.L212,.L30
 	.byte	4
 	.byte	'enc_val',0,1,46,43
-	.word	.L186,.L208
+	.word	.L189,.L213
 	.byte	5
-	.word	.L28,.L207
+	.word	.L31,.L212
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_EncToMenuAngleDeg')
 	.sect	'.debug_abbrev'
-.L152:
+.L155:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_EncToMenuAngleDeg')
 	.sect	'.debug_line'
-.L153:
-	.word	.L451-.L450
-.L450:
+.L156:
+	.word	.L460-.L459
+.L459:
 	.half	3
-	.word	.L453-.L452
-.L452:
+	.word	.L462-.L461
+.L461:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L453:
+.L462:
 	.byte	5,50,7,0,5,2
-	.word	.L28
+	.word	.L31
 	.byte	3,47,1,5,20,9
-	.half	.L454-.L28
+	.half	.L463-.L31
 	.byte	1,5,5,9
-	.half	.L455-.L454
+	.half	.L464-.L463
 	.byte	1,5,1,9
-	.half	.L2-.L455
+	.half	.L2-.L464
 	.byte	3,1,1,7,9
-	.half	.L155-.L2
+	.half	.L158-.L2
 	.byte	0,1,1
-.L451:
+.L460:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_EncToMenuAngleDeg')
 	.sect	'.debug_ranges'
-.L154:
-	.word	-1,.L28,0,.L155-.L28,0,0
+.L157:
+	.word	-1,.L31,0,.L158-.L31,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_info'
-.L156:
+.L159:
 	.word	231
 	.half	3
-	.word	.L157
+	.word	.L160
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L159,.L158
+	.word	.L162,.L161
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'Turn_MenuAngleDegToEnc',0,1,51,14
-	.word	.L186
+	.word	.L189
 	.byte	1,1
-	.word	.L30,.L209,.L29
+	.word	.L33,.L214,.L32
 	.byte	4
 	.byte	'angle_val',0,1,51,43
-	.word	.L186,.L210
+	.word	.L189,.L215
 	.byte	5
-	.word	.L30,.L209
+	.word	.L33,.L214
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_abbrev'
-.L157:
+.L160:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_line'
-.L158:
-	.word	.L457-.L456
-.L456:
+.L161:
+	.word	.L466-.L465
+.L465:
 	.half	3
-	.word	.L459-.L458
-.L458:
+	.word	.L468-.L467
+.L467:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L459:
+.L468:
 	.byte	5,50,7,0,5,2
-	.word	.L30
+	.word	.L33
 	.byte	3,52,1,5,22,9
-	.half	.L460-.L30
+	.half	.L469-.L33
 	.byte	1,5,5,9
-	.half	.L461-.L460
+	.half	.L470-.L469
 	.byte	1,5,1,9
-	.half	.L3-.L461
+	.half	.L3-.L470
 	.byte	3,1,1,7,9
-	.half	.L160-.L3
+	.half	.L163-.L3
 	.byte	0,1,1
-.L457:
+.L466:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_ranges'
-.L159:
-	.word	-1,.L30,0,.L160-.L30,0,0
+.L162:
+	.word	-1,.L33,0,.L163-.L33,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_info'
-.L161:
+.L164:
 	.word	252
 	.half	3
-	.word	.L162
+	.word	.L165
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L164,.L163
+	.word	.L167,.L166
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'Turn_GetDutyFromOutput',0,1,56,15
-	.word	.L211
+	.word	.L216
 	.byte	1,1
-	.word	.L32,.L212,.L31
+	.word	.L35,.L217,.L34
 	.byte	4
 	.byte	'output',0,1,56,44
-	.word	.L186,.L213
+	.word	.L189,.L218
 	.byte	5
-	.word	.L32,.L212
+	.word	.L35,.L217
 	.byte	6
 	.byte	'abs_output',0,1,58,11
-	.word	.L186,.L214
+	.word	.L189,.L219
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_abbrev'
-.L162:
+.L165:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
 	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_line'
-.L163:
-	.word	.L463-.L462
-.L462:
+.L166:
+	.word	.L472-.L471
+.L471:
 	.half	3
-	.word	.L465-.L464
-.L464:
+	.word	.L474-.L473
+.L473:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L465:
+.L474:
 	.byte	5,24,7,0,5,2
-	.word	.L32
+	.word	.L35
 	.byte	3,57,1,5,22,9
-	.half	.L224-.L32
+	.half	.L229-.L35
 	.byte	3,1,1,5,19,9
-	.half	.L466-.L224
+	.half	.L475-.L229
 	.byte	1,5,5,9
-	.half	.L467-.L466
+	.half	.L476-.L475
 	.byte	1,5,16,7,9
-	.half	.L468-.L467
+	.half	.L477-.L476
 	.byte	3,2,1,5,9,9
-	.half	.L469-.L468
+	.half	.L478-.L477
 	.byte	1,5,22,9
-	.half	.L4-.L469
+	.half	.L4-.L478
 	.byte	3,3,1,5,19,9
-	.half	.L470-.L4
+	.half	.L479-.L4
 	.byte	1,5,5,9
-	.half	.L471-.L470
+	.half	.L480-.L479
 	.byte	1,5,16,7,9
-	.half	.L472-.L471
+	.half	.L481-.L480
 	.byte	3,2,1,5,9,9
-	.half	.L473-.L472
+	.half	.L482-.L481
 	.byte	1,5,12,9
-	.half	.L6-.L473
+	.half	.L6-.L482
 	.byte	3,3,1,5,5,9
-	.half	.L474-.L6
+	.half	.L483-.L6
 	.byte	1,5,1,9
-	.half	.L5-.L474
+	.half	.L5-.L483
 	.byte	3,1,1,7,9
-	.half	.L165-.L5
+	.half	.L168-.L5
 	.byte	0,1,1
-.L463:
+.L472:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_ranges'
-.L164:
-	.word	-1,.L32,0,.L165-.L32,0,0
+.L167:
+	.word	-1,.L35,0,.L168-.L35,0,0
 	.sdecl	'.debug_info',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_info'
-.L166:
+.L169:
 	.word	270
 	.half	3
-	.word	.L167
+	.word	.L170
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1
-	.word	.L169,.L168
+	.word	.L172,.L171
 	.byte	2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'Turn_ApplyMotorOutput',0,1,72,13,1,1
-	.word	.L34,.L215,.L33
+	.word	.L37,.L220,.L36
 	.byte	4
 	.byte	'output',0,1,72,41
-	.word	.L186,.L216
+	.word	.L189,.L221
 	.byte	5
-	.word	.L34,.L215
+	.word	.L37,.L220
 	.byte	6
 	.byte	'duty',0,1,74,12
-	.word	.L211,.L217
+	.word	.L216,.L222
 	.byte	6
 	.byte	'target_dir_level',0,1,75,11
-	.word	.L201,.L218
+	.word	.L202,.L223
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_abbrev'
-.L167:
+.L170:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
 	.byte	15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_line'
-.L168:
-	.word	.L476-.L475
-.L475:
+.L171:
+	.word	.L485-.L484
+.L484:
 	.half	3
-	.word	.L478-.L477
-.L477:
+	.word	.L487-.L486
+.L486:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/Turn/Turn.c',0,0,0,0,0
-.L478:
+.L487:
 	.byte	5,13,7,0,5,2
-	.word	.L34
+	.word	.L37
 	.byte	3,199,0,1,5,42,9
-	.half	.L226-.L34
+	.half	.L231-.L37
 	.byte	3,2,1,5,17,9
-	.half	.L225-.L226
+	.half	.L230-.L231
 	.byte	1,5,28,9
-	.half	.L228-.L225
+	.half	.L233-.L230
 	.byte	3,1,1,5,5,9
-	.half	.L229-.L228
+	.half	.L234-.L233
 	.byte	3,2,1,5,22,7,9
-	.half	.L479-.L229
+	.half	.L488-.L234
 	.byte	3,2,1,5,32,9
-	.half	.L480-.L479
-	.byte	1,5,9,9
-	.half	.L227-.L480
-	.byte	3,1,1,5,17,9
-	.half	.L9-.L227
-	.byte	3,3,1,5,15,9
-	.half	.L481-.L9
-	.byte	1,5,5,9
-	.half	.L482-.L481
-	.byte	1,5,26,7,9
-	.half	.L483-.L482
-	.byte	3,2,1,5,28,9
-	.half	.L11-.L483
-	.byte	3,3,1,5,38,9
-	.half	.L484-.L11
-	.byte	1,5,5,9
-	.half	.L485-.L484
-	.byte	1,5,9,7,9
-	.half	.L486-.L485
-	.byte	3,2,1,5,30,9
-	.half	.L487-.L486
-	.byte	1,5,24,9
-	.half	.L488-.L487
-	.byte	3,1,1,5,48,9
 	.half	.L489-.L488
+	.byte	1,5,9,9
+	.half	.L232-.L489
+	.byte	3,1,1,5,17,9
+	.half	.L9-.L232
+	.byte	3,3,1,5,15,9
+	.half	.L490-.L9
+	.byte	1,5,5,9
+	.half	.L491-.L490
+	.byte	1,5,26,7,9
+	.half	.L492-.L491
+	.byte	3,2,1,5,28,9
+	.half	.L11-.L492
+	.byte	3,3,1,5,38,9
+	.half	.L493-.L11
+	.byte	1,5,5,9
+	.half	.L494-.L493
+	.byte	1,5,9,7,9
+	.half	.L495-.L494
+	.byte	3,2,1,5,30,9
+	.half	.L496-.L495
+	.byte	1,5,24,9
+	.half	.L497-.L496
+	.byte	3,1,1,5,48,9
+	.half	.L498-.L497
 	.byte	1,5,18,9
-	.half	.L12-.L489
+	.half	.L12-.L498
 	.byte	3,3,1,5,28,9
-	.half	.L490-.L12
+	.half	.L499-.L12
 	.byte	1,5,1,9
-	.half	.L10-.L490
+	.half	.L10-.L499
 	.byte	3,1,1,7,9
-	.half	.L170-.L10
+	.half	.L173-.L10
 	.byte	0,1,1
-.L476:
+.L485:
 	.sdecl	'.debug_ranges',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_ranges'
-.L169:
-	.word	-1,.L34,0,.L170-.L34,0,0
+.L172:
+	.word	-1,.L37,0,.L173-.L37,0,0
 	.sdecl	'.debug_info',debug,cluster('turn_target_angle_deg')
 	.sect	'.debug_info'
-.L171:
+.L174:
 	.word	183
 	.half	3
-	.word	.L172
+	.word	.L175
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'turn_target_angle_deg',0,28,11,16
-	.word	.L219
+	.word	.L224
 	.byte	1,5,3
 	.word	turn_target_angle_deg
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('turn_target_angle_deg')
 	.sect	'.debug_abbrev'
-.L172:
+.L175:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
 	.sdecl	'.debug_info',debug,cluster('turn_current_angle_deg')
 	.sect	'.debug_info'
-.L173:
+.L176:
 	.word	184
 	.half	3
-	.word	.L174
+	.word	.L177
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'turn_current_angle_deg',0,28,12,16
-	.word	.L220
+	.word	.L225
 	.byte	1,5,3
 	.word	turn_current_angle_deg
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('turn_current_angle_deg')
 	.sect	'.debug_abbrev'
-.L174:
+.L177:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
 	.sdecl	'.debug_info',debug,cluster('turn_pid')
 	.sect	'.debug_info'
-.L175:
+.L178:
 	.word	169
 	.half	3
-	.word	.L176
+	.word	.L179
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'turn_pid',0,28,31,23
-	.word	.L221
+	.word	.L226
 	.byte	5,3
 	.word	turn_pid
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('turn_pid')
 	.sect	'.debug_abbrev'
-.L176:
+.L179:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('turn_state')
 	.sect	'.debug_info'
-.L177:
+.L180:
 	.word	171
 	.half	3
-	.word	.L178
+	.word	.L181
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'turn_state',0,28,32,26
-	.word	.L222
+	.word	.L227
 	.byte	5,3
 	.word	turn_state
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('turn_state')
 	.sect	'.debug_abbrev'
-.L178:
+.L181:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('turn_menu_state')
 	.sect	'.debug_info'
-.L179:
+.L182:
 	.word	176
 	.half	3
-	.word	.L180
+	.word	.L183
 	.byte	4,1
 	.byte	'../code/Turn/Turn.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'D:\\work\\ZUST_KADING_TC387\\Debug\\',0,12,1,2
-	.word	.L67
+	.word	.L70
 	.byte	3
 	.byte	'turn_menu_state',0,28,39,23
-	.word	.L223
+	.word	.L228
 	.byte	5,3
 	.word	turn_menu_state
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('turn_menu_state')
 	.sect	'.debug_abbrev'
-.L180:
+.L183:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_loc'
-.L33:
-	.word	-1,.L34,0,.L215-.L34
+.L36:
+	.word	-1,.L37,0,.L220-.L37
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L217:
-	.word	-1,.L34,.L225-.L34,.L227-.L34
+.L222:
+	.word	-1,.L37,.L230-.L37,.L232-.L37
 	.half	1
 	.byte	82
-	.word	.L228-.L34,.L215-.L34
+	.word	.L233-.L37,.L220-.L37
 	.half	1
 	.byte	89
-	.word	.L9-.L34,.L12-.L34
+	.word	.L9-.L37,.L12-.L37
 	.half	1
 	.byte	82
-	.word	.L231-.L34,.L10-.L34
+	.word	.L236-.L37,.L10-.L37
 	.half	1
 	.byte	85
 	.word	0,0
-.L216:
-	.word	-1,.L34,0,.L225-.L34
+.L221:
+	.word	-1,.L37,0,.L230-.L37
 	.half	1
 	.byte	84
-	.word	.L226-.L34,.L215-.L34
+	.word	.L231-.L37,.L220-.L37
 	.half	1
 	.byte	88
 	.word	0,0
-.L218:
-	.word	-1,.L34,.L229-.L34,.L230-.L34
+.L223:
+	.word	-1,.L37,.L234-.L37,.L235-.L37
 	.half	1
 	.byte	85
-	.word	.L9-.L34,.L12-.L34
+	.word	.L9-.L37,.L12-.L37
 	.half	1
 	.byte	85
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_loc'
-.L41:
-	.word	-1,.L42,0,.L182-.L42
+.L44:
+	.word	-1,.L45,0,.L185-.L45
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L184:
-	.word	-1,.L42,.L232-.L42,.L233-.L42
+.L187:
+	.word	-1,.L45,.L238-.L45,.L239-.L45
 	.half	1
 	.byte	82
-	.word	.L234-.L42,.L235-.L42
+	.word	.L240-.L45,.L241-.L45
 	.half	1
 	.byte	95
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_EncToMenuAngleDeg')
 	.sect	'.debug_loc'
-.L27:
-	.word	-1,.L28,0,.L207-.L28
+.L30:
+	.word	-1,.L31,0,.L212-.L31
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L208:
-	.word	-1,.L28,0,.L207-.L28
+.L213:
+	.word	-1,.L31,0,.L212-.L31
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetCurrentAngleDeg')
 	.sect	'.debug_loc'
-.L65:
-	.word	-1,.L66,0,.L206-.L66
+.L68:
+	.word	-1,.L69,0,.L211-.L69
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_loc'
-.L31:
-	.word	-1,.L32,0,.L212-.L32
+.L34:
+	.word	-1,.L35,0,.L217-.L35
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L214:
-	.word	-1,.L32,.L224-.L32,.L212-.L32
+.L219:
+	.word	-1,.L35,.L229-.L35,.L217-.L35
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
-.L213:
-	.word	-1,.L32,0,.L212-.L32
+.L218:
+	.word	-1,.L35,0,.L217-.L35
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_loc'
-.L63:
-	.word	-1,.L64,0,.L205-.L64
+.L66:
+	.word	-1,.L67,0,.L210-.L67
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_loc'
-.L51:
-	.word	-1,.L52,0,.L193-.L52
+.L54:
+	.word	-1,.L55,0,.L196-.L55
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_loc'
-.L49:
-	.word	-1,.L50,0,.L192-.L50
+.L52:
+	.word	-1,.L53,0,.L195-.L53
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_loc'
-.L53:
-	.word	-1,.L54,0,.L195-.L54
+.L56:
+	.word	-1,.L57,0,.L198-.L57
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
 	.sect	'.debug_loc'
-.L47:
-	.word	-1,.L48,0,.L191-.L48
+.L50:
+	.word	-1,.L51,0,.L194-.L51
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_loc'
-.L61:
-	.word	-1,.L62,0,.L203-.L62
+.L64:
+	.word	-1,.L65,0,.L208-.L65
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_Init')
 	.sect	'.debug_loc'
-.L39:
-	.word	-1,.L40,0,.L181-.L40
+.L42:
+	.word	-1,.L43,0,.L184-.L43
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_loc'
-.L29:
-	.word	-1,.L30,0,.L209-.L30
+.L32:
+	.word	-1,.L33,0,.L214-.L33
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L210:
-	.word	-1,.L30,0,.L209-.L30
+.L215:
+	.word	-1,.L33,0,.L214-.L33
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_MenuRuntimeUpdate')
 	.sect	'.debug_loc'
-.L37:
-	.word	-1,.L38,0,.L197-.L38
+.L40:
+	.word	-1,.L41,0,.L200-.L41
 	.half	2
 	.byte	138,0
 	.word	0,0
+.L203:
+	.word	-1,.L41,.L237-.L41,.L13-.L41
+	.half	1
+	.byte	84
+	.word	.L14-.L41,.L15-.L41
+	.half	1
+	.byte	84
+	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_loc'
-.L35:
-	.word	-1,.L36,0,.L196-.L36
+.L38:
+	.word	-1,.L39,0,.L199-.L39
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_SetCurrentAngleAsZero')
 	.sect	'.debug_loc'
-.L55:
-	.word	-1,.L56,0,.L198-.L56
+.L58:
+	.word	-1,.L59,0,.L204-.L59
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_SetMenuTargetAngleDeg')
 	.sect	'.debug_loc'
-.L45:
-	.word	-1,.L46,0,.L188-.L46
+.L48:
+	.word	-1,.L49,0,.L191-.L49
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L189:
-	.word	-1,.L46,0,.L236-.L46
+.L192:
+	.word	-1,.L49,0,.L242-.L49
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_loc'
-.L59:
-	.word	-1,.L60,0,.L200-.L60
+.L62:
+	.word	-1,.L63,0,.L206-.L63
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L202:
-	.word	-1,.L60,0,.L23-.L60
+.L207:
+	.word	-1,.L63,0,.L26-.L63
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_loc'
-.L43:
-	.word	-1,.L44,0,.L185-.L44
+.L46:
+	.word	-1,.L47,0,.L188-.L47
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L187:
-	.word	-1,.L44,0,.L185-.L44
+.L190:
+	.word	-1,.L47,0,.L188-.L47
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('Turn_Stop')
 	.sect	'.debug_loc'
-.L57:
-	.word	-1,.L58,0,.L199-.L58
+.L60:
+	.word	-1,.L61,0,.L205-.L61
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L491:
+.L500:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -24737,92 +24782,92 @@ turn_menu_state:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('Turn_EncToMenuAngleDeg')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L28,.L207-.L28
+	.word	.L500,.L31,.L212-.L31
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_MenuAngleDegToEnc')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L30,.L209-.L30
+	.word	.L500,.L33,.L214-.L33
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetDutyFromOutput')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L32,.L212-.L32
+	.word	.L500,.L35,.L217-.L35
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_ApplyMotorOutput')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L34,.L215-.L34
+	.word	.L500,.L37,.L220-.L37
 	.sdecl	'.debug_frame',debug,cluster('Turn_MenuTargetAngleSync')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L36,.L196-.L36
+	.word	.L500,.L39,.L199-.L39
 	.sdecl	'.debug_frame',debug,cluster('Turn_MenuRuntimeUpdate')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L38,.L197-.L38
+	.word	.L500,.L41,.L200-.L41
 	.sdecl	'.debug_frame',debug,cluster('Turn_Init')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L40,.L181-.L40
+	.word	.L500,.L43,.L184-.L43
 	.sdecl	'.debug_frame',debug,cluster('Turn_ControlTask')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L42,.L182-.L42
+	.word	.L500,.L45,.L185-.L45
 	.sdecl	'.debug_frame',debug,cluster('Turn_SetTargetAngleDeg')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L44,.L185-.L44
+	.word	.L500,.L47,.L188-.L47
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_SetMenuTargetAngleDeg')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L46,.L188-.L46
+	.word	.L500,.L49,.L191-.L49
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetMenuTargetAngleDegPtr')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L48,.L191-.L48
+	.word	.L500,.L51,.L194-.L51
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetMenuEncoderValuePtr')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L50,.L192-.L50
+	.word	.L500,.L53,.L195-.L53
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetMenuAngleDegPtr')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L52,.L193-.L52
+	.word	.L500,.L55,.L196-.L55
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetMenuMotorEnablePtr')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L54,.L195-.L54
+	.word	.L500,.L57,.L198-.L57
 	.byte	8,19,8,20,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('Turn_SetCurrentAngleAsZero')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L56,.L198-.L56
+	.word	.L500,.L59,.L204-.L59
 	.sdecl	'.debug_frame',debug,cluster('Turn_Stop')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L58,.L199-.L58
+	.word	.L500,.L61,.L205-.L61
 	.sdecl	'.debug_frame',debug,cluster('Turn_SetMotorEnable')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L491,.L60,.L200-.L60
+	.word	.L500,.L63,.L206-.L63
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetMotorEnable')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L62,.L203-.L62
+	.word	.L500,.L65,.L208-.L65
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetEncoderCount')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L64,.L205-.L64
+	.word	.L500,.L67,.L210-.L67
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('Turn_GetCurrentAngleDeg')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L491,.L66,.L206-.L66
+	.word	.L500,.L69,.L211-.L69
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	; Module end

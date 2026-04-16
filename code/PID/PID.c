@@ -31,14 +31,6 @@ PID_IncTypeDef UB_Speed_PID;
 
 PID_IncTypeDef Auto_Cornering_PID;
 
-// 临时参数副本
-PID_IncTypeDef Temp_Speed_PID;
-PID_IncTypeDef Temp_Angle_PID;
-PID_IncTypeDef Temp_Angle_AccPID;
-PID_IncTypeDef Temp_Turnout_PID;
-PID_IncTypeDef Temp_Angleroll_PID;
-PID_IncTypeDef Temp_Z_Angle_speed_PID;
-PID_IncTypeDef Temp_Yaw_Angle_PID;
 void PID_param_init(void)
 {
     PID_Inc_Init(&Motor_Speed_PID_Left, motor_speed_Left_Kp, motor_speed_Left_Ki, motor_speed_Left_Kd);
@@ -223,11 +215,11 @@ float Changing_Integration_Rate_Positional_PID(PID_IncTypeDef *PID, float SetVal
     float I_Term = PID->Ki * PID->Ek;
     if(PID->Ek * PID->I_Out > 0)
     {
-        if(fabs(PID->Ek) <= Coef_B);       //不做处理
-        else if(fabs(PID->Ek) <= (Coef_A + Coef_B))
-            I_Term *= (Coef_A - fabs(PID->Ek) + Coef_B) / Coef_A;
-        else
+        if(fabs(PID->Ek) > (Coef_A + Coef_B))
             I_Term = 0;
+        else if(fabs(PID->Ek) > Coef_B)
+            I_Term *= (Coef_A - fabs(PID->Ek) + Coef_B) / Coef_A;
+        /* else: |Ek| <= Coef_B, 全量积分，I_Term 不变 */
     }
     PID->I_Out += I_Term;
 
@@ -236,10 +228,9 @@ float Changing_Integration_Rate_Positional_PID(PID_IncTypeDef *PID, float SetVal
     if (PID->I_Out < -Max_I)
         PID->I_Out = -Max_I;
 
-    PID->P_Out = (PID->Kp * PID->Ek);
-    if(PID->OLS_Order > 2);         //稍后补充
-    else
-        PID->D_Out = PID->Kd * (PID->Ek - PID->last_Ek);
+    PID->P_Out = PID->Kp * PID->Ek;
+    /* TODO: OLS_Order > 2 时补充高阶微分 */
+    PID->D_Out = PID->Kd * (PID->Ek - PID->last_Ek);
 
     PID->last_Ek = PID->Ek;
 
@@ -249,15 +240,16 @@ float Changing_Integration_Rate_Positional_PID(PID_IncTypeDef *PID, float SetVal
 
 float Speed_Changing_Integration_Rate_Positional_PID(PID_IncTypeDef *PID, float SetValue, float ActualValue, float Max_I, float Coef_A, float Coef_B)
 {
-    PID->Ek = SetValue - (motor_speed_l + motor_speed_r);
-    float I_Term = PID->Ki * PID->Ek;
-    if(PID->Ek * PID->I_Out > 0)
+    /* 积分项使用左右轮合速度误差 */
+    float Ek_speed = SetValue - (motor_speed_l + motor_speed_r);
+    float I_Term = PID->Ki * Ek_speed;
+    if(Ek_speed * PID->I_Out > 0)
     {
-        if(fabs(PID->Ek) <= Coef_B);       //不做处理
-        else if(fabs(PID->Ek) <= (Coef_A + Coef_B))
-            I_Term *= (Coef_A - fabs(PID->Ek) + Coef_B) / Coef_A;
-        else
+        if(fabs(Ek_speed) > (Coef_A + Coef_B))
             I_Term = 0;
+        else if(fabs(Ek_speed) > Coef_B)
+            I_Term *= (Coef_A - fabs(Ek_speed) + Coef_B) / Coef_A;
+        /* else: |Ek| <= Coef_B, 全量积分，I_Term 不变 */
     }
     PID->I_Out += I_Term;
 
@@ -266,13 +258,11 @@ float Speed_Changing_Integration_Rate_Positional_PID(PID_IncTypeDef *PID, float 
     if (PID->I_Out < -Max_I)
         PID->I_Out = -Max_I;
 
+    /* P/D 项使用 ActualValue 误差 */
     PID->Ek = SetValue - ActualValue;
 
-    PID->P_Out = (PID->Kp * PID->Ek);
-    if(PID->OLS_Order > 2);         //稍后补充
-    else
-        PID->D_Out = PID->Kd * (PID->Ek - PID->last_Ek);
-
+    PID->P_Out = PID->Kp * PID->Ek;
+    PID->D_Out = PID->Kd * (PID->Ek - PID->last_Ek);
     PID->last_Ek = PID->Ek;
 
     PID->OUT = PID->P_Out + PID->I_Out + PID->D_Out;

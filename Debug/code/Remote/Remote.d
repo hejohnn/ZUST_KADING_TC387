@@ -394,7 +394,13 @@ Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\SysTimer\SYSTIMER.h" :
 Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Status\Status.h" :
+Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
 Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
+Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
+Remote.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :

@@ -11,12 +11,13 @@
 #include "loudspeak.h"
 #include "SYSTIMER.h"
 #include "Status.h"
-#include "Status.h"
+#include "Pedal.h"
 #include "zf_device_ips200.h"
 #include "zf_device_gnss.h"
 #include "Turn.h"
 #include "Remote.h"
-
+#include "Motor.h"
+#include "Uart_rs232.h"
 
 
 typedef enum

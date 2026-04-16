@@ -103,7 +103,13 @@ void Turn_MenuRuntimeUpdate(void)
 {
     turn_menu_state.encoder_value = (float)Turn_GetEncoderCount();
     turn_menu_state.angle_deg = Turn_EncToMenuAngleDeg(turn_menu_state.encoder_value);
-    Turn_SetMotorEnable(turn_menu_state.motor_enable);
+
+    /* 只在 enable 状态发生变化时才调用 SetMotorEnable，避免每周期触发 PID_clear */
+    uint8 new_enable = (turn_menu_state.motor_enable != 0) ? 1U : 0U;
+    if(new_enable != turn_state.motor_enable)
+    {
+        Turn_SetMotorEnable(new_enable);
+    }
 }
 
 void Turn_Init(void)

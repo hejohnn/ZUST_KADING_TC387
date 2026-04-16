@@ -95,6 +95,7 @@ int core0_main(void)
     Menu_Init();                    //菜单初始化
     MyEncoder_Init();               //编码器初始化
     my_key_init(20);                //按键初始化
+    UartRs232_Init();               //RS232串口初始化(TC264数据接收)
 
 
     pit_ms_init(CCU60_CH0, 20);     //按键扫描中断初始化:菜单的

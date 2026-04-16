@@ -51,13 +51,16 @@ RM := rm -rf
 -include code/loudspeak/subdir.mk
 -include code/led_driver/TLD7002_driver/subdir.mk
 -include code/led_driver/subdir.mk
+-include code/Uart_rs232/subdir.mk
 -include code/Turn/subdir.mk
 -include code/SysTimer/subdir.mk
 -include code/Status/subdir.mk
 -include code/Remote/subdir.mk
+-include code/Pedal/subdir.mk
 -include code/PID/subdir.mk
 -include code/MyKey/subdir.mk
 -include code/MyEncoder/subdir.mk
+-include code/Motor/subdir.mk
 -include code/Beep/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)
