@@ -179,7 +179,8 @@ void Turn_Page_Init(void)
             MENU_ITEM_ENTER_FUNC("ON", Turn_MenuTargetAngleSync, 0),
             MENU_ITEM_FLOAT_SHOW("Enc", NULL, 0),
             MENU_ITEM_FLOAT_SHOW("Angle", NULL, 0),
-            MENU_ITEM_STATIC_FUNC(" ", Turn_MenuRuntimeUpdate, 0),
+            MENU_ITEM_ENTER_FUNC("ResetTurns", Turn_ResetTurns_MenuCallback, 0),
+            MENU_ITEM_STATIC_FUNC("", Turn_MenuRuntimeUpdate, 0),
             {".", }
     };
 

@@ -398,6 +398,8 @@ menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
+menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 menu.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
