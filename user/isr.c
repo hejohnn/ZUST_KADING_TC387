@@ -39,7 +39,6 @@
 #include "asr_audio.h"
 #include "zf_device_dot_matrix_screen.h"
 #include "led_test_ctrl.h"
-#include "Uart_rs232.h"
 
 // 对于TC系列默认是不支持中断嵌套的，希望支持中断嵌套需要在中断内使用 interrupt_global_enable(0); 来开启中断嵌套
 // 简单点说实际上进入中断后TC系列的硬件自动调用了 interrupt_global_disable(); 来拒绝响应任何的中断，因此需要我们自己手动调用 interrupt_global_enable(0); 来开启中断的响应。
@@ -87,9 +86,9 @@ IFX_INTERRUPT(cc61_pit_ch0_isr, CCU6_1_CH0_INT_VECTAB_NUM, CCU6_1_CH0_ISR_PRIORI
     interrupt_global_enable(0);                     // 开启中断嵌套
     pit_clear_flag(CCU61_CH0);
 
-
-
-
+    encoder_app_pit_handler();                      // 后轮编码器 50ms 任务 (方案二)
+    Pedal_Update();                                 // 踏板 ADC 采样+滤波
+    Motor_UpdateFromPedal();                        // 踏板百分比线性映射到双轮占空比
 }
 
 IFX_INTERRUPT(cc61_pit_ch1_isr, CCU6_1_CH1_INT_VECTAB_NUM, CCU6_1_CH1_ISR_PRIORITY)
@@ -222,7 +221,6 @@ IFX_INTERRUPT(uart1_tx_isr, UART1_INT_VECTAB_NUM, UART1_TX_INT_PRIO)
 IFX_INTERRUPT(uart1_rx_isr, UART1_INT_VECTAB_NUM, UART1_RX_INT_PRIO)
 {
     interrupt_global_enable(0);                     // 开启中断嵌套
-    UartRs232_Tc264RxHandler();                     // TC264 编码器数据接收（状态机）
 }
 
 // 串口2默认连接到无线转串口模块

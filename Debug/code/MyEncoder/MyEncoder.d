@@ -348,12 +348,14 @@ MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyKey\MyKEY.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyKey\MyKEY.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h"
 "D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h" :
+MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h" :
+MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\MYHEADFILE.h"
+"D:\\work\\ZUST_KADING_TC387\\code\MYHEADFILE.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Beep\Beep.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Beep\Beep.h" :
-MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\MYHEADFILE.h"
-"D:\\work\\ZUST_KADING_TC387\\code\MYHEADFILE.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\loudspeak\loudspeak.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\loudspeak\loudspeak.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\zf_common\zf_common_headfile.h"
@@ -372,8 +374,6 @@ MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\\Gpt12\\IncrEnc\IfxGpt12_IncrEnc.h"
 "D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\\Gpt12\\IncrEnc\IfxGpt12_IncrEnc.h" :
 MyEncoder.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Service\\CpuGeneric\StdIf\IfxStdIf_Pos.h"

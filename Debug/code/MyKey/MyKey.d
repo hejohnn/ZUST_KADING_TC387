@@ -376,6 +376,8 @@ MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyKey\MyKEY.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyKey\MyKEY.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h" :
+MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h"
@@ -400,5 +402,3 @@ MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :

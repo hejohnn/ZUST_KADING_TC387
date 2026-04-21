@@ -6,6 +6,7 @@
 #include "isr.h"
 #include "MyKEY.h"
 #include "MyEncoder.h"
+#include "encoder_app.h"
 #include "menu.h"
 #include "Beep.h"
 #include "loudspeak.h"
@@ -17,7 +18,6 @@
 #include "Turn.h"
 #include "Remote.h"
 #include "Motor.h"
-#include "Uart_rs232.h"
 
 
 typedef enum

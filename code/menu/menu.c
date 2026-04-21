@@ -3,7 +3,6 @@
 #include "MYHEADFILE.h"
 #include "asr_audio.h"
 #include "led_test_ctrl.h"
-#include "Uart_rs232.h"
 uint8 menu_key_event = menu_release;
 uint8 menu_update_flag = 0;
 uint8 menu_wait_flag = 0;
@@ -11,6 +10,12 @@ static uint8 menu_cfg_flag = 0;
 static uint8 menu_global_line = 0;
 static uint8 last_menu_global_line = 0;
 static uint8 menu_global_line_buff_flag = 0;
+static float manual_pedal_percent_show = 0.0f;
+
+static void Manual_PedalPercentRuntimeUpdate(void)
+{
+    manual_pedal_percent_show = (float)Pedal_GetPercent();
+}
 
 MenuPage_Linked_List *menu_head_page_node = NULL; // 菜单链表头指针
 
@@ -45,22 +50,20 @@ MenuPage_Linked_List *menu_head_page_node = NULL; // 菜单链表头指针
 * @param : void
 * @return: void
 * @date  : 2025年3月20日14:26:28
-* @author: SJX
+* @author: HJY
 ************************************************/
-
-void Data_Page_Init(void)
+void DATA_Page_Init(void)
 {
     static MenuLine LineList[] = {
-        MENU_ITEM_CONFIG_SHOW("Tc264RX",    NULL, 0),
-        MENU_ITEM_FLOAT_SHOW ("Dist_mm",    NULL, 0),
-        MENU_ITEM_FLOAT_SHOW ("Speed_mms",  NULL, 0),
+        MENU_ITEM_INT_SHOW("L_Dist_cm",  &menu_distance_left_cm,  0),
+        MENU_ITEM_INT_SHOW("L_Spd_cm_s", &menu_speed_left_cm_s,   0),
+        MENU_ITEM_INT_SHOW("R_Dist_cm",  &menu_distance_right_cm, 0),
+        MENU_ITEM_INT_SHOW("R_Spd_cm_s", &menu_speed_right_cm_s,  0),
+        MENU_ITEM_INT_SHOW("Pedal_%",    &menu_motor_pedal_pct,   0),
+        MENU_ITEM_ENTER_FUNC("Reset",    encoder_app_reset,       0),
         {".", }
     };
-    static MenuPage Page = {"Data", .line = LineList, .open_status = 0};
-
-    LineList[0].line_extends.config_value_show_line.show_value = UartRs232_GetTc264RxEnablePtr();
-    LineList[1].line_extends.float_value_show_line.show_value  = UartRs232_GetTc264DistanceFloatPtr();
-    LineList[2].line_extends.float_value_show_line.show_value  = UartRs232_GetTc264SpeedFloatPtr();
+    static MenuPage Page = {"DATA", .line = LineList, .open_status = 0};
 
     Menu_Push_Node(&Page);
 }
@@ -197,32 +200,30 @@ void Turn_Page_Init(void)
 
 
 /***********************************************
-* @brief : 人为页面
+* @brief : Motor页面
 * @param : void
 * @return: void
 * @date  : 2025年3月20日14:26:28
 * @author: SJX
 ************************************************/
-
-void Manual_Page_Init(void)
+void MOTOR_Page_Init(void)
 {
-   uint8 *pedal_uart_enable = UartRs232_GetPedalEnablePtr();
-   float *pedal_percent_show = UartRs232_GetPedalPercentShowPtr();
+    static MenuLine LineList[] = {
+        MENU_ITEM_ENTER_FUNC("Toggle_EN",  Motor_ToggleEnable,    0),
+        MENU_ITEM_INT_SHOW  ("Enable",     &menu_motor_enable,    0),
+        MENU_ITEM_ENTER_FUNC("Toggle_DIR", Motor_ToggleDirection, 0),
+        MENU_ITEM_INT_SHOW  ("Dir(1/-1)",  &menu_motor_direction, 0),
+        MENU_ITEM_INT_EDIT  ("DutyMax",    &menu_motor_duty_max,  10, 2, 0),
+        MENU_ITEM_INT_SHOW  ("Pedal_%",    &menu_motor_pedal_pct, 0),
+        MENU_ITEM_INT_SHOW  ("L_Duty",     &menu_motor_left_duty, 0),
+        MENU_ITEM_INT_SHOW  ("R_Duty",     &menu_motor_right_duty,0),
+        {".", }
+    };
+    static MenuPage Page = {"MOTOR", .line = LineList, .open_status = 0};
 
-   static MenuLine  LineList[] = {
-           MENU_ITEM_CONFIG_SHOW("PedalUART", NULL, 0),
-           MENU_ITEM_FLOAT_SHOW("Percent", NULL, 0),
-           MENU_ITEM_STATIC_FUNC(" ", UartRs232_PedalRuntimeUpdate, 0),
-           {".",  }
-   };
-   static MenuPage Page = {"Manual", .line = LineList, .open_status = 0} ;
-
-   /* 将开关变量绑定到菜单行 */
-   LineList[0].line_extends.config_value_show_line.show_value = pedal_uart_enable;
-   LineList[1].line_extends.float_value_show_line.show_value = pedal_percent_show;
-
-   Menu_Push_Node(&Page);
+    Menu_Push_Node(&Page);
 }
+
 
 
 
@@ -239,11 +240,12 @@ void Main_Page_Init(void)
     static MenuLine LineList[] = {
 //        MENU_ITEM_STATIC_FUNC(" ", Image_Show, -1),
           MENU_ITEM_PAGE_JUMP("test",test_Page_Init, 0),
-          MENU_ITEM_PAGE_JUMP("Manual", Manual_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("MOTOR ",MOTOR_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("Turn_Control ", Turn_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("ASR ",ASR_Page_Init, 0),
           MENU_ITEM_PAGE_JUMP("Remote ",Remote_Page_Init, 0),
-          MENU_ITEM_PAGE_JUMP("Data ",Data_Page_Init, 0),
+          MENU_ITEM_PAGE_JUMP("DATA ",DATA_Page_Init, 0),
+
 //        MENU_ITEM_PAGE_JUMP("Camera_Page ", Camera_Page_Init, 0),
    //     MENU_ITEM_INT_EDIT("PWM", &Left_Motor.set_pwm, 10, 2, 0),
   //      MENU_ITEM_INT_EDIT("TarSpeed", &Left_Motor.target_speed, 1, 2, 0),

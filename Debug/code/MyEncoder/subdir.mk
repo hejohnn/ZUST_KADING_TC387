@@ -4,16 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-"../code/MyEncoder/MyEncoder.c" 
+"../code/MyEncoder/MyEncoder.c" \
+"../code/MyEncoder/encoder_app.c" 
 
 COMPILED_SRCS += \
-"code/MyEncoder/MyEncoder.src" 
+"code/MyEncoder/MyEncoder.src" \
+"code/MyEncoder/encoder_app.src" 
 
 C_DEPS += \
-"./code/MyEncoder/MyEncoder.d" 
+"./code/MyEncoder/MyEncoder.d" \
+"./code/MyEncoder/encoder_app.d" 
 
 OBJS += \
-"code/MyEncoder/MyEncoder.o" 
+"code/MyEncoder/MyEncoder.o" \
+"code/MyEncoder/encoder_app.o" 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,11 +25,15 @@ OBJS += \
 	cctc -cs --dep-file="$*.d" --misrac-version=2004 "-fD:/work/ZUST_KADING_TC387/Debug/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc38x -Y0 -N0 -Z0 -o "$@" "$<"
 "code/MyEncoder/MyEncoder.o":"code/MyEncoder/MyEncoder.src" "code/MyEncoder/subdir.mk"
 	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"code/MyEncoder/encoder_app.src":"../code/MyEncoder/encoder_app.c" "code/MyEncoder/subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2004 "-fD:/work/ZUST_KADING_TC387/Debug/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc38x -Y0 -N0 -Z0 -o "$@" "$<"
+"code/MyEncoder/encoder_app.o":"code/MyEncoder/encoder_app.src" "code/MyEncoder/subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
 
 clean: clean-code-2f-MyEncoder
 
 clean-code-2f-MyEncoder:
-	-$(RM) ./code/MyEncoder/MyEncoder.d ./code/MyEncoder/MyEncoder.o ./code/MyEncoder/MyEncoder.src
+	-$(RM) ./code/MyEncoder/MyEncoder.d ./code/MyEncoder/MyEncoder.o ./code/MyEncoder/MyEncoder.src ./code/MyEncoder/encoder_app.d ./code/MyEncoder/encoder_app.o ./code/MyEncoder/encoder_app.src
 
 .PHONY: clean-code-2f-MyEncoder
 

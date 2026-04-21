@@ -382,6 +382,8 @@ Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h"
 "D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h" :
+Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Beep\Beep.h"
@@ -398,9 +400,9 @@ Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
+Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-Status.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :

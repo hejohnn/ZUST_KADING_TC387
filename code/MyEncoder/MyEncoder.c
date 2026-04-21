@@ -94,8 +94,11 @@ void Get_Switch_Num(void)
     int tmp = 0;
     static int i = 0;
     static int encoder_cnt, timer_cnt, last_switch_encoder_num = 0;
+    // 方案二: 原子保护 T6 读+清, 避免与 cc61 PIT 中后轮编码器 (T5/T2) 操作交错
+    interrupt_global_disable();
     timer_cnt = -My_Switch_encoder_get_count(TIM6_ENCODER);
     encoder_clear_count(TIM6_ENCODER);
+    interrupt_global_enable(0);
 
     if(abs(timer_cnt) < SWITCH_ENCODER_STEP_THRESHOLD)
     {

@@ -382,6 +382,8 @@ Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h"
 "D:\\work\\ZUST_KADING_TC387\\code\MyHeadFile.h" :
 Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h" :
+Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h" :
 Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h" :
 Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Beep\Beep.h"
@@ -402,7 +404,5 @@ Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :
 Turn.o :	..\code\Turn\zf_device_pd1503.h
 ..\code\Turn\zf_device_pd1503.h :

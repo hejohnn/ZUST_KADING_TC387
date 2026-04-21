@@ -91,15 +91,18 @@ int core0_main(void)
     // 此处编写用户代码 例如外设初始化代码等
     Beep_Init();                    //蜂鸣器初始化
     LoudSpeak_Init();               //PWM喇叭初始化(P33.5)
+    Pedal_Init();                   //踏板ADC初始化
+    Motor_Init();                   //驱动电机初始化(DRV8701E: 左 P33.13/P33.12, 右 P33.11/P33.5)
     ips200_init(IPS200_TYPE);       //屏幕初始化
     Menu_Init();                    //菜单初始化
-    MyEncoder_Init();               //编码器初始化
+    encoder_app_init();             //后轮编码器初始化(左:TIM5 P21_7/P21_6, 右:TIM2 P33_7/P33_6) —— 必须在 MyEncoder_Init 之前, 否则 T5 init 会破坏同块 T6 配置
+    MyEncoder_Init();               //编码器初始化(旋转编码器 TIM6 P20_3/P20_0)
     my_key_init(20);                //按键初始化
-    UartRs232_Init();               //RS232串口初始化(TC264数据接收)
 
 
     pit_ms_init(CCU60_CH0, 20);     //按键扫描中断初始化:菜单的
     pit_ms_init(CCU60_CH1, 2);      //旋转编码器采样中断初始化(提升响应速度)
+    pit_ms_init(CCU61_CH0, ENCODER_PIT_PERIOD_MS); //后轮编码器+踏板/电机周期任务(50ms, 方案二)
 
     ips200_set_color(RGB565_WHITE, RGB565_BLACK);
     ips200_clear();

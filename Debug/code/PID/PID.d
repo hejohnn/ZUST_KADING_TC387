@@ -378,6 +378,8 @@ PID.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A
 "D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\_PinMap\IfxGpt12_PinMap.h" :
 PID.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Port\Std\IfxPort.h"
 "D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Port\Std\IfxPort.h" :
+PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h"
+"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\encoder_app.h" :
 PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\menu\menu.h" :
 PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Beep\Beep.h"
@@ -400,7 +402,5 @@ PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Uart_rs232\Uart_rs232.h" :
 PID.o :	"D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\MyEncoder\MyEncoder.h" :

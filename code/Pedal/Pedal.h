@@ -10,18 +10,9 @@
 
 #include "MYHEADFILE.h"
 
-void Pedal_Init(void);
-void Pedal_Update(void);
-
-uint16 Pedal_GetRaw(void);
-uint16 Pedal_GetVoltageMv(void);
-uint16 Pedal_GetPercent(void);
-uint16 Pedal_GetPercentRaw(void);
-uint16 Pedal_GetMinRaw(void);
-uint16 Pedal_GetMaxRaw(void);
-uint8 Pedal_IsSignalValid(void);
-
-
-
+void   Pedal_Init(void);
+void   Pedal_Update(void);
+uint16 Pedal_GetPercent(void);       /* 0..100, 已滤波 */
+uint8  Pedal_IsSignalValid(void);    /* min/max 学习完成且 span >= 阈值 */
 
 #endif /* CODE_PEDAL_PEDAL_H_ */

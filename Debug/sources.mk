@@ -34,7 +34,6 @@ code/Remote \
 code/Status \
 code/SysTimer \
 code/Turn \
-code/Uart_rs232 \
 code/led_driver/TLD7002_driver \
 code/led_driver \
 code/loudspeak \
