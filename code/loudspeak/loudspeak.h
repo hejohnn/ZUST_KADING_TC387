@@ -3,7 +3,7 @@
 
 #include "zf_common_headfile.h"
 
-#define LOUDSPEAK_PWM_CHANNEL      ATOM2_CH1_P33_5
+#define LOUDSPEAK_PWM_CHANNEL      ATOM2_CH0_P33_4
 #define LOUDSPEAK_PWM_FREQ_HZ      2000U
 #define LOUDSPEAK_PWM_DUTY_ON      5000U
 

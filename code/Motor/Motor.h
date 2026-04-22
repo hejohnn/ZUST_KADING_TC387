@@ -1,10 +1,12 @@
 /*
- * Motor.h - DRV8701E 双轮直流电机驱动 (踏板线性控制)
+ * Motor.h - 双 EG2104 半桥 双轮直流电机驱动 (踏板线性控制)
  *
  * 硬件:
- *     左轮: DIR = P33.13 (GPIO 输出), PWM = P33.12 (ATOM2_CH4)
- *     右轮: DIR = P33.11 (GPIO 输出), PWM = P33.5  (ATOM2_CH1)
- *     驱动方式: DRV8701E PH/EN 模式 (DIR 选相, PWM 调速)
+ *     左轮: 正转 PWM = P33.12 (ATOM2_CH4), 反转 PWM = P33.13 (ATOM2_CH5)
+ *     右轮: 正转 PWM = P33.5  (ATOM2_CH1), 反转 PWM = P33.11 (ATOM1_CH2)
+ *     驱动方式: 两路 PWM 互锁
+ *               正转: FWD 脚输出 PWM, REV 脚输出 0
+ *               反转: REV 脚输出 PWM, FWD 脚输出 0
  *
  * 调用顺序:
  *     Pedal_Init();
@@ -19,22 +21,20 @@
 
 #include "MYHEADFILE.h"
 
-/* ------------------ PWM / GPIO 引脚 ------------------ */
-#define MOTOR_LEFT_PWM              ATOM2_CH4_P33_12
-#define MOTOR_LEFT_PWM_SAFE_PIN     P33_12
-#define MOTOR_LEFT_DIR_PIN          P33_13
+/* ------------------ PWM 引脚 ------------------ */
+#define MOTOR_LEFT_PWM_FWD          ATOM2_CH4_P33_12
+#define MOTOR_LEFT_PWM_FWD_SAFE_PIN P33_12
+#define MOTOR_LEFT_PWM_REV          ATOM2_CH5_P33_13
+#define MOTOR_LEFT_PWM_REV_SAFE_PIN P33_13
 
-#define MOTOR_RIGHT_PWM             ATOM2_CH1_P33_5
-#define MOTOR_RIGHT_PWM_SAFE_PIN    P33_5
-#define MOTOR_RIGHT_DIR_PIN         P33_11
+#define MOTOR_RIGHT_PWM_FWD          ATOM2_CH1_P33_5
+#define MOTOR_RIGHT_PWM_FWD_SAFE_PIN P33_5
+#define MOTOR_RIGHT_PWM_REV          ATOM1_CH2_P33_11
+#define MOTOR_RIGHT_PWM_REV_SAFE_PIN P33_11
 
 /* ------------------ PWM 参数 ------------------ */
 #define MOTOR_PWM_FREQ              20000           /* 20kHz, 超出人耳听阈 */
 #define MOTOR_DUTY_LIMIT            5000            /* 上限 50% (PWM_DUTY_MAX=10000), 调试期保守值 */
-
-/* ------------------ 方向极性 (DRV8701 PH 引脚) ------------------ */
-#define MOTOR_LEFT_DIR_FORWARD      1               /* 左轮前进时 DIR 电平 */
-#define MOTOR_RIGHT_DIR_FORWARD     1               /* 右轮前进时 DIR 电平 */
 
 /* ------------------ 踏板映射 ------------------ */
 #define MOTOR_PEDAL_DEADBAND_PCT    2               /* 踏板百分比死区 */

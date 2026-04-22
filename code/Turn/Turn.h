@@ -12,15 +12,17 @@
 #include "MYHEADFILE.h"
 #include "zf_device_pd1503.h"
 
-// ===================== 转向电机PWM/方向配置 =====================
-#define Turn_PWM                         ATOM1_CH1_P14_6
-#define Turn_PWM_SAFE_PIN                P14_6
+// ===================== 转向电机PWM配置 =====================
+// 新驱动板: 两个EG2104驱动一个半桥, 双PWM互锁
+//   正转: Turn_PWM_FWD 输出 PWM, Turn_PWM_REV 输出 0
+//   反转: Turn_PWM_REV 输出 PWM, Turn_PWM_FWD 输出 0
+#define Turn_PWM_FWD                     ATOM1_CH1_P14_6
+#define Turn_PWM_FWD_SAFE_PIN            P14_6
+#define Turn_PWM_REV                     ATOM0_CH0_P14_5
+#define Turn_PWM_REV_SAFE_PIN            P14_5
 #define Turn_PWM_SAFE_LEVEL              0
 #define Turn_MOTOR_FREQ                  20000
 #define Turn_Duty_LIMIT                  5000
-
-#define Turn_DIR_PIN                     P14_5
-#define Turn_DIR_POSITIVE_LEVEL          1
 
 // ===================== SPI绝对编码器(PD1503)配置 =====================
 // SPI引脚配置见 zf_device_pd1503.h (SPI4: SCK=P22.3, MOSI=P22.0, MISO=P22.1, CS=P22.2)

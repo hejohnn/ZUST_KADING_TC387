@@ -20,7 +20,7 @@ typedef struct
     volatile float  encoder_abs_deg;    // 编码器当前单圈绝对角度 (0~360°)
     volatile float  encoder_last_deg;   // 上次单圈角度，用于检测跨零
     volatile int32  encoder_turns;      // 编码器整圈计数 (跨越0°/360°时±1)
-    uint8 dir_level;
+    int8  output_sign;                  // 当前输出方向: +1=正转, -1=反转, 0=停车
     uint16 startup_hold_cnt;
     uint8 motor_enable;
     uint8 encoder_valid;                // 编码器通信是否正常
@@ -44,7 +44,7 @@ static Turn_RuntimeState turn_state = {
     .encoder_abs_deg = 0.0f,
     .encoder_last_deg = 0.0f,
     .encoder_turns = 0,
-    .dir_level = Turn_DIR_POSITIVE_LEVEL,
+    .output_sign = 0,
     .startup_hold_cnt = 0,
     .motor_enable = 0,
     .encoder_valid = 0,
@@ -128,26 +128,37 @@ static uint32 Turn_GetDutyFromOutput(float output)
 static void Turn_ApplyMotorOutput(float output)
 {
     uint32 duty = Turn_GetDutyFromOutput(output);
-    uint8 target_dir_level = Turn_DIR_POSITIVE_LEVEL;
 
     if(duty == 0)
     {
-        pwm_set_duty(Turn_PWM, 0);
+        pwm_set_duty(Turn_PWM_FWD, 0);
+        pwm_set_duty(Turn_PWM_REV, 0);
+        turn_state.output_sign = 0;
         return;
     }
 
-    if(output < 0.0f)
+    int8 target_sign = (output >= 0.0f) ? (int8)1 : (int8)-1;
+
+    /* 方向切换时先把两路都拉到 0, 下个周期再给新方向占空比, 避免瞬间两路同时 PWM */
+    if(target_sign != turn_state.output_sign && turn_state.output_sign != 0)
     {
-        target_dir_level = (uint8)!Turn_DIR_POSITIVE_LEVEL;
+        pwm_set_duty(Turn_PWM_FWD, 0);
+        pwm_set_duty(Turn_PWM_REV, 0);
+        turn_state.output_sign = 0;
+        return;
     }
 
-    if(target_dir_level != turn_state.dir_level)
+    if(target_sign > 0)
     {
-        turn_state.dir_level = target_dir_level;
-        gpio_set_level(Turn_DIR_PIN, turn_state.dir_level);
+        pwm_set_duty(Turn_PWM_REV, 0);
+        pwm_set_duty(Turn_PWM_FWD, duty);
     }
-
-    pwm_set_duty(Turn_PWM, duty);
+    else
+    {
+        pwm_set_duty(Turn_PWM_FWD, 0);
+        pwm_set_duty(Turn_PWM_REV, duty);
+    }
+    turn_state.output_sign = target_sign;
 }
 
 void Turn_MenuTargetAngleSync(void)
@@ -172,15 +183,17 @@ void Turn_MenuRuntimeUpdate(void)
 
 void Turn_Init(void)
 {
-    // 上电先把EN/PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
-    gpio_init(Turn_PWM_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
+    // 上电先把两路PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
+    gpio_init(Turn_PWM_FWD_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
+    gpio_init(Turn_PWM_REV_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
 
     // 再切换到PWM外设并保持0占空比
-    pwm_init(Turn_PWM, Turn_MOTOR_FREQ, 0);
-    pwm_set_duty(Turn_PWM, 0);
+    pwm_init(Turn_PWM_FWD, Turn_MOTOR_FREQ, 0);
+    pwm_init(Turn_PWM_REV, Turn_MOTOR_FREQ, 0);
+    pwm_set_duty(Turn_PWM_FWD, 0);
+    pwm_set_duty(Turn_PWM_REV, 0);
 
-    turn_state.dir_level = Turn_DIR_POSITIVE_LEVEL;
-    gpio_init(Turn_DIR_PIN, GPO, turn_state.dir_level, GPO_PUSH_PULL);
+    turn_state.output_sign = 0;
 
         // 初始化 PD1503 SPI绝对编码器 (替代原来的GPT12增量编码器)
     if(pd1503_init() == 0)
@@ -253,7 +266,9 @@ void Turn_ControlTask(void)
     {
         // 通信失败，保持上次值不更新，不输出电机
         turn_state.encoder_valid = 0;
-        pwm_set_duty(Turn_PWM, 0);
+        pwm_set_duty(Turn_PWM_FWD, 0);
+        pwm_set_duty(Turn_PWM_REV, 0);
+        turn_state.output_sign = 0;
         return;
     }
 
@@ -262,7 +277,9 @@ void Turn_ControlTask(void)
     {
         turn_state.startup_hold_cnt--;
         turn_current_angle_deg = 0.0f;
-        pwm_set_duty(Turn_PWM, 0);
+        pwm_set_duty(Turn_PWM_FWD, 0);
+        pwm_set_duty(Turn_PWM_REV, 0);
+        turn_state.output_sign = 0;
         return;
     }
 
@@ -332,7 +349,9 @@ void Turn_ResetTurns_MenuCallback(void)
 void Turn_Stop(void)
 {
     PID_clear(&turn_pid);
-    pwm_set_duty(Turn_PWM, 0);
+    pwm_set_duty(Turn_PWM_FWD, 0);
+    pwm_set_duty(Turn_PWM_REV, 0);
+    turn_state.output_sign = 0;
 }
 
 void Turn_SetMotorEnable(uint8 enable)
