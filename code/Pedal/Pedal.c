@@ -9,6 +9,7 @@
  */
 
 #include "Pedal.h"
+#include "Evadc/Adc/IfxEvadc_Adc.h"
 
 #define PEDAL_ADC_CHANNEL        (ADC8_CH15_A47)
 #define PEDAL_ADC_MAX_VALUE      (4095U)
@@ -30,6 +31,12 @@ typedef struct
 } pedal_state_t;
 
 static pedal_state_t pedal_state;
+
+/* 调试用: 菜单 shadow 变量, 每次 Pedal_Update 末尾同步 */
+static int16 pedal_menu_raw   = 0;
+static int16 pedal_menu_min   = 0;
+static int16 pedal_menu_max   = 0;
+static uint8 pedal_menu_valid = 0;
 
 static uint16 pedal_calc_percent_raw(pedal_state_t *s)
 {
@@ -96,6 +103,22 @@ void Pedal_Init(void)
 
 	adc_init(PEDAL_ADC_CHANNEL, ADC_12BIT);
 
+	/* 单独把 A47 所在 Group 8 的 ICLASS0 采样时间拉长到 10us.
+	 * 实测: 2us→raw最大480, 10us→1200, 30us反而掉到695 (漏电占优).
+	 * 10us 是当前硬件下的最佳工作点, 再长就过头了.
+	 * zf 库里 adc_init 对所有 channel 只用 inputClass[0].
+	 * ICLASS 寄存器写保护, 必须先 enableAccess 再 disableAccess. */
+	{
+		uint8             group_idx    = (uint8)(PEDAL_ADC_CHANNEL / 16);
+		Ifx_EVADC_G      *pedal_group  = &MODULE_EVADC.G[group_idx];
+		IfxEvadc_Protection prot       = (IfxEvadc_Protection)(IfxEvadc_Protection_initGroup0 + group_idx);
+		float32           analog_freq  = IfxEvadc_getAdcAnalogFrequency(pedal_group);
+
+		IfxEvadc_enableAccess(&MODULE_EVADC, prot);
+		IfxEvadc_setGroupSampleTime(pedal_group, 0U, analog_freq, 1.0e-5f);
+		IfxEvadc_disableAccess(&MODULE_EVADC, prot);
+	}
+
 	pedal_state.raw           = 0U;
 	pedal_state.min           = PEDAL_ADC_MAX_VALUE;
 	pedal_state.max           = 0U;
@@ -116,7 +139,18 @@ void Pedal_Update(void)
 	pedal_state.raw = adc_mean_filter_convert(PEDAL_ADC_CHANNEL, PEDAL_SAMPLE_COUNT);
 	pct_raw = pedal_calc_percent_raw(&pedal_state);
 	pedal_state.percent = pedal_filter_percent(&pedal_state, pct_raw);
+
+	/* 同步菜单调试 shadow (raw/min/max 范围 0..4095, 放进 int16 安全) */
+	pedal_menu_raw   = (int16)pedal_state.raw;
+	pedal_menu_min   = (int16)pedal_state.min;
+	pedal_menu_max   = (int16)pedal_state.max;
+	pedal_menu_valid = pedal_state.signal_valid;
 }
+
+int16 *Pedal_GetMenuRawPtr(void)   { return &pedal_menu_raw;   }
+int16 *Pedal_GetMenuMinPtr(void)   { return &pedal_menu_min;   }
+int16 *Pedal_GetMenuMaxPtr(void)   { return &pedal_menu_max;   }
+uint8 *Pedal_GetMenuValidPtr(void) { return &pedal_menu_valid; }
 
 uint16 Pedal_GetPercent(void)
 {

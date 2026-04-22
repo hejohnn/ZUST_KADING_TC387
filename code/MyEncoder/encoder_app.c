@@ -74,9 +74,9 @@ void encoder_app_pit_handler(void)
         last_count_right = total_count_right;
 
         // 速度 (mm/s) = delta * DISTANCE_PER_REV_MM * 1000 / ENCODER_PPR / SPEED_SAMPLE_MS
-        speed_mm_left  = dtl * (int32)DISTANCE_PER_REV_MM * 1000
+        speed_mm_left  = dtl * (int32)DISTANCE_PER_REV_MM_LEFT  * 1000
                             / (int32)ENCODER_PPR / (int32)SPEED_SAMPLE_MS;
-        speed_mm_right = dtr * (int32)DISTANCE_PER_REV_MM * 1000
+        speed_mm_right = dtr * (int32)DISTANCE_PER_REV_MM_RIGHT * 1000
                             / (int32)ENCODER_PPR / (int32)SPEED_SAMPLE_MS;
         speed_flag = 1;
 
@@ -85,9 +85,9 @@ void encoder_app_pit_handler(void)
     }
 
     // 距离每个 PIT 周期都更新一次, 菜单刷新感平滑
-    menu_distance_left_cm  = (int16)(total_count_left  * (int32)DISTANCE_PER_REV_MM
+    menu_distance_left_cm  = (int16)(total_count_left  * (int32)DISTANCE_PER_REV_MM_LEFT
                                 / (int32)ENCODER_PPR / 10);
-    menu_distance_right_cm = (int16)(total_count_right * (int32)DISTANCE_PER_REV_MM
+    menu_distance_right_cm = (int16)(total_count_right * (int32)DISTANCE_PER_REV_MM_RIGHT
                                 / (int32)ENCODER_PPR / 10);
 }
 
@@ -97,11 +97,11 @@ int32 encoder_app_get_count_right (void) { return total_count_right; }
 
 int32 encoder_app_get_distance_mm_left  (void)
 {
-    return total_count_left  * (int32)DISTANCE_PER_REV_MM / (int32)ENCODER_PPR;
+    return total_count_left  * (int32)DISTANCE_PER_REV_MM_LEFT  / (int32)ENCODER_PPR;
 }
 int32 encoder_app_get_distance_mm_right (void)
 {
-    return total_count_right * (int32)DISTANCE_PER_REV_MM / (int32)ENCODER_PPR;
+    return total_count_right * (int32)DISTANCE_PER_REV_MM_RIGHT / (int32)ENCODER_PPR;
 }
 
 int32 encoder_app_get_speed_mm_s_left  (void) { return speed_mm_left;  }

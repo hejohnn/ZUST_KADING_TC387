@@ -167,31 +167,24 @@ void Motor_SetRightOutput(int32 output)
 
 void Motor_UpdateFromPedal(void)
 {
-    /* 信号无效或未启用 -> 强制停车 */
-    if(!MOTOR_IS_ENABLED() || !Pedal_IsSignalValid())
-    {
-        Motor_Stop();
-        menu_motor_pedal_pct = 0;
-        return;
-    }
-
-    /* 3. 取踏板百分比, 应用死区 */
-    uint16 pct = Pedal_GetPercent();
+    /* 1. 无论是否使能, 都刷新踏板百分比到菜单, 方便上电前预览踏板信号 */
+    uint16 pct = Pedal_IsSignalValid() ? Pedal_GetPercent() : 0U;
     if(pct > 100U) pct = 100U;
     menu_motor_pedal_pct = (int16)pct;
 
-    if(pct < MOTOR_PEDAL_DEADBAND_PCT)
+    /* 2. 菜单侧可能把 DutyMax 改到越界值, 这里回写一次 clamp, 让显示与实际生效值一致 */
+    if(menu_motor_duty_max < 0)                        menu_motor_duty_max = 0;
+    if(menu_motor_duty_max > MOTOR_DUTY_LIMIT)         menu_motor_duty_max = MOTOR_DUTY_LIMIT;
+
+    /* 3. 未使能 / 信号无效 / 踏板在死区 -> 停车, 不下发 duty */
+    if(!MOTOR_IS_ENABLED() || !Pedal_IsSignalValid() || pct < MOTOR_PEDAL_DEADBAND_PCT)
     {
         Motor_Stop();
         return;
     }
 
-    /* 4. 线性映射到 0..menu_motor_duty_max (上限 MOTOR_DUTY_LIMIT), 按方向符号输出 */
-    int32 duty_max = menu_motor_duty_max;
-    if(duty_max < 0)                        duty_max = 0;
-    if(duty_max > MOTOR_DUTY_LIMIT)         duty_max = MOTOR_DUTY_LIMIT;
-
-    int32 duty = ((int32)pct * duty_max) / 100;
+    /* 4. 线性映射到 0..menu_motor_duty_max, 按方向符号输出 */
+    int32 duty = ((int32)pct * menu_motor_duty_max) / 100;
     if(menu_motor_direction < 0) duty = -duty;
 
     Motor_SetLeftOutput (duty);

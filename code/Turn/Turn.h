@@ -65,6 +65,8 @@ float *Turn_GetMenuTargetAngleDegPtr(void);
 float *Turn_GetMenuEncoderValuePtr(void);
 float *Turn_GetMenuAngleDegPtr(void);
 uint8 *Turn_GetMenuMotorEnablePtr(void);
+int16 *Turn_GetMenuOutputSignPtr(void);
+uint8 *Turn_GetMenuEncoderValidPtr(void);
 void Turn_MenuTargetAngleSync(void);
 void Turn_MenuRuntimeUpdate(void);
 void Turn_SetCurrentAngleAsZero(void);

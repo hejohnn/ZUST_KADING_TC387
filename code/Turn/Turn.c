@@ -33,6 +33,8 @@ typedef struct
     float encoder_value;
     float angle_deg;
     uint8 motor_enable;
+    int16 output_sign;      /* 驱动当前输出符号 +1/-1/0, 菜单 INT_SHOW */
+    uint8 encoder_valid;    /* 编码器通信状态, 菜单 CONFIG_SHOW (Open/Close) */
 } Turn_MenuState;
 
 static PID_IncTypeDef turn_pid;
@@ -55,6 +57,8 @@ static Turn_MenuState turn_menu_state = {
     .encoder_value = 0.0f,
     .angle_deg = 0.0f,
     .motor_enable = 0,
+    .output_sign = 0,
+    .encoder_valid = 0,
 };
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -172,6 +176,8 @@ void Turn_MenuRuntimeUpdate(void)
         float total_deg = turn_state.encoder_turns * 360.0f + turn_state.encoder_abs_deg;
         turn_menu_state.encoder_value = total_deg - Turn_ENCODER_CENTER_DEG;
         turn_menu_state.angle_deg = turn_current_angle_deg;
+    turn_menu_state.output_sign   = (int16)turn_state.output_sign;
+    turn_menu_state.encoder_valid = turn_state.encoder_valid;
 
     /* 只在 enable 状态发生变化时才调用 SetMotorEnable，避免每周期触发 PID_clear */
     uint8 new_enable = (turn_menu_state.motor_enable != 0) ? 1U : 0U;
@@ -223,6 +229,8 @@ void Turn_Init(void)
     turn_menu_state.encoder_value = 0.0f;
     turn_menu_state.angle_deg = 0.0f;
     turn_menu_state.motor_enable = 0;
+    turn_menu_state.output_sign   = 0;
+    turn_menu_state.encoder_valid = turn_state.encoder_valid;
 }
 
 void Turn_ControlTask(void)
@@ -326,6 +334,16 @@ float *Turn_GetMenuAngleDegPtr(void)
 uint8 *Turn_GetMenuMotorEnablePtr(void)
 {
     return &turn_menu_state.motor_enable;
+}
+
+int16 *Turn_GetMenuOutputSignPtr(void)
+{
+    return &turn_menu_state.output_sign;
+}
+
+uint8 *Turn_GetMenuEncoderValidPtr(void)
+{
+    return &turn_menu_state.encoder_valid;
 }
 
 void Turn_SetCurrentAngleAsZero(void)

@@ -406,3 +406,29 @@ Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Evadc\Adc\IfxEvadc_Adc.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Evadc\Adc\IfxEvadc_Adc.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Evadc\Std\IfxEvadc.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Evadc\Std\IfxEvadc.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\_Impl\IfxEvadc_cfg.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\_Impl\IfxEvadc_cfg.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\_PinMap\IfxEvadc_PinMap.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\_PinMap\IfxEvadc_PinMap.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_reg.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_reg.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_regdef.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_regdef.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Port\Std\IfxPort.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Port\Std\IfxPort.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_bf.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxEvadc_bf.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Scu\Std\IfxScuCcu.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Scu\Std\IfxScuCcu.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Scu\Std\IfxScuWdt.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\iLLD\\TC38A\\Tricore\Scu\Std\IfxScuWdt.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxCbs_reg.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxCbs_reg.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxCbs_regdef.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Infra\\Sfr\\TC38A\\_Reg\IfxCbs_regdef.h" :
+Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
+"D:\\work\\ZUST_KADING_TC387\\libraries\\infineon_libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :

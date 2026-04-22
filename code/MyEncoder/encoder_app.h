@@ -7,7 +7,8 @@
 *
 * 参数:
 *     编码器每圈 1000 线 (硬件四倍频后 4000 计数)
-*     每圈对应行进距离 20 cm = 200 mm
+*     左轮: 每圈行进 5 cm = 50 mm
+*     右轮: 每圈行进 20 cm = 200 mm
 *
 * 实现:
 *     使用 TC387 硬件 GPT12 (T2/T5) 做四倍频正交解码
@@ -26,8 +27,9 @@
 #include "MYHEADFILE.h"
 
 /* ---------------------- 编码器物理参数 ---------------------- */
-#define ENCODER_PPR             4000        // 编码器每圈计数 (硬件四倍频原始值, 1000线*4)
-#define DISTANCE_PER_REV_MM     200         // 每圈行进距离, 单位 mm
+#define ENCODER_PPR                  4000        // 编码器每圈计数 (硬件四倍频原始值, 1000线*4)
+#define DISTANCE_PER_REV_MM_LEFT     50          // 左轮每圈行进距离, 单位 mm (5cm)
+#define DISTANCE_PER_REV_MM_RIGHT    200         // 右轮每圈行进距离, 单位 mm (20cm)
 #define SPEED_SAMPLE_MS         100         // 速度采样周期, 单位 ms (方案二: 拉长到 PIT 周期的整数倍)
 #define ENCODER_PIT_PERIOD_MS   50          // PIT 中断周期, 单位 ms (方案二: 10 -> 50, 减少对 T6 的扰动)
 
