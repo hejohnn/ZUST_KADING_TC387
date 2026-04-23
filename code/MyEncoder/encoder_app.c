@@ -60,7 +60,9 @@ void encoder_app_pit_handler(void)
     IfxGpt12_T2_setTimerValue(&MODULE_GPT120, 0);
     interrupt_global_enable(0);
 
-    total_count_left  += dl;
+    // 左轮 (T5) 实测计数为右轮 (T2) 的 1/4, 在累计时 ×4 对齐到同样的 4000/圈
+    // 左轮接线方向与右轮相反, 取负使正向行驶时两轮计数同号
+    total_count_left  += -(int32)dl * 4;
     total_count_right += dr;
 
     ms_tick += ENCODER_PIT_PERIOD_MS;

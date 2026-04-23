@@ -38,14 +38,14 @@
 #else
 //====================================================硬件 SPI 引脚====================================================
 #define PD1503_SPI_SPEED                    (6 * 1000 * 1000)                   // 硬件 SPI 速率 最大10MHz
-#define PD1503_SPI                          (SPI_4)                             // 硬件 SPI 号
-#define PD1503_SCLK_PIN                     (SPI4_SCLK_P22_3)                   // 硬件 SPI SCK 引脚
-#define PD1503_MOSI_PIN                     (SPI4_MOSI_P22_0)                   // 硬件 SPI MOSI 引脚
-#define PD1503_MISO_PIN                     (SPI4_MISO_P22_1)                   // 硬件 SPI MISO 引脚
+#define PD1503_SPI                          (SPI_1)                             // 硬件 SPI 号
+#define PD1503_SCLK_PIN                     (SPI1_SCLK_P10_2)                   // 硬件 SPI SCK 引脚
+#define PD1503_MOSI_PIN                     (SPI1_MOSI_P10_3)                   // 硬件 SPI MOSI 引脚
+#define PD1503_MISO_PIN                     (SPI1_MISO_P10_1)                   // 硬件 SPI MISO 引脚
 //====================================================硬件 SPI 引脚====================================================
 #endif
 
-#define PD1503_CS_PIN                       (P22_2)                             // CS 引脚定义
+#define PD1503_CS_PIN                       (P10_5)                             // CS 引脚定义
 #define PD1503_CSN(x)                       ((x) ? (gpio_high(PD1503_CS_PIN)) : (gpio_low(PD1503_CS_PIN)))
 
 //=================================================PD1503 常量定义==================================================
