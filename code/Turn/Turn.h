@@ -3,14 +3,13 @@
  *
  *  Created on: 2026年4月3日
  *      Author: 17706
- *  Modified:   转向编码器由GPT12增量编码器改为PD1503 SPI绝对编码器
+ *  Modified:   转向编码器改回 GPT12 增量编码器 (EG2104 双PWM驱动保留)
  */
 
 #ifndef CODE_TURN_TURN_H_
 #define CODE_TURN_TURN_H_
 
 #include "MYHEADFILE.h"
-#include "zf_device_pd1503.h"
 
 // ===================== 转向电机PWM配置 =====================
 // 新驱动板: 两个EG2104驱动一个半桥, 双PWM互锁
@@ -24,20 +23,18 @@
 #define Turn_MOTOR_FREQ                  20000
 #define Turn_Duty_LIMIT                  5000
 
-// ===================== SPI绝对编码器(PD1503)配置 =====================
-// SPI引脚配置见 zf_device_pd1503.h (SPI4: SCK=P22.3, MOSI=P22.0, MISO=P22.1, CS=P22.2)
-#define Turn_ENCODER_SIGN                1              // 编码器方向: 1=正向, -1=反向
-#define Turn_ENCODER_RESOLUTION          65536           // PD1503 16bit分辨率
-#define Turn_ENCODER_CENTER_DEG          0.0f            // 编码器机械中位角度(°)
-                                                        // 车头打正时读到的编码器绝对角度值
-                                                        // 首次使用请上电读数后填入此处
-#define Turn_GEAR_RATIO                  1.0f            // 齿轮减速比 (编码器度数/车头度数)
-                                                        // 例: 车头转1°编码器转10°则填10.0f
+// ===================== 增量式编码器(GPT12)配置 =====================
+// 当前工程定时器占用: TIM2=后右, TIM5=后左, TIM6=旋转编码器
+// 空闲定时器: TIM3 / TIM4
+// 这里使用 TIM4, 引脚 P02.8 / P00.9 (参考"推荐IO分配"中第3路编码器槽位)
+#define Turn_ENCODER_INDEX               TIM4_ENCODER
+#define Turn_ENCODER_PULSE_PIN           TIM4_ENCODER_CH1_P02_8
+#define Turn_ENCODER_DIR_INPUT_PIN       TIM4_ENCODER_CH2_P00_9
 
-// ===================== Flash断电记忆配置 =====================
-#define Turn_FLASH_SECTOR                0              // Flash扇区号(固定0)
-#define Turn_FLASH_PAGE                  0              // Flash页号(0-127可选)
-#define Turn_FLASH_MAGIC                 0x5AA5C33C     // 魔数，用于校验Flash数据有效性
+#define Turn_ENCODER_COUNT_PER_DEG       1.0f            // 编码器计数值 / 编码器旋转角度(°)
+#define Turn_ENCODER_SIGN                1               // 编码器方向: 1=正向, -1=反向
+#define Turn_GEAR_RATIO                  1.0f            // 齿轮减速比 (编码器度数/车头度数)
+                                                         // 例: 车头转1°编码器转10°则填10.0f
 
 // ===================== PID 参数 =====================
 #define Turn_PID_KP                      8.0f
@@ -49,7 +46,7 @@
 #define Turn_STARTUP_HOLD_CYCLES         120
 
 // ===================== 菜单显示比例 =====================
-// 菜单中 encoder_value 显示编码器累计角度(°), angle_deg 显示车头实际角度(°)
+// 菜单中 encoder_value 显示(相对零点)累计编码器度数(°), angle_deg 显示车头实际角度(°)
 #define Turn_MENU_ENC_FULL_SCALE         360.0f
 #define Turn_MENU_ANGLE_FULL_SCALE       360.0f
 
@@ -70,18 +67,13 @@ uint8 *Turn_GetMenuEncoderValidPtr(void);
 void Turn_MenuTargetAngleSync(void);
 void Turn_MenuRuntimeUpdate(void);
 void Turn_SetCurrentAngleAsZero(void);
+void Turn_ResetTurns_MenuCallback(void);    // 清零当前位置(菜单按钮回调)
 void Turn_Stop(void);
 void Turn_SetMotorEnable(uint8 enable);
 uint8 Turn_GetMotorEnable(void);
 
 int32 Turn_GetEncoderCount(void);
 float Turn_GetCurrentAngleDeg(void);
-float Turn_GetEncoderTotalDeg(void);        // 编码器多圈总角度(°)
-uint16 Turn_GetEncoderRaw(void);
-float Turn_GetEncoderAbsAngleDeg(void);     // 编码器单圈绝对角度 (0~360°)
-int32 Turn_GetEncoderTurns(void);           // 编码器整圈数
 uint8 Turn_GetEncoderValid(void);
-void Turn_SavePositionToFlash(void);        // 手动保存位置到Flash
-void Turn_ResetTurns_MenuCallback(void);    // 清零圈数(菜单按钮回调)
 
 #endif /* CODE_TURN_TURN_H_ */

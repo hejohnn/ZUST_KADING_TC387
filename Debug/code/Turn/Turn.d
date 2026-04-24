@@ -404,5 +404,3 @@ Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 Turn.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h" :
-Turn.o :	..\code\Turn\zf_device_pd1503.h
-..\code\Turn\zf_device_pd1503.h :

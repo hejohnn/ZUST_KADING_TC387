@@ -396,8 +396,6 @@ MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
-MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 MyKey.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"

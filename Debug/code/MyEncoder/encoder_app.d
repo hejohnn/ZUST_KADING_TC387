@@ -400,8 +400,6 @@ encoder_app.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 encoder_app.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
-encoder_app.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h" :
 encoder_app.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 encoder_app.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"

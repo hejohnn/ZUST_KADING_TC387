@@ -400,8 +400,6 @@ Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Pedal\Pedal.h" :
 Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Turn\Turn.h" :
-Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h"
-"D:\\work\\ZUST_KADING_TC387\\code\\Turn\zf_device_pd1503.h" :
 Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h"
 "D:\\work\\ZUST_KADING_TC387\\code\\Remote\Remote.h" :
 Pedal.o :	"D:\\work\\ZUST_KADING_TC387\\code\\Motor\Motor.h"
