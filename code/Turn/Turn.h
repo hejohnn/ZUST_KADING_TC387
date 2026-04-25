@@ -3,7 +3,7 @@
  *
  *  Created on: 2026年4月3日
  *      Author: 17706
- *  Modified:   转向编码器改回 GPT12 增量编码器 (EG2104 双PWM驱动保留)
+ *  Modified:   转向驱动改为 DRV8701E (PWM + DIR), 编码器仍为 GPT12 增量编码器
  */
 
 #ifndef CODE_TURN_TURN_H_
@@ -12,13 +12,14 @@
 #include "MYHEADFILE.h"
 
 // ===================== 转向电机PWM配置 =====================
-// 新驱动板: 两个EG2104驱动一个半桥, 双PWM互锁
-//   正转: Turn_PWM_FWD 输出 PWM, Turn_PWM_REV 输出 0
-//   反转: Turn_PWM_REV 输出 PWM, Turn_PWM_FWD 输出 0
-#define Turn_PWM_FWD                     ATOM1_CH1_P14_6
-#define Turn_PWM_FWD_SAFE_PIN            P14_6
-#define Turn_PWM_REV                     ATOM0_CH0_P14_5
-#define Turn_PWM_REV_SAFE_PIN            P14_5
+// 驱动板: DRV8701E, PWM + DIR 模式
+//   速度: Turn_PWM_PIN 输出 PWM (P14.6)
+//   方向: Turn_DIR_PIN 输出电平 (P14.5)  高=正转, 低=反转
+#define Turn_PWM_PIN                     ATOM1_CH1_P14_6
+#define Turn_PWM_SAFE_PIN                P14_6
+#define Turn_DIR_PIN                     P14_5
+#define Turn_DIR_FORWARD_LEVEL           1
+#define Turn_DIR_REVERSE_LEVEL           0
 #define Turn_PWM_SAFE_LEVEL              0
 #define Turn_MOTOR_FREQ                  20000
 #define Turn_Duty_LIMIT                  5000

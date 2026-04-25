@@ -3,7 +3,7 @@
  *
  *  Created on: 2026年4月3日
  *      Author: 17706
- *  Modified:   转向编码器改回 GPT12 增量编码器 (EG2104 双PWM驱动保留)
+ *  Modified:   转向驱动改为 DRV8701E (PWM + DIR), 编码器仍为 GPT12 增量编码器
  */
 
 #include "Turn.h"
@@ -85,34 +85,22 @@ static void Turn_ApplyMotorOutput(float output)
 
     if(duty == 0)
     {
-        pwm_set_duty(Turn_PWM_FWD, 0);
-        pwm_set_duty(Turn_PWM_REV, 0);
+        pwm_set_duty(Turn_PWM_PIN, 0);
         turn_state.output_sign = 0;
         return;
     }
 
-    int8 target_sign = (output >= 0.0f) ? (int8)1 : (int8)-1;
-
-    /* 方向切换时先把两路都拉到 0, 下个周期再给新方向占空比, 避免瞬间两路同时 PWM */
-    if(target_sign != turn_state.output_sign && turn_state.output_sign != 0)
+    if(output >= 0.0f)
     {
-        pwm_set_duty(Turn_PWM_FWD, 0);
-        pwm_set_duty(Turn_PWM_REV, 0);
-        turn_state.output_sign = 0;
-        return;
-    }
-
-    if(target_sign > 0)
-    {
-        pwm_set_duty(Turn_PWM_REV, 0);
-        pwm_set_duty(Turn_PWM_FWD, duty);
+        gpio_set_level(Turn_DIR_PIN, Turn_DIR_FORWARD_LEVEL);
+        turn_state.output_sign = 1;
     }
     else
     {
-        pwm_set_duty(Turn_PWM_FWD, 0);
-        pwm_set_duty(Turn_PWM_REV, duty);
+        gpio_set_level(Turn_DIR_PIN, Turn_DIR_REVERSE_LEVEL);
+        turn_state.output_sign = -1;
     }
-    turn_state.output_sign = target_sign;
+    pwm_set_duty(Turn_PWM_PIN, duty);
 }
 
 void Turn_MenuTargetAngleSync(void)
@@ -139,15 +127,14 @@ void Turn_MenuRuntimeUpdate(void)
 
 void Turn_Init(void)
 {
-    // 上电先把两路PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
-    gpio_init(Turn_PWM_FWD_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
-    gpio_init(Turn_PWM_REV_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
+    // 上电先把PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
+    gpio_init(Turn_PWM_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
+    // 方向脚初始化为正转电平
+    gpio_init(Turn_DIR_PIN, GPO, Turn_DIR_FORWARD_LEVEL, GPO_PUSH_PULL);
 
     // 再切换到PWM外设并保持0占空比
-    pwm_init(Turn_PWM_FWD, Turn_MOTOR_FREQ, 0);
-    pwm_init(Turn_PWM_REV, Turn_MOTOR_FREQ, 0);
-    pwm_set_duty(Turn_PWM_FWD, 0);
-    pwm_set_duty(Turn_PWM_REV, 0);
+    pwm_init(Turn_PWM_PIN, Turn_MOTOR_FREQ, 0);
+    pwm_set_duty(Turn_PWM_PIN, 0);
 
     turn_state.output_sign = 0;
 
@@ -190,8 +177,7 @@ void Turn_ControlTask(void)
         turn_state.startup_hold_cnt--;
         turn_state.encoder_zero = turn_state.encoder_count;
         turn_current_angle_deg = 0.0f;
-        pwm_set_duty(Turn_PWM_FWD, 0);
-        pwm_set_duty(Turn_PWM_REV, 0);
+        pwm_set_duty(Turn_PWM_PIN, 0);
         turn_state.output_sign = 0;
         return;
     }
@@ -263,8 +249,7 @@ void Turn_ResetTurns_MenuCallback(void)
 void Turn_Stop(void)
 {
     PID_clear(&turn_pid);
-    pwm_set_duty(Turn_PWM_FWD, 0);
-    pwm_set_duty(Turn_PWM_REV, 0);
+    pwm_set_duty(Turn_PWM_PIN, 0);
     turn_state.output_sign = 0;
 }
 

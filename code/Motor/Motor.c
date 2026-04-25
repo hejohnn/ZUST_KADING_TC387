@@ -1,5 +1,5 @@
 /*
- * Motor.c - 双 EG2104 半桥 双轮直流电机驱动 (踏板线性控制), 详见 Motor.h
+ * Motor.c - DRV8701E 双轮直流电机驱动 (踏板线性控制), 详见 Motor.h
  */
 
 #include "Motor.h"
@@ -10,9 +10,6 @@ int16 menu_motor_duty_max   = MOTOR_DUTY_LIMIT;     /* 踏板映射上限, 运�
 int16 menu_motor_pedal_pct  = 0;
 int16 menu_motor_left_duty  = 0;
 int16 menu_motor_right_duty = 0;
-
-static int8 left_output_sign  = 0;                  /* +1=正转, -1=反转, 0=停车 */
-static int8 right_output_sign = 0;
 
 #define MOTOR_IS_ENABLED()  (menu_motor_enable != 0)
 
@@ -25,24 +22,19 @@ static uint32 motor_clamp_duty(int32 abs_duty)
 
 void Motor_Init(void)
 {
-    /* 1. 上电先把 4 路 PWM 引脚以 GPIO 拉低, 防止外设切换瞬间误驱动 */
-    gpio_init(MOTOR_LEFT_PWM_FWD_SAFE_PIN,  GPO, 0, GPO_PUSH_PULL);
-    gpio_init(MOTOR_LEFT_PWM_REV_SAFE_PIN,  GPO, 0, GPO_PUSH_PULL);
-    gpio_init(MOTOR_RIGHT_PWM_FWD_SAFE_PIN, GPO, 0, GPO_PUSH_PULL);
-    gpio_init(MOTOR_RIGHT_PWM_REV_SAFE_PIN, GPO, 0, GPO_PUSH_PULL);
+    /* 1. PWM 脚先以 GPIO 拉低, 防止外设切换瞬间误驱动 */
+    gpio_init(MOTOR_LEFT_PWM_SAFE_PIN,  GPO, 0, GPO_PUSH_PULL);
+    gpio_init(MOTOR_RIGHT_PWM_SAFE_PIN, GPO, 0, GPO_PUSH_PULL);
 
-    /* 2. 切换 PWM 外设, 占空比保持 0 */
-    pwm_init(MOTOR_LEFT_PWM_FWD,  MOTOR_PWM_FREQ, 0);
-    pwm_init(MOTOR_LEFT_PWM_REV,  MOTOR_PWM_FREQ, 0);
-    pwm_init(MOTOR_RIGHT_PWM_FWD, MOTOR_PWM_FREQ, 0);
-    pwm_init(MOTOR_RIGHT_PWM_REV, MOTOR_PWM_FREQ, 0);
-    pwm_set_duty(MOTOR_LEFT_PWM_FWD,  0);
-    pwm_set_duty(MOTOR_LEFT_PWM_REV,  0);
-    pwm_set_duty(MOTOR_RIGHT_PWM_FWD, 0);
-    pwm_set_duty(MOTOR_RIGHT_PWM_REV, 0);
+    /* 2. 方向脚初始化为正转电平 */
+    gpio_init(MOTOR_LEFT_DIR_PIN,  GPO, MOTOR_DIR_FORWARD_LEVEL, GPO_PUSH_PULL);
+    gpio_init(MOTOR_RIGHT_DIR_PIN, GPO, MOTOR_DIR_FORWARD_LEVEL, GPO_PUSH_PULL);
 
-    left_output_sign  = 0;
-    right_output_sign = 0;
+    /* 3. 切换 PWM 外设, 占空比保持 0 */
+    pwm_init(MOTOR_LEFT_PWM,  MOTOR_PWM_FREQ, 0);
+    pwm_init(MOTOR_RIGHT_PWM, MOTOR_PWM_FREQ, 0);
+    pwm_set_duty(MOTOR_LEFT_PWM,  0);
+    pwm_set_duty(MOTOR_RIGHT_PWM, 0);
 
     menu_motor_enable       = 0;
     menu_motor_pedal_pct    = 0;
@@ -52,12 +44,8 @@ void Motor_Init(void)
 
 void Motor_Stop(void)
 {
-    pwm_set_duty(MOTOR_LEFT_PWM_FWD,  0);
-    pwm_set_duty(MOTOR_LEFT_PWM_REV,  0);
-    pwm_set_duty(MOTOR_RIGHT_PWM_FWD, 0);
-    pwm_set_duty(MOTOR_RIGHT_PWM_REV, 0);
-    left_output_sign      = 0;
-    right_output_sign     = 0;
+    pwm_set_duty(MOTOR_LEFT_PWM,  0);
+    pwm_set_duty(MOTOR_RIGHT_PWM, 0);
     menu_motor_left_duty  = 0;
     menu_motor_right_duty = 0;
 }
@@ -92,77 +80,50 @@ void Motor_ToggleDirection(void)
 
 void Motor_SetLeftOutput(int32 output)
 {
-    int8   target_sign = (output > 0) ? (int8)1 : ((output < 0) ? (int8)-1 : (int8)0);
-    uint32 duty        = motor_clamp_duty((output >= 0) ? output : -output);
+    uint32 duty = motor_clamp_duty((output >= 0) ? output : -output);
 
     if(duty == 0)
     {
-        pwm_set_duty(MOTOR_LEFT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_LEFT_PWM_REV, 0);
-        left_output_sign     = 0;
+        pwm_set_duty(MOTOR_LEFT_PWM, 0);
         menu_motor_left_duty = 0;
         return;
     }
 
-    /* 方向切换: 本周期先两路归零, 下一周期再给新方向 PWM, 避免半桥瞬间反向直通 */
-    if(target_sign != left_output_sign && left_output_sign != 0)
+    if(output > 0)
     {
-        pwm_set_duty(MOTOR_LEFT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_LEFT_PWM_REV, 0);
-        left_output_sign     = 0;
-        menu_motor_left_duty = 0;
-        return;
-    }
-
-    if(target_sign > 0)
-    {
-        pwm_set_duty(MOTOR_LEFT_PWM_REV, 0);
-        pwm_set_duty(MOTOR_LEFT_PWM_FWD, duty);
+        gpio_set_level(MOTOR_LEFT_DIR_PIN, MOTOR_DIR_FORWARD_LEVEL);
+        menu_motor_left_duty = (int16)duty;
     }
     else
     {
-        pwm_set_duty(MOTOR_LEFT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_LEFT_PWM_REV, duty);
+        gpio_set_level(MOTOR_LEFT_DIR_PIN, MOTOR_DIR_REVERSE_LEVEL);
+        menu_motor_left_duty = -(int16)duty;
     }
-    left_output_sign     = target_sign;
-    menu_motor_left_duty = (int16)((target_sign > 0) ? (int32)duty : -(int32)duty);
+    pwm_set_duty(MOTOR_LEFT_PWM, duty);
 }
 
 void Motor_SetRightOutput(int32 output)
 {
-    int8   target_sign = (output > 0) ? (int8)1 : ((output < 0) ? (int8)-1 : (int8)0);
-    uint32 duty        = motor_clamp_duty((output >= 0) ? output : -output);
+    uint32 duty = motor_clamp_duty((output >= 0) ? output : -output);
 
     if(duty == 0)
     {
-        pwm_set_duty(MOTOR_RIGHT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_RIGHT_PWM_REV, 0);
-        right_output_sign     = 0;
+        pwm_set_duty(MOTOR_RIGHT_PWM, 0);
         menu_motor_right_duty = 0;
         return;
     }
 
-    if(target_sign != right_output_sign && right_output_sign != 0)
+    if(output > 0)
     {
-        pwm_set_duty(MOTOR_RIGHT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_RIGHT_PWM_REV, 0);
-        right_output_sign     = 0;
-        menu_motor_right_duty = 0;
-        return;
-    }
-
-    if(target_sign > 0)
-    {
-        pwm_set_duty(MOTOR_RIGHT_PWM_REV, 0);
-        pwm_set_duty(MOTOR_RIGHT_PWM_FWD, duty);
+        gpio_set_level(MOTOR_RIGHT_DIR_PIN, MOTOR_DIR_FORWARD_LEVEL);
+        menu_motor_right_duty = (int16)duty;
     }
     else
     {
-        pwm_set_duty(MOTOR_RIGHT_PWM_FWD, 0);
-        pwm_set_duty(MOTOR_RIGHT_PWM_REV, duty);
+        gpio_set_level(MOTOR_RIGHT_DIR_PIN, MOTOR_DIR_REVERSE_LEVEL);
+        menu_motor_right_duty = -(int16)duty;
     }
-    right_output_sign     = target_sign;
-    menu_motor_right_duty = (int16)((target_sign > 0) ? (int32)duty : -(int32)duty);
+    pwm_set_duty(MOTOR_RIGHT_PWM, duty);
 }
 
 void Motor_UpdateFromPedal(void)
