@@ -15,8 +15,8 @@
 // 驱动板: DRV8701E, PWM + DIR 模式
 //   速度: Turn_PWM_PIN 输出 PWM (P14.6)
 //   方向: Turn_DIR_PIN 输出电平 (P14.5)  高=正转, 低=反转
-#define Turn_PWM_PIN                     ATOM1_CH1_P14_6
-#define Turn_PWM_SAFE_PIN                P14_6
+#define Turn_PWM_PIN                     ATOM0_CH2_P14_3
+#define Turn_PWM_SAFE_PIN                P14_3
 #define Turn_DIR_PIN                     P14_5
 #define Turn_DIR_FORWARD_LEVEL           1
 #define Turn_DIR_REVERSE_LEVEL           0
@@ -31,6 +31,9 @@
 #define Turn_ENCODER_INDEX               TIM4_ENCODER
 #define Turn_ENCODER_PULSE_PIN           TIM4_ENCODER_CH1_P02_8
 #define Turn_ENCODER_DIR_INPUT_PIN       TIM4_ENCODER_CH2_P00_9
+//#define Turn_ENCODER_INDEX               TIM5_ENCODER
+//#define Turn_ENCODER_PULSE_PIN           TIM5_ENCODER_CH1_P10_3
+//#define Turn_ENCODER_DIR_INPUT_PIN       TIM5_ENCODER_CH2_P10_1
 
 #define Turn_ENCODER_COUNT_PER_DEG       1.0f            // 编码器计数值 / 编码器旋转角度(°)
 #define Turn_ENCODER_SIGN                1               // 编码器方向: 1=正向, -1=反向
