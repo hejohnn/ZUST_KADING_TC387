@@ -15,8 +15,8 @@
 // 驱动板: DRV8701E, PWM + DIR 模式
 //   速度: Turn_PWM_PIN 输出 PWM (P14.6)
 //   方向: Turn_DIR_PIN 输出电平 (P14.5)  高=正转, 低=反转
-#define Turn_PWM_PIN                     ATOM0_CH2_P14_3
-#define Turn_PWM_SAFE_PIN                P14_3
+#define Turn_PWM_PIN                     ATOM0_CH1_P14_4
+#define Turn_PWM_SAFE_PIN                P14_4
 #define Turn_DIR_PIN                     P14_5
 #define Turn_DIR_FORWARD_LEVEL           1
 #define Turn_DIR_REVERSE_LEVEL           0
