@@ -238,8 +238,6 @@ IFX_INTERRUPT(uart2_rx_isr, UART2_INT_VECTAB_NUM, UART2_RX_INT_PRIO)
     wireless_module_uart_handler();                 // 无线模块统一回调函数
 
 
-
-
 }
 // 串口3默认连接到GPS定位模块
 IFX_INTERRUPT(uart3_tx_isr, UART3_INT_VECTAB_NUM, UART3_TX_INT_PRIO)

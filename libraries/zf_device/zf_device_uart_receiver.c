@@ -111,7 +111,15 @@ void uart_receiver_callback(void)
     {
         length = 0;
     }
-    uart_receiver_data[length++] = uart_read_byte(UART_RECEVIER_UART_INDEX);
+    if (length < REV_DATA_LEN)                                                                          // 防止越界写入
+    {
+        uart_receiver_data[length++] = uart_read_byte(UART_RECEVIER_UART_INDEX);
+    }
+    else
+    {
+        (void)uart_read_byte(UART_RECEVIER_UART_INDEX);                                                 // 丢弃多余字节 防止缓冲区溢出
+        length++;                                                                                      // 等待下一帧 3ms 间隔复位
+    }
     if  ( (REV_DATA_LEN  == length)                                                                    // 如果帧长、帧头、帧尾满足协议
         && (FRAME_STAR   == uart_receiver_data[0])
         && (FRAME_END    == uart_receiver_data[24]))

@@ -41,6 +41,21 @@
     { name, ENTER_FUNC_RUN_TYPE, .action.void_func = func_ptr, .display_line_count = line_count }
 
 /***********************************************
+ * @brief : 创建带右侧状态显示的功能项,按键执行函数,根据值显示两种文字
+ * @param : name        菜单项名称
+ * @param : func_ptr    按键时执行的函数
+ * @param : value_ptr   状态值指针(int16*)
+ * @param : active_val  匹配该值时显示 text_act
+ * @param : text_act    匹配 active_val 时的显示文字
+ * @param : text_inact  不匹配时的显示文字 (建议两段文字等长)
+ * @param : line_count  显示行数
+ ************************************************/
+#define MENU_ITEM_ENTER_FUNC_TOGGLE(name, func_ptr, value_ptr, active_val, text_act, text_inact, line_count) \
+        { name, ENTER_FUNC_TOGGLE_TYPE, .action.void_func = func_ptr, \
+            .line_extends = { .enter_func_toggle_line = { (value_ptr), (active_val), (text_act), (text_inact) } }, \
+      .display_line_count = line_count }
+
+/***********************************************
  * @brief : 创建静态功能运行项，常态下直接执行关联函数
  * @param : name       菜单项名称
  * @param : func_ptr   指向要执行的函数
@@ -157,6 +172,7 @@ enum LineExtendsType{
     FLOAT_VALUE_EDIT_TYPE,
     INT_VALUE_EDIT_TYPE,
     DOUBLE_VALUE_SHOW_TYPE,
+    ENTER_FUNC_TOGGLE_TYPE,     //按键执行函数 + 右侧显示状态文字
 };
 
 typedef union {
@@ -175,6 +191,7 @@ typedef union {
     struct { uint8 *show_value; } config_value_show_line;
     struct { float *edit_value; float basic_val; } float_value_edit_line;
     struct { int16 *edit_value; int16 int_basic_val; int16 son_start_line; } int_value_edit_line;
+    struct { int16 *show_value; int16 active_value; const char *text_active; const char *text_inactive; } enter_func_toggle_line;
 } LineExtends;
 
 typedef struct {

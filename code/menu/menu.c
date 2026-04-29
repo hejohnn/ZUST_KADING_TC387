@@ -143,7 +143,7 @@ void ASR_Page_Init(void)
 
         MENU_ITEM_ENTER_FUNC("Start_ASR", ASR_Auto_Run_Entry, 0),
 
-
+        
 
         {".", }
     };
@@ -162,17 +162,26 @@ void ASR_Page_Init(void)
 * @author: SJX
 ************************************************/
 
+void Remote_MenuRuntimeUpdate(void)
+{
+    extern uint8 menu_update_flag;
+    menu_update_flag = 1;
+}
+
 void Remote_Page_Init(void)
 {
     static MenuLine LineList[] = {
 
         MENU_ITEM_CONFIG_SHOW("CH1_Map", NULL, 0),
+        MENU_ITEM_INT_SHOW("CH1_Raw", NULL, 0),
+        MENU_ITEM_STATIC_FUNC(" ", Remote_MenuRuntimeUpdate, 0),
 
         {".", }
     };
     static MenuPage Page = {"Remote", .line = LineList, .open_status = 0};
 
     LineList[0].line_extends.config_value_show_line.show_value = Remote_GetSteerMapEnablePtr();
+    LineList[1].line_extends.int_value_show_line.show_value = Remote_GetSbusCh1Ptr();
 
     Menu_Push_Node(&Page);
 }
@@ -180,25 +189,20 @@ void Remote_Page_Init(void)
 void Turn_Page_Init(void)
 {
     static MenuLine LineList[] = {
-            MENU_ITEM_FLOAT_EDIT ("Angel",      NULL, 10.0f, 0),
-            MENU_ITEM_CONFIG_SHOW("Motor",      NULL, 0),
-            MENU_ITEM_ENTER_FUNC ("ON",         Turn_MenuTargetAngleSync, 0),
-            MENU_ITEM_FLOAT_SHOW ("Enc",        NULL, 0),
-            MENU_ITEM_FLOAT_SHOW ("Angle",      NULL, 0),
-            MENU_ITEM_INT_SHOW   ("OutSign",    NULL, 0),
-            MENU_ITEM_CONFIG_SHOW("EncValid",   NULL, 0),
-            MENU_ITEM_ENTER_FUNC ("ResetTurns", Turn_ResetTurns_MenuCallback, 0),
-            MENU_ITEM_STATIC_FUNC("",           Turn_MenuRuntimeUpdate, 0),
-            {".", }
+        MENU_ITEM_FLOAT_SHOW("TARGET_ANGLE", NULL, 0),
+        MENU_ITEM_CONFIG_SHOW("Motor", NULL, 0),
+        MENU_ITEM_ENTER_FUNC("ON", Turn_MenuTargetAngleSync, 0),
+        MENU_ITEM_FLOAT_SHOW("Enc", NULL, 0),
+        MENU_ITEM_FLOAT_SHOW("Angle", NULL, 0),
+        MENU_ITEM_STATIC_FUNC(" ", Turn_MenuRuntimeUpdate, 0),
+        {".", }
     };
-
     static MenuPage Page = {"Turn_Control", .line = LineList, .open_status = 0};
-    LineList[0].line_extends.float_value_edit_line.edit_value  = Turn_GetMenuTargetAngleDegPtr();
+
+    LineList[0].line_extends.float_value_show_line.show_value = Turn_GetMenuTargetAngleDegPtr();
     LineList[1].line_extends.config_value_show_line.show_value = Turn_GetMenuMotorEnablePtr();
-    LineList[3].line_extends.float_value_show_line.show_value  = Turn_GetMenuEncoderValuePtr();
-    LineList[4].line_extends.float_value_show_line.show_value  = Turn_GetMenuAngleDegPtr();
-    LineList[5].line_extends.int_value_show_line.show_value    = Turn_GetMenuOutputSignPtr();
-    LineList[6].line_extends.config_value_show_line.show_value = Turn_GetMenuEncoderValidPtr();
+    LineList[3].line_extends.float_value_show_line.show_value = Turn_GetMenuEncoderValuePtr();
+    LineList[4].line_extends.float_value_show_line.show_value = Turn_GetMenuAngleDegPtr();
 
     Menu_Push_Node(&Page);
 }
@@ -215,10 +219,10 @@ void Turn_Page_Init(void)
 void MOTOR_Page_Init(void)
 {
     static MenuLine LineList[] = {
-        MENU_ITEM_ENTER_FUNC("Toggle_EN",  Motor_ToggleEnable,    0),
-        MENU_ITEM_INT_SHOW  ("Enable",     &menu_motor_enable,    0),
-        MENU_ITEM_ENTER_FUNC("Toggle_DIR", Motor_ToggleDirection, 0),
-        MENU_ITEM_INT_SHOW  ("Dir(1/-1)",  &menu_motor_direction, 0),
+        MENU_ITEM_ENTER_FUNC_TOGGLE("Toggle_EN ", Motor_ToggleEnable,    &menu_motor_enable,    1, "Open ",   "Close",   0),
+        // MENU_ITEM_INT_SHOW         ("Enable",     &menu_motor_enable,    0),
+        MENU_ITEM_ENTER_FUNC_TOGGLE("Toggle_DIR", Motor_ToggleDirection, &menu_motor_direction, 1, "Forward", "Back   ", 0),
+        // MENU_ITEM_INT_SHOW         ("Dir(1/-1)",  &menu_motor_direction, 0),
         MENU_ITEM_INT_EDIT  ("DutyMax",    &menu_motor_duty_max,  10, 2, 0),
         MENU_ITEM_INT_SHOW  ("Pedal_%",    &menu_motor_pedal_pct, 0),
         MENU_ITEM_INT_SHOW  ("L_Duty",     &menu_motor_left_duty, 0),
@@ -422,6 +426,20 @@ void MENU_RUN(void)
                     My_Show_Int_Color(120, (use_start_line + (i+1)) * 18, 0, 0, DEFAULT_BRUSH);
                    break;
             }
+            case ENTER_FUNC_TOGGLE_TYPE:
+            {
+                if(menu_head_page_node->page->line[i].line_extends.enter_func_toggle_line.show_value != NULL)
+                {
+                    const char *toggle_text;
+                    if(*(menu_head_page_node->page->line[i].line_extends.enter_func_toggle_line.show_value)
+                       == menu_head_page_node->page->line[i].line_extends.enter_func_toggle_line.active_value)
+                        toggle_text = menu_head_page_node->page->line[i].line_extends.enter_func_toggle_line.text_active;
+                    else
+                        toggle_text = menu_head_page_node->page->line[i].line_extends.enter_func_toggle_line.text_inactive;
+                    My_Show_String_Color(150, (use_start_line + (i+1)) * 18, toggle_text, (i+1)==menu_global_line?SELECTED_BRUSH:DEFAULT_BRUSH);
+                }
+                break;
+            }
             default:break;
         }
     }
@@ -501,6 +519,7 @@ void Menu_Key_Process(void)
                 switch (menu_head_page_node->page->line[menu_global_line-1].line_type)
                 {
                     case ENTER_FUNC_RUN_TYPE:
+                    case ENTER_FUNC_TOGGLE_TYPE:
                     {
                         if(menu_head_page_node->page->line[menu_global_line-1].action.void_func)
                         {

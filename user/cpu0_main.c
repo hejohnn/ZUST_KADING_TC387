@@ -98,7 +98,6 @@ int core0_main(void)
     encoder_app_init();             //后轮编码器初始化(左:TIM5 P21_7/P21_6, 右:TIM2 P33_7/P33_6) —— 必须在 MyEncoder_Init 之前, 否则 T5 init 会破坏同块 T6 配置
     MyEncoder_Init();               //编码器初始化(旋转编码器 TIM6 P20_3/P20_0)
     my_key_init(20);                //按键初始化
-
     pit_ms_init(CCU60_CH0, 20);     //按键扫描中断初始化:菜单的
     pit_ms_init(CCU60_CH1, 2);      //旋转编码器采样中断初始化(提升响应速度)
     pit_ms_init(CCU61_CH0, ENCODER_PIT_PERIOD_MS); //后轮编码器+踏板/电机周期任务(50ms, 方案二)

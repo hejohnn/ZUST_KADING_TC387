@@ -3,9 +3,7 @@
  *
  *  Created on: 2026年4月3日
  *      Author: 17706
- *  Modified:   转向驱动改为 DRV8701E (PWM + DIR), 编码器仍为 GPT12 增量编码器
  */
-
 #include "Turn.h"
 
 #include <math.h>
@@ -15,12 +13,11 @@ volatile float turn_current_angle_deg = 0.0f;
 
 typedef struct
 {
-    volatile int32 encoder_count;   // 累计编码器计数值
-    volatile int32 encoder_zero;    // 零点计数值 (上电抑制窗口末尾取样)
-    int8   output_sign;             // 当前输出方向: +1=正转, -1=反转, 0=停车
+    volatile int32 encoder_count;
+    volatile int32 encoder_zero;
+    uint8 dir_level;
     uint16 startup_hold_cnt;
-    uint8  motor_enable;
-    uint8  encoder_valid;           // 增量编码器硬件常有效, 始终为 1
+    uint8 motor_enable;
 } Turn_RuntimeState;
 
 typedef struct
@@ -29,28 +26,21 @@ typedef struct
     float encoder_value;
     float angle_deg;
     uint8 motor_enable;
-    int16 output_sign;      /* 驱动当前输出符号 +1/-1/0, 菜单 INT_SHOW */
-    uint8 encoder_valid;    /* 编码器状态, 菜单 CONFIG_SHOW (Open/Close) */
 } Turn_MenuState;
 
 static PID_IncTypeDef turn_pid;
-
 static Turn_RuntimeState turn_state = {
     .encoder_count = 0,
     .encoder_zero = 0,
-    .output_sign = 0,
+    .dir_level = Turn_DIR_POSITIVE_LEVEL,
     .startup_hold_cnt = 0,
     .motor_enable = 0,
-    .encoder_valid = 1,
 };
-
 static Turn_MenuState turn_menu_state = {
     .target_angle_deg = 0.0f,
     .encoder_value = 0.0f,
     .angle_deg = 0.0f,
     .motor_enable = 0,
-    .output_sign = 0,
-    .encoder_valid = 1,
 };
 
 static float Turn_EncToMenuAngleDeg(float enc_val)
@@ -82,25 +72,26 @@ static uint32 Turn_GetDutyFromOutput(float output)
 static void Turn_ApplyMotorOutput(float output)
 {
     uint32 duty = Turn_GetDutyFromOutput(output);
+    uint8 target_dir_level = Turn_DIR_POSITIVE_LEVEL;
 
     if(duty == 0)
     {
-        pwm_set_duty(Turn_PWM_PIN, 0);
-        turn_state.output_sign = 0;
+        pwm_set_duty(Turn_PWM, 0);
         return;
     }
 
-    if(output >= 0.0f)
+    if(output < 0.0f)
     {
-        gpio_set_level(Turn_DIR_PIN, Turn_DIR_FORWARD_LEVEL);
-        turn_state.output_sign = 1;
+        target_dir_level = (uint8)!Turn_DIR_POSITIVE_LEVEL;
     }
-    else
+
+    if(target_dir_level != turn_state.dir_level)
     {
-        gpio_set_level(Turn_DIR_PIN, Turn_DIR_REVERSE_LEVEL);
-        turn_state.output_sign = -1;
+        turn_state.dir_level = target_dir_level;
+        gpio_set_level(Turn_DIR_PIN, turn_state.dir_level);
     }
-    pwm_set_duty(Turn_PWM_PIN, duty);
+
+    pwm_set_duty(Turn_PWM, duty);
 }
 
 void Turn_MenuTargetAngleSync(void)
@@ -110,12 +101,8 @@ void Turn_MenuTargetAngleSync(void)
 
 void Turn_MenuRuntimeUpdate(void)
 {
-    // encoder_value 显示(相对零点)累计编码器度数(°), angle_deg 显示车头实际角度(°)
-    turn_menu_state.encoder_value =
-        (float)(turn_state.encoder_count - turn_state.encoder_zero) / Turn_ENCODER_COUNT_PER_DEG;
-    turn_menu_state.angle_deg     = turn_current_angle_deg;
-    turn_menu_state.output_sign   = (int16)turn_state.output_sign;
-    turn_menu_state.encoder_valid = turn_state.encoder_valid;
+    turn_menu_state.encoder_value = (float)Turn_GetEncoderCount();
+    turn_menu_state.angle_deg = Turn_EncToMenuAngleDeg(turn_menu_state.encoder_value);
 
     /* 只在 enable 状态发生变化时才调用 SetMotorEnable，避免每周期触发 PID_clear */
     uint8 new_enable = (turn_menu_state.motor_enable != 0) ? 1U : 0U;
@@ -127,37 +114,32 @@ void Turn_MenuRuntimeUpdate(void)
 
 void Turn_Init(void)
 {
-    // 上电先把PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
+    // 上电先把EN/PWM脚当GPIO拉到安全电平，避免复用切换前后误驱动
     gpio_init(Turn_PWM_SAFE_PIN, GPO, Turn_PWM_SAFE_LEVEL, GPO_PUSH_PULL);
-    // 方向脚初始化为正转电平
-    gpio_init(Turn_DIR_PIN, GPO, Turn_DIR_FORWARD_LEVEL, GPO_PUSH_PULL);
 
     // 再切换到PWM外设并保持0占空比
-    pwm_init(Turn_PWM_PIN, Turn_MOTOR_FREQ, 0);
-    pwm_set_duty(Turn_PWM_PIN, 0);
+    pwm_init(Turn_PWM, Turn_MOTOR_FREQ, 0);
+    pwm_set_duty(Turn_PWM, 0);
 
-    turn_state.output_sign = 0;
+    turn_state.dir_level = Turn_DIR_POSITIVE_LEVEL;
+    gpio_init(Turn_DIR_PIN, GPO, turn_state.dir_level, GPO_PUSH_PULL);
 
-    // 初始化增量式编码器 (方向判别模式: CH1=计数脉冲, CH2=方向电平)
     encoder_dir_init(Turn_ENCODER_INDEX, Turn_ENCODER_PULSE_PIN, Turn_ENCODER_DIR_INPUT_PIN);
     encoder_clear_count(Turn_ENCODER_INDEX);
 
     PID_Inc_Init(&turn_pid, Turn_PID_KP, Turn_PID_KI, Turn_PID_KD);
 
-    turn_state.encoder_count    = 0;
-    turn_state.encoder_zero     = 0;
+    turn_state.encoder_count = 0;
+    turn_state.encoder_zero = 0;
     turn_state.startup_hold_cnt = Turn_STARTUP_HOLD_CYCLES;
-    turn_state.motor_enable     = 0;
-    turn_state.encoder_valid    = 1;
-    turn_target_angle_deg  = 0.0f;
+    turn_state.motor_enable = 0;
+    turn_target_angle_deg = 0.0f;
     turn_current_angle_deg = 0.0f;
 
     turn_menu_state.target_angle_deg = 0.0f;
-    turn_menu_state.encoder_value    = 0.0f;
-    turn_menu_state.angle_deg        = 0.0f;
-    turn_menu_state.motor_enable     = 0;
-    turn_menu_state.output_sign      = 0;
-    turn_menu_state.encoder_valid    = 1;
+    turn_menu_state.encoder_value = 0.0f;
+    turn_menu_state.angle_deg = 0.0f;
+    turn_menu_state.motor_enable = 0;
 }
 
 void Turn_ControlTask(void)
@@ -166,19 +148,15 @@ void Turn_ControlTask(void)
     encoder_clear_count(Turn_ENCODER_INDEX);
 
     turn_state.encoder_count += (int32)(Turn_ENCODER_SIGN * delta_count);
+    turn_current_angle_deg = (float)(turn_state.encoder_count - turn_state.encoder_zero) / Turn_ENCODER_COUNT_PER_DEG;
 
-    // 车头角度 = (编码器累计计数 - 零点) / 每度计数 / 齿轮比
-    turn_current_angle_deg = (float)(turn_state.encoder_count - turn_state.encoder_zero)
-                              / Turn_ENCODER_COUNT_PER_DEG / Turn_GEAR_RATIO;
-
-    // 上电抑制窗口: 等待编码器稳定, 把当前位置取样为零点, 不输出电机
+    // 上电抑制窗口：先采样稳定零点，不输出电机
     if(turn_state.startup_hold_cnt > 0)
     {
         turn_state.startup_hold_cnt--;
         turn_state.encoder_zero = turn_state.encoder_count;
         turn_current_angle_deg = 0.0f;
-        pwm_set_duty(Turn_PWM_PIN, 0);
-        turn_state.output_sign = 0;
+        pwm_set_duty(Turn_PWM, 0);
         return;
     }
 
@@ -222,16 +200,6 @@ uint8 *Turn_GetMenuMotorEnablePtr(void)
     return &turn_menu_state.motor_enable;
 }
 
-int16 *Turn_GetMenuOutputSignPtr(void)
-{
-    return &turn_menu_state.output_sign;
-}
-
-uint8 *Turn_GetMenuEncoderValidPtr(void)
-{
-    return &turn_menu_state.encoder_valid;
-}
-
 void Turn_SetCurrentAngleAsZero(void)
 {
     turn_state.encoder_zero = turn_state.encoder_count;
@@ -240,17 +208,10 @@ void Turn_SetCurrentAngleAsZero(void)
     PID_clear(&turn_pid);
 }
 
-void Turn_ResetTurns_MenuCallback(void)
-{
-    Turn_SetCurrentAngleAsZero();
-    Beep_ShortRing();
-}
-
 void Turn_Stop(void)
 {
     PID_clear(&turn_pid);
-    pwm_set_duty(Turn_PWM_PIN, 0);
-    turn_state.output_sign = 0;
+    pwm_set_duty(Turn_PWM, 0);
 }
 
 void Turn_SetMotorEnable(uint8 enable)
@@ -275,9 +236,7 @@ int32 Turn_GetEncoderCount(void)
 float Turn_GetCurrentAngleDeg(void)
 {
     return turn_current_angle_deg;
+
 }
 
-uint8 Turn_GetEncoderValid(void)
-{
-    return turn_state.encoder_valid;
-}
+
